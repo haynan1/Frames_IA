@@ -1,0 +1,14 @@
+{
+  "name": "direcao-de-arte-com-ia",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Biblioteca visual e laboratório de direção de arte para criativos com IA.",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node --test",
+    "check": "node --check app.js && node --check data/content.js && node --check scripts/build.mjs && npm test && npm run build"
+  },
+  "engines": { "node": ">=22" }
+}
