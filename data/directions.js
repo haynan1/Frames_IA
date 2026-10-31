@@ -3,6 +3,20 @@
 // camera on the positive Y axis. They describe intent, not a measured set.
 
 export const directions = [
+  // Transcribed from the store's own studio standard (manual 14, 20.10.2026): one set for every product photo.
+  {id: 'estudio-sarcenet', name: 'Estúdio Sarcenet', tagline: 'O fundo de todas as fotos da loja.',
+    use: 'Padrão da loja para galeria de produto, giros e planos de detalhe. Cor fiel, peça legível, sem objetos.',
+    mood: ['Calmo', 'Fiel', 'Editorial'], light: 'softbox', grade: 'natural', lens: '50mm corpo inteiro · 85mm plano médio · 100mm macro', exposure: 'Luz do dia, cerca de 5500K · detalhe preservado no branco e no preto',
+    palette: [{name: 'Parede', hex: '#CFC3B4'}, {name: 'Chão', hex: '#DDD1C3'}, {name: 'Queda de luz', hex: '#C4B8AA'}, {name: 'Fundo do site', hex: '#F2ECE3'}, {name: 'Tinta', hex: '#191512'}, {name: 'Dourado', hex: '#8A6B2F'}],
+    setup: [
+      {kind: 'key', label: 'Luz principal grande e suave', x: -1.6, y: 1.6, modifier: '45° à esquerda, pouco acima dos olhos'},
+      {kind: 'bounce', label: 'Rebatedor branco', x: 1.5, y: 1.1, modifier: 'Preenchimento à direita'},
+      {kind: 'bg', label: 'Fundo infinito de papel', x: 0, y: -1.6, modifier: 'Parede e chão em curva, sem horizonte'}
+    ],
+    environment: 'a seamless warm sand-grey paper backdrop curving into the floor with no horizon line, wall about #CFC3B4 with a soft falloff toward the upper right, floor one tone lighter, fine uniform paper grain, no props except a plain upholstered ottoman in the same tone when a seated pose needs it; no windows, plants, furniture, marble, skirting or patterns',
+    artDirection: 'quiet editorial catalogue photograph, the garment fully legible and colour faithful, short soft shadows falling to the right and a discreet contact shadow under the feet, small gold hoop earrings, nothing covering the neckline, cuffs, waist or hem',
+    hero: {castId: 'sc-01', wardrobe: 'a champagne satin-finish floor-length column gown with a draped cowl neckline, wide straps and a high front slit'},
+    avoid: 'Fundo com outro tom ou horizonte, luz vindo da direita, peça com cor puxada pela luz, equipamento de estúdio no quadro.'},
   {id: 'seda-janela', name: 'Seda & janela', tagline: 'Matéria líquida, luz de manhã.',
     use: 'Assinatura proposta para a Sarcenet: lançamentos, peças fluidas, seda, cetim, malhas finas.',
     mood: ['Íntimo', 'Luminoso', 'Tátil'], light: 'window', grade: 'warm-film', lens: '85mm · f/2', exposure: 'ISO 400 · 1/250 · balanço 5200K',
@@ -13,7 +27,7 @@ export const directions = [
       {kind: 'bg', label: 'Cortina de linho', x: 0, y: -1.8, modifier: 'Fundo a 1,8 m'}
     ],
     environment: 'a quiet sunlit apartment atelier with a tall window dressed in sheer ivory voile curtains, pale limestone floor, warm off-white plaster walls, a single linen-covered stool, generous empty space',
-    artDirection: 'soft directional window light from camera left wrapping the face and making silk glow, gentle falloff into warm shadows, champagne and ivory palette, calm luxury, no clutter',
+    artDirection: 'soft directional window light from camera left wrapping the face and making silk glow, gentle falloff into warm shadows, champagne and ivory palette, calm and quiet, no clutter',
     hero: {castId: 'sc-01', wardrobe: 'a champagne silk-satin bias-cut midi slip dress with thin straps and a soft cowl neckline'},
     avoid: 'Brilho estourado no cetim, pele plastificada, cortina competindo com a peça.'},
   {id: 'ciclorama-marfim', name: 'Ciclorama marfim', tagline: 'Verdade de produto, sem ruído.',

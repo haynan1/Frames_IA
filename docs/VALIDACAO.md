@@ -84,6 +84,44 @@ As exportações de roteiro foram verificadas em função pura; nesta versão, n
 
 Não verificado nesta versão: leitor de tela real, Core Web Vitals medidos, bytes dos arquivos baixados e conteúdo do clipboard. As 100 imagens da fila ainda não foram geradas; nenhum clipe foi produzido.
 
+## Evidência observada · versão 2.1 (31.10.2026)
+
+- `npm run check`: **40 testes** aprovados. Novos testes: a lista de referências de cada keyframe é idêntica à linha “Attach and follow” do prompt em todos os modelos de cena; progresso `{a, b, clip}` sobrevive à exportação; progresso com valor não booleano, chave desconhecida ou lista é rejeitado; escape de `<img onerror>` no painel Produzir de todas as tomadas.
+- Navegador em 1440 px, modelo Sarcenet, tomada 4: três passos com 3, 6 e 2 referências; miniaturas carregadas do acervo; links de download com o nome do prompt (`sc-01-rosto-frente.webp`); A e B marcados como “já está no acervo”. Marcar “Clipe aprovado” manteve o foco na caixa, atualizou o contador para 3/3, a linha do tempo e o `localStorage`. Editar o título com “Ver o texto” aberto manteve o painel aberto e atualizou o prompt.
+- Modelo “Provador · Reels”: referências da peça aparecem como “sua foto” sem download; keyframe A no passo 2 aparece como “a imagem que você gerou no passo 1”. Entrega mostrou 0/11 passos e 5 referências em cartões.
+- 375 px: painel em uma coluna, sem rolagem horizontal; faixa Como funciona empilhada. Console sem erros.
+
+Não verificado: o download real dos arquivos e o clipboard.
+
+## Evidência observada · versão 2.2 (31.10.2026)
+
+- `npm run check`: **44 testes**. Os novos cobrem:
+  - planos macro e de detalhe: pousam na região escolhida, anexam a foto de detalhe e não anexam o rosto;
+  - distância do macro (13 cm em 100 mm, formato 9:16);
+  - movimentos de detalhe: deslize, órbita e giro;
+  - alertas: sem foto de detalhe, giro acima de 45°, modelo andando no macro e salto de escala;
+  - modelos da loja: válidos e sempre privados (`path: null`);
+  - projetos antigos recebem a região `fabric`, e região inválida é rejeitada;
+  - nenhum prompt contém luxury, premium, cinematic ou nome de equipamento.
+- Pasta da loja lida sem alteração:
+  - manuais da pasta 04: AGENTS, método, receitas, fundo padrão e workflow de vídeo;
+  - as 20 fichas de `06 - MODELOS SARCENET` e a MODELO-A;
+  - a ficha de fatos do Champagne Drape Satin Gown.
+
+  A loja ao vivo (sarcenet.uk) foi consultada na página inicial e na página do vestido.
+- `npm run modelos` gerou 63 recortes em `references/sarcenet/modelos/`, e `git status` não os lista. Os recortes foram conferidos visualmente e não trazem o texto das fichas. Como as fichas têm cerca de 1100 px, os recortes são pequenos (rosto com 480 px).
+- Navegador em 1440 px:
+  - o modelo “Ultra close no cetim” não gera alertas;
+  - na tomada 2, a lupa mostra “Decote / gola · campo 14 cm”;
+  - o inspetor mostra a Região do detalhe;
+  - o painel Produzir pede `sarcenet-modelo-a-corpo.png` como arquivo privado e as fotos da peça;
+  - a etapa 2 lista a MODELO-A e as 20 fichas;
+  - o Elenco lista as 21 modelos sem nenhuma imagem.
+
+  Em 375 px não há rolagem horizontal, e o console não mostra erros.
+
+Não verificado: geração real de imagens ou clipes com os novos prompts.
+
 ## Limites atuais
 
 Não foi realizado benchmark de modelos, geração de clipes nas plataformas listadas, avaliação de conversão ou auditoria automática de arquivos de campanha. Envio ao repositório e implantação de Pages são eventos distintos. Um build local aprovado não comprova publicação do site.

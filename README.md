@@ -10,8 +10,10 @@ Estúdio de direção de arte com IA em português, pensado primeiro para a loja
 
 - **Studio de cenas:** cinco etapas (briefing, peça e elenco, cenário e luz, sequência, entrega). Cada tomada tem enquadramento inicial e final, 16 operações de câmera, graus de arco ou giro, lente, altura, ângulo, ação, foco, ritmo e transição. Planta vista de cima, vista lateral e enquadramento animados no tempo da tomada; keyframe A, keyframe B e prompt de movimento; pacote de produção, pedido para o Codex e projeto `.json`.
 - **Elenco:** 10 modelos fictícias (inclui plus size, 40+, petite e masculino) com ficha de identidade e sete vistas de referência.
-- **Direções de arte:** oito sets repetíveis com planta de luz, lente, exposição, paleta e cenário. “Seda & janela” é a assinatura proposta para a Sarcenet.
-- **Fila de imagens:** 100 imagens com prioridade, dependências, destino e critério de aceite, prontas para o Codex. A ingestão publica cada imagem no site automaticamente.
+- **Direções de arte:** nove sets repetíveis com planta de luz, lente, exposição, paleta e cenário, incluindo o **Estúdio Sarcenet**, transcrito do padrão de fotos da loja.
+- **Ultra close e giros:** macro de textura (campo de 4 cm) e plano detalhe pousados numa região da peça (decote, franzido, fenda, barra…), com deslize, órbita, giro lento e rack focus descritos em escala real. Sem foto de detalhe, o Studio avisa em vez de inventar trama.
+- **Modelos da loja:** MODELO-A e as 20 fichas da Sarcenet como referências privadas (`npm run modelos` gera recortes limpos fora do Git).
+- **Fila de imagens:** 102 imagens com prioridade, dependências, destino e critério de aceite, prontas para o Codex. A ingestão publica cada imagem no site automaticamente.
 - **Menu lateral recolhível** (tecla `[`), agrupado por Studio, Biblioteca, Aprender e Sistema.
 - **Biblioteca visual:** 10 cenários, 30 frames individuais gerados e seis estudos de roupas. Sequências de 15 ou 24 segundos planejados, com prompts de imagem e animação por frame, narração proposta, favoritos, busca, downloads e curadoria visual. Inclui uma tentativa rejeitada e seu reparo de enquadramento.
 - **Como usar:** percurso de operação em seis passos e um primeiro exercício prático. Consulte também o [guia rápido](docs/COMO-USAR.md).

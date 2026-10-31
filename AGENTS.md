@@ -24,8 +24,11 @@ O fundador dirige e decide; o agente implementa. A barra é alta em design, arqu
 - Identificar imagens geradas, produto fictício, simulação geométrica e storyboard proposto.
 - Não afirmar identidade perfeita, fidelidade garantida, resultado de vendas ou superioridade universal.
 - Registrar prompts e origem de cada asset em `docs/IMAGENS.md`.
-- Elenco, peças e campanhas do Studio são fictícios. Modelos reais da Sarcenet só entram por `references/` (ignorado pelo Git) com consentimento registrado, e o resultado não é publicado.
-- O perfil Sarcenet é uma proposta; não apresentá-lo como guia oficial da loja.
+- O elenco `sc-*` e as campanhas de demonstração são fictícios. Pessoas reais só entram por `references/` (ignorado pelo Git) com consentimento registrado, e o resultado não é publicado.
+- As modelos da loja (`data/store-models.js`: MODELO-A e as 20 fichas) são modelos de IA da Sarcenet. As imagens delas nunca vão para o repositório nem para o site: só os recortes privados em `references/sarcenet/modelos/`, gerados por `npm run modelos`.
+- A pasta da loja (OneDrive, `LOJA SARCENET/07 - VESTUARIO`) é somente leitura para este projeto. Não copiar fotos de fornecedor, fichas ou manuais da loja para o repositório.
+- O perfil Sarcenet e a direção “Estúdio Sarcenet” resumem o manual de imagens da loja (lido em 31.10.2026). Em conflito, vale o manual da loja. Peças reais da loja nos modelos de cena usam só fatos da ficha verificada da copy.
+- Planos macro e de detalhe exigem foto de detalhe da peça; sem ela, o Studio avisa e o prompt proíbe inventar trama. Não remover esse aviso.
 
 ## Publicação
 

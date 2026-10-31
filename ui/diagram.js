@@ -1,15 +1,15 @@
 // Camera previews for the Studio. Pure functions: numbers in, SVG out. Only
 // internal numeric state and labels from fixed tables are rendered.
-import {shotSizes, heights, focusTargets, coverOf, actions, moveControls} from '../data/studio.js';
+import {shotSizes, heights, focusTargets, coverOf, actions, moveControls, isTight, detailRegions, formats} from '../data/studio.js';
 import {escapeHTML as esc} from './html.js';
 
 const lerp = (a, b, t) => a + (b - a) * t;
 const ease = t => t < .5 ? 2 * t * t : 1 - (-2 * t + 2) ** 2 / 2;
 const rad = d => d * Math.PI / 180;
 const f2 = n => Number(n).toFixed(2);
-const aspect = {'9:16': 9 / 16, '4:5': 4 / 5, '1:1': 1, '16:9': 16 / 9};
-const planWidthMM = {'9:16': 20.25, '4:5': 24, '1:1': 24, '16:9': 36};
-const centers = {ecu: 1.2, cu: 1.6, mcu: 1.47, ms: 1.32, mls: 1.12, fs: 0.92, ws: 0.95, ews: 1.2};
+const aspect = {'9:16': 9 / 16, '3:4': 3 / 4, '4:5': 4 / 5, '1:1': 1, '16:9': 16 / 9};
+const planWidthMM = {'9:16': 20.25, '3:4': 24, '4:5': 24, '1:1': 24, '16:9': 36};
+const centers = {macro: 1.15, ecu: 1.2, cu: 1.6, mcu: 1.47, ms: 1.32, mls: 1.12, fs: 0.92, ws: 0.95, ews: 1.2};
 
 /** Interpolated camera state for a compiled shot at progress t (0–1). */
 export function cameraState(shot, t) {
@@ -77,7 +77,7 @@ export function sideSVG(shot, t) {
   const ground = 104, scale = 40, subjectX = 262;
   const camX = subjectX - Math.min(6.5, Math.max(.3, s.distance)) * 34;
   const camY = ground - s.height * scale;
-  const focusY = ground - focusTargets[shot.focus].y * scale;
+  const focusY = ground - (isTight(s.size) ? (detailRegions[shot.detail] || detailRegions.fabric).y : focusTargets[shot.focus].y) * scale;
   const ticks = Object.values(heights).filter(h => h.m <= 2.3).map(h => `<line x1="10" x2="16" y1="${f2(ground - h.m * scale)}" y2="${f2(ground - h.m * scale)}" class="plan-axis"/>`).join('');
   return `<svg viewBox="0 0 320 120" role="img" aria-label="Vista lateral: câmera a ${s.height.toFixed(1).replace('.', ',')} metros de altura"><rect width="320" height="120" class="plan-bg"/>${ticks}<line x1="0" y1="${ground}" x2="320" y2="${ground}" class="plan-ground"/><line x1="${f2(camX)}" y1="${f2(camY)}" x2="${subjectX}" y2="${f2(focusY)}" class="plan-sight"/><g class="side-figure"><circle cx="${subjectX}" cy="${f2(ground - 1.62 * scale)}" r="4.4"/><path d="M${subjectX} ${f2(ground - 1.5 * scale)}V${f2(ground - .9 * scale)}M${subjectX - 9} ${f2(ground - 1.38 * scale)}H${subjectX + 9}M${subjectX} ${f2(ground - .9 * scale)}L${subjectX - 6} ${ground}M${subjectX} ${f2(ground - .9 * scale)}L${subjectX + 6} ${ground}"/></g><line x1="${f2(camX)}" y1="${ground}" x2="${f2(camX)}" y2="${f2(camY)}" class="plan-axis"/><g class="plan-camera" transform="translate(${f2(camX)} ${f2(camY)})"><rect x="-8" y="-6" width="16" height="12" rx="2"/></g><text x="22" y="16" class="plan-tick">ALTURA ${s.height.toFixed(1).replace('.', ',')} m · ${esc(heights[shot.height].label.toUpperCase())}</text></svg>`;
 }
@@ -86,18 +86,22 @@ export function sideSVG(shot, t) {
 export function framingSVG(shot, t, format) {
   const s = cameraState(shot, t);
   const scale = 128, base = 286, mid = 130;
-  const tight = size => size === 'ecu' || (size === 'cu' && shot.focus !== 'face');
-  const center = size => tight(size) ? focusTargets[shot.focus].y : centers[size];
+  // Close-ups land on the chosen garment region; a face close-up stays on the face.
+  const region = detailRegions[shot.detail] || detailRegions.fabric;
+  const center = size => isTight(size) ? region.y : size === 'cu' && shot.focus !== 'face' ? focusTargets[shot.focus].y : centers[size];
   const cy = lerp(center(shot.sizeStart), center(shot.sizeEnd), s.k);
   const h = s.cover * scale, w = h * aspect[format];
   const fx = mid - w / 2, fy = base - cy * scale - h / 2;
   const Y = m => f2(base - m * scale);
   // Seen from behind when the camera sits more than 135° away from where the subject faces.
   const back = Math.abs((((s.angle - s.subject) % 360) + 540) % 360 - 180) >= 135;
+  // At macro scale the frame is a few pixels tall: a loupe names the region, the field and the magnification.
+  const magnification = (formats[format]?.frameMM ?? 36) / (s.cover * 1000);
+  const loupe = isTight(s.size) ? `<circle cx="${f2(mid)}" cy="${f2(fy + h / 2)}" r="${f2(Math.max(10, h * .9))}" class="frame-loupe"/><text x="10" y="${back ? 50 : 34}" class="plan-tick accent-tick">${esc(region.label.toUpperCase())}</text><text x="10" y="${back ? 64 : 48}" class="plan-tick">CAMPO ${Math.round(s.cover * 100)} CM · ${magnification.toFixed(1).replace('.', ',')}×</text>` : '';
   const figure = `<g class="frame-figure"><circle cx="${mid}" cy="${Y(1.62)}" r="${f2(.105 * scale)}"/><path d="M${mid - 5} ${Y(1.52)}h10v${f2(.06 * scale)}h-10z"/><path d="M${f2(mid - .2 * scale)} ${Y(1.44)}Q${mid} ${Y(1.49)} ${f2(mid + .2 * scale)} ${Y(1.44)}L${f2(mid + .15 * scale)} ${Y(1.02)}L${f2(mid + .25 * scale)} ${Y(.42)}L${f2(mid - .25 * scale)} ${Y(.42)}L${f2(mid - .15 * scale)} ${Y(1.02)}Z"/><path d="M${f2(mid - .2 * scale)} ${Y(1.43)}L${f2(mid - .27 * scale)} ${Y(.95)}M${f2(mid + .2 * scale)} ${Y(1.43)}L${f2(mid + .27 * scale)} ${Y(.95)}M${f2(mid - .07 * scale)} ${Y(.42)}L${f2(mid - .08 * scale)} ${Y(.02)}M${f2(mid + .07 * scale)} ${Y(.42)}L${f2(mid + .08 * scale)} ${Y(.02)}" class="frame-limbs"/></g>`;
   const mask = `<path class="frame-mask" fill-rule="evenodd" d="M-400 -400H660V700H-400Z M${f2(fx)} ${f2(fy)}h${f2(w)}v${f2(h)}h${f2(-w)}Z"/>`;
   const grid = [1, 2].map(i => `<line x1="${f2(fx + w * i / 3)}" x2="${f2(fx + w * i / 3)}" y1="${f2(fy)}" y2="${f2(fy + h)}" class="frame-third"/><line y1="${f2(fy + h * i / 3)}" y2="${f2(fy + h * i / 3)}" x1="${f2(fx)}" x2="${f2(fx + w)}" class="frame-third"/>`).join('');
-  return `<svg viewBox="0 0 260 300" role="img" aria-label="Enquadramento ${esc(shotSizes[s.size].label)} sobre uma figura de 1,75 metro"><rect width="260" height="300" class="plan-bg"/><line x1="0" y1="${base}" x2="260" y2="${base}" class="plan-ground"/>${figure}${mask}<rect x="${f2(fx)}" y="${f2(fy)}" width="${f2(w)}" height="${f2(h)}" class="frame-rect"/>${grid}<text x="10" y="18" class="plan-tick">${esc(shotSizes[shot.sizeStart].abbr)} → ${esc(shotSizes[shot.sizeEnd].abbr)} · ${format}</text>${back ? '<text x="10" y="34" class="plan-tick accent-tick">VISTA DE COSTAS</text>' : ''}</svg>`;
+  return `<svg viewBox="0 0 260 300" role="img" aria-label="Enquadramento ${esc(shotSizes[s.size].label)} sobre uma figura de 1,75 metro"><rect width="260" height="300" class="plan-bg"/><line x1="0" y1="${base}" x2="260" y2="${base}" class="plan-ground"/>${figure}${mask}<rect x="${f2(fx)}" y="${f2(fy)}" width="${f2(w)}" height="${f2(h)}" class="frame-rect"/>${grid}${loupe}<text x="10" y="18" class="plan-tick">${esc(shotSizes[shot.sizeStart].abbr)} → ${esc(shotSizes[shot.sizeEnd].abbr)} · ${format}</text>${back ? '<text x="10" y="34" class="plan-tick accent-tick">VISTA DE COSTAS</text>' : ''}</svg>`;
 }
 
 /** Fully static, meaningful placeholder for images the queue has not produced yet. */

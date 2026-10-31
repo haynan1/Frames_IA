@@ -2,7 +2,7 @@
 
 Gerado por `npm run build` a partir de `data/image-requests.js`. Não edite à mão.
 
-**100/100 geradas** · P0: 43/43. Siga a ordem da tabela (prioridade, depois onda). Protocolo completo: [IMAGENS-CODEX.md](IMAGENS-CODEX.md).
+**100/102 geradas** · P0: 43/44. Siga a ordem da tabela (prioridade, depois onda). Protocolo completo: [IMAGENS-CODEX.md](IMAGENS-CODEX.md).
 
 | # | ID | Prioridade | Onda | Tamanho | Destino | Status |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -30,82 +30,84 @@ Gerado por `npm run build` a partir de `data/image-requests.js`. Não edite à m
 | 22 | `SHOW-PECA-COSTAS` | P0 | 2 | 1024x1536 | `assets/projects/sarcenet-capsula-seda/peca-costas.webp` | gerada |
 | 23 | `SHOW-PECA-DETALHE` | P0 | 2 | 1024x1536 | `assets/projects/sarcenet-capsula-seda/peca-detalhe.webp` | gerada |
 | 24 | `CAST-SC-01-CORPO-COSTAS` | P0 | 3 | 1024x1536 | `assets/cast/sc-01/corpo-costas.webp` | gerada |
-| 25 | `DIR-SEDA-JANELA-HERO` | P0 | 3 | 1024x1536 | `assets/directions/seda-janela/hero.webp` | gerada |
-| 26 | `DIR-CICLORAMA-MARFIM-HERO` | P0 | 3 | 1024x1536 | `assets/directions/ciclorama-marfim/hero.webp` | gerada |
-| 27 | `DIR-ATELIER-PROVADOR-HERO` | P0 | 3 | 1024x1536 | `assets/directions/atelier-provador/hero.webp` | gerada |
-| 28 | `DIR-RUA-GOLDEN-HOUR-HERO` | P0 | 3 | 1024x1536 | `assets/directions/rua-golden-hour/hero.webp` | gerada |
-| 29 | `DIR-NOITE-FLASH-HERO` | P0 | 3 | 1024x1536 | `assets/directions/noite-flash/hero.webp` | gerada |
-| 30 | `DIR-COLOR-BLOCK-HERO` | P0 | 3 | 1024x1536 | `assets/directions/color-block/hero.webp` | gerada |
-| 31 | `DIR-CONCRETO-MINIMAL-HERO` | P0 | 3 | 1024x1536 | `assets/directions/concreto-minimal/hero.webp` | gerada |
-| 32 | `DIR-NATUREZA-LINHO-HERO` | P0 | 3 | 1024x1536 | `assets/directions/natureza-linho/hero.webp` | gerada |
-| 33 | `SHOW-S01-A` | P0 | 3 | 1024x1536 | `assets/projects/sarcenet-capsula-seda/s01-a.webp` | gerada |
-| 34 | `SHOW-S02-A` | P0 | 3 | 1024x1536 | `assets/projects/sarcenet-capsula-seda/s02-a.webp` | gerada |
-| 35 | `SHOW-S03-A` | P0 | 3 | 1024x1536 | `assets/projects/sarcenet-capsula-seda/s03-a.webp` | gerada |
-| 36 | `SHOW-S04-A` | P0 | 3 | 1024x1536 | `assets/projects/sarcenet-capsula-seda/s04-a.webp` | gerada |
-| 37 | `SHOW-S05-A` | P0 | 3 | 1024x1536 | `assets/projects/sarcenet-capsula-seda/s05-a.webp` | gerada |
-| 38 | `SHOW-S06-A` | P0 | 3 | 1024x1536 | `assets/projects/sarcenet-capsula-seda/s06-a.webp` | gerada |
-| 39 | `HOME-CAPA` | P0 | 3 | 1536x1024 | `assets/studio/capa.webp` | gerada |
-| 40 | `SHOW-S02-B` | P0 | 4 | 1024x1536 | `assets/projects/sarcenet-capsula-seda/s02-b.webp` | gerada |
-| 41 | `SHOW-S03-B` | P0 | 4 | 1024x1536 | `assets/projects/sarcenet-capsula-seda/s03-b.webp` | gerada |
-| 42 | `SHOW-S04-B` | P0 | 4 | 1024x1536 | `assets/projects/sarcenet-capsula-seda/s04-b.webp` | gerada |
-| 43 | `SHOW-S05-B` | P0 | 4 | 1024x1536 | `assets/projects/sarcenet-capsula-seda/s05-b.webp` | gerada |
-| 44 | `CAST-SC-01-ROSTO-34` | P1 | 3 | 1024x1536 | `assets/cast/sc-01/rosto-34.webp` | gerada |
-| 45 | `CAST-SC-01-PERFIL` | P1 | 3 | 1024x1536 | `assets/cast/sc-01/perfil.webp` | gerada |
-| 46 | `CAST-SC-01-CORPO-LATERAL` | P1 | 3 | 1024x1536 | `assets/cast/sc-01/corpo-lateral.webp` | gerada |
-| 47 | `CAST-SC-02-ROSTO-34` | P1 | 3 | 1024x1536 | `assets/cast/sc-02/rosto-34.webp` | gerada |
-| 48 | `CAST-SC-02-PERFIL` | P1 | 3 | 1024x1536 | `assets/cast/sc-02/perfil.webp` | gerada |
-| 49 | `CAST-SC-02-CORPO-COSTAS` | P1 | 3 | 1024x1536 | `assets/cast/sc-02/corpo-costas.webp` | gerada |
-| 50 | `CAST-SC-02-CORPO-LATERAL` | P1 | 3 | 1024x1536 | `assets/cast/sc-02/corpo-lateral.webp` | gerada |
-| 51 | `CAST-SC-03-ROSTO-34` | P1 | 3 | 1024x1536 | `assets/cast/sc-03/rosto-34.webp` | gerada |
-| 52 | `CAST-SC-03-PERFIL` | P1 | 3 | 1024x1536 | `assets/cast/sc-03/perfil.webp` | gerada |
-| 53 | `CAST-SC-03-CORPO-COSTAS` | P1 | 3 | 1024x1536 | `assets/cast/sc-03/corpo-costas.webp` | gerada |
-| 54 | `CAST-SC-03-CORPO-LATERAL` | P1 | 3 | 1024x1536 | `assets/cast/sc-03/corpo-lateral.webp` | gerada |
-| 55 | `CAST-SC-04-ROSTO-34` | P1 | 3 | 1024x1536 | `assets/cast/sc-04/rosto-34.webp` | gerada |
-| 56 | `CAST-SC-04-PERFIL` | P1 | 3 | 1024x1536 | `assets/cast/sc-04/perfil.webp` | gerada |
-| 57 | `CAST-SC-04-CORPO-COSTAS` | P1 | 3 | 1024x1536 | `assets/cast/sc-04/corpo-costas.webp` | gerada |
-| 58 | `CAST-SC-04-CORPO-LATERAL` | P1 | 3 | 1024x1536 | `assets/cast/sc-04/corpo-lateral.webp` | gerada |
-| 59 | `CAST-SC-05-ROSTO-34` | P1 | 3 | 1024x1536 | `assets/cast/sc-05/rosto-34.webp` | gerada |
-| 60 | `CAST-SC-05-PERFIL` | P1 | 3 | 1024x1536 | `assets/cast/sc-05/perfil.webp` | gerada |
-| 61 | `CAST-SC-05-CORPO-COSTAS` | P1 | 3 | 1024x1536 | `assets/cast/sc-05/corpo-costas.webp` | gerada |
-| 62 | `CAST-SC-05-CORPO-LATERAL` | P1 | 3 | 1024x1536 | `assets/cast/sc-05/corpo-lateral.webp` | gerada |
-| 63 | `CAST-SC-06-ROSTO-34` | P1 | 3 | 1024x1536 | `assets/cast/sc-06/rosto-34.webp` | gerada |
-| 64 | `CAST-SC-06-PERFIL` | P1 | 3 | 1024x1536 | `assets/cast/sc-06/perfil.webp` | gerada |
-| 65 | `CAST-SC-06-CORPO-COSTAS` | P1 | 3 | 1024x1536 | `assets/cast/sc-06/corpo-costas.webp` | gerada |
-| 66 | `CAST-SC-06-CORPO-LATERAL` | P1 | 3 | 1024x1536 | `assets/cast/sc-06/corpo-lateral.webp` | gerada |
-| 67 | `CAST-SC-07-ROSTO-34` | P1 | 3 | 1024x1536 | `assets/cast/sc-07/rosto-34.webp` | gerada |
-| 68 | `CAST-SC-07-PERFIL` | P1 | 3 | 1024x1536 | `assets/cast/sc-07/perfil.webp` | gerada |
-| 69 | `CAST-SC-07-CORPO-COSTAS` | P1 | 3 | 1024x1536 | `assets/cast/sc-07/corpo-costas.webp` | gerada |
-| 70 | `CAST-SC-07-CORPO-LATERAL` | P1 | 3 | 1024x1536 | `assets/cast/sc-07/corpo-lateral.webp` | gerada |
-| 71 | `CAST-SC-08-ROSTO-34` | P1 | 3 | 1024x1536 | `assets/cast/sc-08/rosto-34.webp` | gerada |
-| 72 | `CAST-SC-08-PERFIL` | P1 | 3 | 1024x1536 | `assets/cast/sc-08/perfil.webp` | gerada |
-| 73 | `CAST-SC-08-CORPO-COSTAS` | P1 | 3 | 1024x1536 | `assets/cast/sc-08/corpo-costas.webp` | gerada |
-| 74 | `CAST-SC-08-CORPO-LATERAL` | P1 | 3 | 1024x1536 | `assets/cast/sc-08/corpo-lateral.webp` | gerada |
-| 75 | `CAST-SC-09-ROSTO-34` | P1 | 3 | 1024x1536 | `assets/cast/sc-09/rosto-34.webp` | gerada |
-| 76 | `CAST-SC-09-PERFIL` | P1 | 3 | 1024x1536 | `assets/cast/sc-09/perfil.webp` | gerada |
-| 77 | `CAST-SC-09-CORPO-COSTAS` | P1 | 3 | 1024x1536 | `assets/cast/sc-09/corpo-costas.webp` | gerada |
-| 78 | `CAST-SC-09-CORPO-LATERAL` | P1 | 3 | 1024x1536 | `assets/cast/sc-09/corpo-lateral.webp` | gerada |
-| 79 | `CAST-SC-10-ROSTO-34` | P1 | 3 | 1024x1536 | `assets/cast/sc-10/rosto-34.webp` | gerada |
-| 80 | `CAST-SC-10-PERFIL` | P1 | 3 | 1024x1536 | `assets/cast/sc-10/perfil.webp` | gerada |
-| 81 | `CAST-SC-10-CORPO-COSTAS` | P1 | 3 | 1024x1536 | `assets/cast/sc-10/corpo-costas.webp` | gerada |
-| 82 | `CAST-SC-10-CORPO-LATERAL` | P1 | 3 | 1024x1536 | `assets/cast/sc-10/corpo-lateral.webp` | gerada |
-| 83 | `DIR-SEDA-JANELA-PLATE` | P1 | 4 | 1536x1024 | `assets/directions/seda-janela/plate.webp` | gerada |
-| 84 | `DIR-CICLORAMA-MARFIM-PLATE` | P1 | 4 | 1536x1024 | `assets/directions/ciclorama-marfim/plate.webp` | gerada |
-| 85 | `DIR-ATELIER-PROVADOR-PLATE` | P1 | 4 | 1536x1024 | `assets/directions/atelier-provador/plate.webp` | gerada |
-| 86 | `DIR-RUA-GOLDEN-HOUR-PLATE` | P1 | 4 | 1536x1024 | `assets/directions/rua-golden-hour/plate.webp` | gerada |
-| 87 | `DIR-NOITE-FLASH-PLATE` | P1 | 4 | 1536x1024 | `assets/directions/noite-flash/plate.webp` | gerada |
-| 88 | `DIR-COLOR-BLOCK-PLATE` | P1 | 4 | 1536x1024 | `assets/directions/color-block/plate.webp` | gerada |
-| 89 | `DIR-CONCRETO-MINIMAL-PLATE` | P1 | 4 | 1536x1024 | `assets/directions/concreto-minimal/plate.webp` | gerada |
-| 90 | `DIR-NATUREZA-LINHO-PLATE` | P1 | 4 | 1536x1024 | `assets/directions/natureza-linho/plate.webp` | gerada |
-| 91 | `CAST-SC-01-EDITORIAL` | P2 | 3 | 1024x1536 | `assets/cast/sc-01/editorial.webp` | gerada |
-| 92 | `CAST-SC-02-EDITORIAL` | P2 | 3 | 1024x1536 | `assets/cast/sc-02/editorial.webp` | gerada |
-| 93 | `CAST-SC-03-EDITORIAL` | P2 | 3 | 1024x1536 | `assets/cast/sc-03/editorial.webp` | gerada |
-| 94 | `CAST-SC-04-EDITORIAL` | P2 | 3 | 1024x1536 | `assets/cast/sc-04/editorial.webp` | gerada |
-| 95 | `CAST-SC-05-EDITORIAL` | P2 | 3 | 1024x1536 | `assets/cast/sc-05/editorial.webp` | gerada |
-| 96 | `CAST-SC-06-EDITORIAL` | P2 | 3 | 1024x1536 | `assets/cast/sc-06/editorial.webp` | gerada |
-| 97 | `CAST-SC-07-EDITORIAL` | P2 | 3 | 1024x1536 | `assets/cast/sc-07/editorial.webp` | gerada |
-| 98 | `CAST-SC-08-EDITORIAL` | P2 | 3 | 1024x1536 | `assets/cast/sc-08/editorial.webp` | gerada |
-| 99 | `CAST-SC-09-EDITORIAL` | P2 | 3 | 1024x1536 | `assets/cast/sc-09/editorial.webp` | gerada |
-| 100 | `CAST-SC-10-EDITORIAL` | P2 | 3 | 1024x1536 | `assets/cast/sc-10/editorial.webp` | gerada |
+| 25 | `DIR-ESTUDIO-SARCENET-HERO` | P0 | 3 | 1024x1536 | `assets/directions/estudio-sarcenet/hero.webp` | pendente |
+| 26 | `DIR-SEDA-JANELA-HERO` | P0 | 3 | 1024x1536 | `assets/directions/seda-janela/hero.webp` | gerada |
+| 27 | `DIR-CICLORAMA-MARFIM-HERO` | P0 | 3 | 1024x1536 | `assets/directions/ciclorama-marfim/hero.webp` | gerada |
+| 28 | `DIR-ATELIER-PROVADOR-HERO` | P0 | 3 | 1024x1536 | `assets/directions/atelier-provador/hero.webp` | gerada |
+| 29 | `DIR-RUA-GOLDEN-HOUR-HERO` | P0 | 3 | 1024x1536 | `assets/directions/rua-golden-hour/hero.webp` | gerada |
+| 30 | `DIR-NOITE-FLASH-HERO` | P0 | 3 | 1024x1536 | `assets/directions/noite-flash/hero.webp` | gerada |
+| 31 | `DIR-COLOR-BLOCK-HERO` | P0 | 3 | 1024x1536 | `assets/directions/color-block/hero.webp` | gerada |
+| 32 | `DIR-CONCRETO-MINIMAL-HERO` | P0 | 3 | 1024x1536 | `assets/directions/concreto-minimal/hero.webp` | gerada |
+| 33 | `DIR-NATUREZA-LINHO-HERO` | P0 | 3 | 1024x1536 | `assets/directions/natureza-linho/hero.webp` | gerada |
+| 34 | `SHOW-S01-A` | P0 | 3 | 1024x1536 | `assets/projects/sarcenet-capsula-seda/s01-a.webp` | gerada |
+| 35 | `SHOW-S02-A` | P0 | 3 | 1024x1536 | `assets/projects/sarcenet-capsula-seda/s02-a.webp` | gerada |
+| 36 | `SHOW-S03-A` | P0 | 3 | 1024x1536 | `assets/projects/sarcenet-capsula-seda/s03-a.webp` | gerada |
+| 37 | `SHOW-S04-A` | P0 | 3 | 1024x1536 | `assets/projects/sarcenet-capsula-seda/s04-a.webp` | gerada |
+| 38 | `SHOW-S05-A` | P0 | 3 | 1024x1536 | `assets/projects/sarcenet-capsula-seda/s05-a.webp` | gerada |
+| 39 | `SHOW-S06-A` | P0 | 3 | 1024x1536 | `assets/projects/sarcenet-capsula-seda/s06-a.webp` | gerada |
+| 40 | `HOME-CAPA` | P0 | 3 | 1536x1024 | `assets/studio/capa.webp` | gerada |
+| 41 | `SHOW-S02-B` | P0 | 4 | 1024x1536 | `assets/projects/sarcenet-capsula-seda/s02-b.webp` | gerada |
+| 42 | `SHOW-S03-B` | P0 | 4 | 1024x1536 | `assets/projects/sarcenet-capsula-seda/s03-b.webp` | gerada |
+| 43 | `SHOW-S04-B` | P0 | 4 | 1024x1536 | `assets/projects/sarcenet-capsula-seda/s04-b.webp` | gerada |
+| 44 | `SHOW-S05-B` | P0 | 4 | 1024x1536 | `assets/projects/sarcenet-capsula-seda/s05-b.webp` | gerada |
+| 45 | `CAST-SC-01-ROSTO-34` | P1 | 3 | 1024x1536 | `assets/cast/sc-01/rosto-34.webp` | gerada |
+| 46 | `CAST-SC-01-PERFIL` | P1 | 3 | 1024x1536 | `assets/cast/sc-01/perfil.webp` | gerada |
+| 47 | `CAST-SC-01-CORPO-LATERAL` | P1 | 3 | 1024x1536 | `assets/cast/sc-01/corpo-lateral.webp` | gerada |
+| 48 | `CAST-SC-02-ROSTO-34` | P1 | 3 | 1024x1536 | `assets/cast/sc-02/rosto-34.webp` | gerada |
+| 49 | `CAST-SC-02-PERFIL` | P1 | 3 | 1024x1536 | `assets/cast/sc-02/perfil.webp` | gerada |
+| 50 | `CAST-SC-02-CORPO-COSTAS` | P1 | 3 | 1024x1536 | `assets/cast/sc-02/corpo-costas.webp` | gerada |
+| 51 | `CAST-SC-02-CORPO-LATERAL` | P1 | 3 | 1024x1536 | `assets/cast/sc-02/corpo-lateral.webp` | gerada |
+| 52 | `CAST-SC-03-ROSTO-34` | P1 | 3 | 1024x1536 | `assets/cast/sc-03/rosto-34.webp` | gerada |
+| 53 | `CAST-SC-03-PERFIL` | P1 | 3 | 1024x1536 | `assets/cast/sc-03/perfil.webp` | gerada |
+| 54 | `CAST-SC-03-CORPO-COSTAS` | P1 | 3 | 1024x1536 | `assets/cast/sc-03/corpo-costas.webp` | gerada |
+| 55 | `CAST-SC-03-CORPO-LATERAL` | P1 | 3 | 1024x1536 | `assets/cast/sc-03/corpo-lateral.webp` | gerada |
+| 56 | `CAST-SC-04-ROSTO-34` | P1 | 3 | 1024x1536 | `assets/cast/sc-04/rosto-34.webp` | gerada |
+| 57 | `CAST-SC-04-PERFIL` | P1 | 3 | 1024x1536 | `assets/cast/sc-04/perfil.webp` | gerada |
+| 58 | `CAST-SC-04-CORPO-COSTAS` | P1 | 3 | 1024x1536 | `assets/cast/sc-04/corpo-costas.webp` | gerada |
+| 59 | `CAST-SC-04-CORPO-LATERAL` | P1 | 3 | 1024x1536 | `assets/cast/sc-04/corpo-lateral.webp` | gerada |
+| 60 | `CAST-SC-05-ROSTO-34` | P1 | 3 | 1024x1536 | `assets/cast/sc-05/rosto-34.webp` | gerada |
+| 61 | `CAST-SC-05-PERFIL` | P1 | 3 | 1024x1536 | `assets/cast/sc-05/perfil.webp` | gerada |
+| 62 | `CAST-SC-05-CORPO-COSTAS` | P1 | 3 | 1024x1536 | `assets/cast/sc-05/corpo-costas.webp` | gerada |
+| 63 | `CAST-SC-05-CORPO-LATERAL` | P1 | 3 | 1024x1536 | `assets/cast/sc-05/corpo-lateral.webp` | gerada |
+| 64 | `CAST-SC-06-ROSTO-34` | P1 | 3 | 1024x1536 | `assets/cast/sc-06/rosto-34.webp` | gerada |
+| 65 | `CAST-SC-06-PERFIL` | P1 | 3 | 1024x1536 | `assets/cast/sc-06/perfil.webp` | gerada |
+| 66 | `CAST-SC-06-CORPO-COSTAS` | P1 | 3 | 1024x1536 | `assets/cast/sc-06/corpo-costas.webp` | gerada |
+| 67 | `CAST-SC-06-CORPO-LATERAL` | P1 | 3 | 1024x1536 | `assets/cast/sc-06/corpo-lateral.webp` | gerada |
+| 68 | `CAST-SC-07-ROSTO-34` | P1 | 3 | 1024x1536 | `assets/cast/sc-07/rosto-34.webp` | gerada |
+| 69 | `CAST-SC-07-PERFIL` | P1 | 3 | 1024x1536 | `assets/cast/sc-07/perfil.webp` | gerada |
+| 70 | `CAST-SC-07-CORPO-COSTAS` | P1 | 3 | 1024x1536 | `assets/cast/sc-07/corpo-costas.webp` | gerada |
+| 71 | `CAST-SC-07-CORPO-LATERAL` | P1 | 3 | 1024x1536 | `assets/cast/sc-07/corpo-lateral.webp` | gerada |
+| 72 | `CAST-SC-08-ROSTO-34` | P1 | 3 | 1024x1536 | `assets/cast/sc-08/rosto-34.webp` | gerada |
+| 73 | `CAST-SC-08-PERFIL` | P1 | 3 | 1024x1536 | `assets/cast/sc-08/perfil.webp` | gerada |
+| 74 | `CAST-SC-08-CORPO-COSTAS` | P1 | 3 | 1024x1536 | `assets/cast/sc-08/corpo-costas.webp` | gerada |
+| 75 | `CAST-SC-08-CORPO-LATERAL` | P1 | 3 | 1024x1536 | `assets/cast/sc-08/corpo-lateral.webp` | gerada |
+| 76 | `CAST-SC-09-ROSTO-34` | P1 | 3 | 1024x1536 | `assets/cast/sc-09/rosto-34.webp` | gerada |
+| 77 | `CAST-SC-09-PERFIL` | P1 | 3 | 1024x1536 | `assets/cast/sc-09/perfil.webp` | gerada |
+| 78 | `CAST-SC-09-CORPO-COSTAS` | P1 | 3 | 1024x1536 | `assets/cast/sc-09/corpo-costas.webp` | gerada |
+| 79 | `CAST-SC-09-CORPO-LATERAL` | P1 | 3 | 1024x1536 | `assets/cast/sc-09/corpo-lateral.webp` | gerada |
+| 80 | `CAST-SC-10-ROSTO-34` | P1 | 3 | 1024x1536 | `assets/cast/sc-10/rosto-34.webp` | gerada |
+| 81 | `CAST-SC-10-PERFIL` | P1 | 3 | 1024x1536 | `assets/cast/sc-10/perfil.webp` | gerada |
+| 82 | `CAST-SC-10-CORPO-COSTAS` | P1 | 3 | 1024x1536 | `assets/cast/sc-10/corpo-costas.webp` | gerada |
+| 83 | `CAST-SC-10-CORPO-LATERAL` | P1 | 3 | 1024x1536 | `assets/cast/sc-10/corpo-lateral.webp` | gerada |
+| 84 | `DIR-ESTUDIO-SARCENET-PLATE` | P1 | 4 | 1536x1024 | `assets/directions/estudio-sarcenet/plate.webp` | pendente |
+| 85 | `DIR-SEDA-JANELA-PLATE` | P1 | 4 | 1536x1024 | `assets/directions/seda-janela/plate.webp` | gerada |
+| 86 | `DIR-CICLORAMA-MARFIM-PLATE` | P1 | 4 | 1536x1024 | `assets/directions/ciclorama-marfim/plate.webp` | gerada |
+| 87 | `DIR-ATELIER-PROVADOR-PLATE` | P1 | 4 | 1536x1024 | `assets/directions/atelier-provador/plate.webp` | gerada |
+| 88 | `DIR-RUA-GOLDEN-HOUR-PLATE` | P1 | 4 | 1536x1024 | `assets/directions/rua-golden-hour/plate.webp` | gerada |
+| 89 | `DIR-NOITE-FLASH-PLATE` | P1 | 4 | 1536x1024 | `assets/directions/noite-flash/plate.webp` | gerada |
+| 90 | `DIR-COLOR-BLOCK-PLATE` | P1 | 4 | 1536x1024 | `assets/directions/color-block/plate.webp` | gerada |
+| 91 | `DIR-CONCRETO-MINIMAL-PLATE` | P1 | 4 | 1536x1024 | `assets/directions/concreto-minimal/plate.webp` | gerada |
+| 92 | `DIR-NATUREZA-LINHO-PLATE` | P1 | 4 | 1536x1024 | `assets/directions/natureza-linho/plate.webp` | gerada |
+| 93 | `CAST-SC-01-EDITORIAL` | P2 | 3 | 1024x1536 | `assets/cast/sc-01/editorial.webp` | gerada |
+| 94 | `CAST-SC-02-EDITORIAL` | P2 | 3 | 1024x1536 | `assets/cast/sc-02/editorial.webp` | gerada |
+| 95 | `CAST-SC-03-EDITORIAL` | P2 | 3 | 1024x1536 | `assets/cast/sc-03/editorial.webp` | gerada |
+| 96 | `CAST-SC-04-EDITORIAL` | P2 | 3 | 1024x1536 | `assets/cast/sc-04/editorial.webp` | gerada |
+| 97 | `CAST-SC-05-EDITORIAL` | P2 | 3 | 1024x1536 | `assets/cast/sc-05/editorial.webp` | gerada |
+| 98 | `CAST-SC-06-EDITORIAL` | P2 | 3 | 1024x1536 | `assets/cast/sc-06/editorial.webp` | gerada |
+| 99 | `CAST-SC-07-EDITORIAL` | P2 | 3 | 1024x1536 | `assets/cast/sc-07/editorial.webp` | gerada |
+| 100 | `CAST-SC-08-EDITORIAL` | P2 | 3 | 1024x1536 | `assets/cast/sc-08/editorial.webp` | gerada |
+| 101 | `CAST-SC-09-EDITORIAL` | P2 | 3 | 1024x1536 | `assets/cast/sc-09/editorial.webp` | gerada |
+| 102 | `CAST-SC-10-EDITORIAL` | P2 | 3 | 1024x1536 | `assets/cast/sc-10/editorial.webp` | gerada |
 
 ## CAST-SC-01-ROSTO-FRENTE
 
@@ -669,6 +671,31 @@ Photorealistic, shot on a full-frame digital camera. Natural skin texture with p
 Vertical 2:3 composition, 1024x1536. Fictional adult model: not a real person and not resembling any celebrity or public figure. No text, no logos, no watermarks, no borders, no extra panels.
 ```
 
+## DIR-ESTUDIO-SARCENET-HERO
+
+Estúdio Sarcenet · imagem-chave · Direções · P0 · onda 3
+
+- Salvar como: `incoming/DIR-ESTUDIO-SARCENET-HERO.png`
+- Destino: `assets/directions/estudio-sarcenet/hero.webp` (1024x1536)
+- Anexar: `assets/cast/sc-01/rosto-frente.webp`, `assets/cast/sc-01/corpo-frente.webp`
+- Depende de: `CAST-SC-01-ROSTO-FRENTE`, `CAST-SC-01-CORPO-FRENTE`
+- Aceite:
+  - Mesma identidade da modelo indicada.
+  - Peça descrita sem logos, construção legível.
+  - Luz e paleta coerentes com a direção.
+
+```text
+Art direction key image · "Estúdio Sarcenet". ONE editorial fashion photograph for a clothing store campaign.
+Attach and match exactly: sc-01-rosto-frente.webp, sc-01-corpo-frente.webp.
+Talent: SC-01 Helena, a fictional Brazilian woman, 27 years old, 1.76 m tall, slim natural build; medium brown skin (Monk skin tone 6) with warm undertone; oval face with high cheekbones, softly defined jaw; almond-shaped dark brown eyes; thick straight dark brows; full natural lips; a small mole just above the left side of the upper lip; long wavy dark brown hair, center part, reaching mid-back.
+Wardrobe: a champagne satin-finish floor-length column gown with a draped cowl neckline, wide straps and a high front slit; no logos, no visible brand.
+Pose: natural confident editorial pose, three-quarter view, medium long shot from the knees up, garment construction fully readable.
+Set: a seamless warm sand-grey paper backdrop curving into the floor with no horizon line, wall about #CFC3B4 with a soft falloff toward the upper right, floor one tone lighter, fine uniform paper grain, no props except a plain upholstered ottoman in the same tone when a seated pose needs it; no windows, plants, furniture, marble, skirting or patterns.
+Light: broad soft key light from camera left at about 45 degrees, slightly above eye level, gentle fill from the right, short soft shadows falling to the right, neutral daylight white balance. Art direction: quiet editorial catalogue photograph, the garment fully legible and colour faithful, short soft shadows falling to the right and a discreet contact shadow under the feet, small gold hoop earrings, nothing covering the neckline, cuffs, waist or hem. Lens and exposure feel: 50mm corpo inteiro · 85mm plano médio · 100mm macro. Color: true-to-life neutral color. Palette: Parede #CFC3B4, Chão #DDD1C3, Queda de luz #C4B8AA, Fundo do site #F2ECE3, Tinta #191512, Dourado #8A6B2F.
+Photorealistic, shot on a full-frame digital camera. Natural skin texture with pores and fine vellus hair, no plastic smoothing or beauty filter. Anatomically correct hands with five fingers. Physically plausible seams, stitching and fabric weight. Believable contact shadows and true optical depth of field.
+Vertical 2:3, 1024x1536, safe for 4:5 and 9:16 crops. Fictional adult model: not a real person and not resembling any celebrity or public figure. No text, no logos, no watermarks, no borders, no extra panels.
+```
+
 ## DIR-SEDA-JANELA-HERO
 
 Seda & janela · imagem-chave · Direções · P0 · onda 3
@@ -689,7 +716,7 @@ Talent: SC-01 Helena, a fictional Brazilian woman, 27 years old, 1.76 m tall, sl
 Wardrobe: a champagne silk-satin bias-cut midi slip dress with thin straps and a soft cowl neckline; no logos, no visible brand.
 Pose: natural confident editorial pose, three-quarter view, medium long shot from the knees up, garment construction fully readable.
 Set: a quiet sunlit apartment atelier with a tall window dressed in sheer ivory voile curtains, pale limestone floor, warm off-white plaster walls, a single linen-covered stool, generous empty space.
-Light: large soft window light from camera left with gentle falloff. Art direction: soft directional window light from camera left wrapping the face and making silk glow, gentle falloff into warm shadows, champagne and ivory palette, calm luxury, no clutter. Lens and exposure feel: 85mm · f/2. Color: warm filmic grade with soft highlight roll-off and fine grain. Palette: Champagne #D8C3A5, Marfim #F2EDE4, Rosé seco #B88A7E, Sombra quente #5B4B3E.
+Light: large soft window light from camera left with gentle falloff. Art direction: soft directional window light from camera left wrapping the face and making silk glow, gentle falloff into warm shadows, champagne and ivory palette, calm and quiet, no clutter. Lens and exposure feel: 85mm · f/2. Color: warm filmic grade with soft highlight roll-off and fine grain. Palette: Champagne #D8C3A5, Marfim #F2EDE4, Rosé seco #B88A7E, Sombra quente #5B4B3E.
 Photorealistic, shot on a full-frame digital camera. Natural skin texture with pores and fine vellus hair, no plastic smoothing or beauty filter. Anatomically correct hands with five fingers. Physically plausible seams, stitching and fabric weight. Believable contact shadows and true optical depth of field.
 Vertical 2:3, 1024x1536, safe for 4:5 and 9:16 crops. Fictional adult model: not a real person and not resembling any celebrity or public figure. No text, no logos, no watermarks, no borders, no extra panels.
 ```
@@ -739,7 +766,7 @@ Talent: SC-06 Marta, a fictional Brazilian woman, 46 years old, 1.69 m tall, sli
 Wardrobe: an ivory silk blouse tucked into high-waisted camel tailored trousers; no logos, no visible brand.
 Pose: natural confident editorial pose, three-quarter view, medium long shot from the knees up, garment construction fully readable.
 Set: an elegant boutique fitting room with a tall brass-framed mirror, walnut clothing rail with a few neutral garments, cream velvet curtain, warm wall sconces, small round ottoman.
-Light: large softbox key at 45 degrees camera left with a subtle ivory bounce fill. Art direction: warm intimate interior light, practical sconces glowing softly, honest behind-the-scenes boutique atmosphere, natural skin, readable garment color. Lens and exposure feel: 35mm · f/2.8. Color: warm filmic grade with soft highlight roll-off and fine grain. Palette: Nogueira #6E4E37, Latão #B08D57, Creme #EFE5D3.
+Light: broad soft key light from camera left at about 45 degrees, slightly above eye level, gentle fill from the right, short soft shadows falling to the right, neutral daylight white balance. Art direction: warm intimate interior light, practical sconces glowing softly, honest behind-the-scenes boutique atmosphere, natural skin, readable garment color. Lens and exposure feel: 35mm · f/2.8. Color: warm filmic grade with soft highlight roll-off and fine grain. Palette: Nogueira #6E4E37, Latão #B08D57, Creme #EFE5D3.
 Photorealistic, shot on a full-frame digital camera. Natural skin texture with pores and fine vellus hair, no plastic smoothing or beauty filter. Anatomically correct hands with five fingers. Physically plausible seams, stitching and fabric weight. Believable contact shadows and true optical depth of field.
 Vertical 2:3, 1024x1536, safe for 4:5 and 9:16 crops. Fictional adult model: not a real person and not resembling any celebrity or public figure. No text, no logos, no watermarks, no borders, no extra panels.
 ```
@@ -875,8 +902,8 @@ Tomada 1 · O toque da seda · keyframe A · Campanha Sarcenet · P0 · onda 3
 
 - Salvar como: `incoming/SHOW-S01-A.png`
 - Destino: `assets/projects/sarcenet-capsula-seda/s01-a.webp` (1024x1536)
-- Anexar: `assets/cast/sc-01/rosto-frente.webp`, `assets/cast/sc-01/corpo-frente.webp`, `assets/projects/sarcenet-capsula-seda/peca-frente.webp`, `assets/projects/sarcenet-capsula-seda/peca-detalhe.webp`
-- Depende de: `CAST-SC-01-ROSTO-FRENTE`, `CAST-SC-01-CORPO-FRENTE`, `SHOW-PECA-FRENTE`, `SHOW-PECA-DETALHE`
+- Anexar: `assets/cast/sc-01/corpo-frente.webp`, `assets/projects/sarcenet-capsula-seda/peca-frente.webp`, `assets/projects/sarcenet-capsula-seda/peca-detalhe.webp`
+- Depende de: `CAST-SC-01-CORPO-FRENTE`, `SHOW-PECA-FRENTE`, `SHOW-PECA-DETALHE`
 - Aceite:
   - Identidade de Helena e vestido idênticos às referências.
   - Enquadramento e ângulo exatamente como descritos (O toque da seda).
@@ -884,13 +911,17 @@ Tomada 1 · O toque da seda · keyframe A · Campanha Sarcenet · P0 · onda 3
 
 ```text
 KEYFRAME A · SHOT 1 · "O toque da seda". ONE photographic still frame for a fashion film; not a collage, not a contact sheet.
-Attach and follow: sc-01-rosto-frente.webp, sc-01-corpo-frente.webp, peca-frente.webp, peca-detalhe.webp.
-Talent: SC-01 Helena, a fictional Brazilian woman, 27 years old, 1.76 m tall, slim natural build; medium brown skin (Monk skin tone 6) with warm undertone; oval face with high cheekbones, softly defined jaw; almond-shaped dark brown eyes; thick straight dark brows; full natural lips; a small mole just above the left side of the upper lip; long wavy dark brown hair, center part, reaching mid-back. The talent lightly touches a visible detail of the garment with the fingertips.
+Attach and follow: sc-01-corpo-frente.webp, peca-frente.webp, peca-detalhe.webp.
+Image 1 (sc-01-corpo-frente.webp) = body proportions and height only. Ignore its clothing and setting.
+Image 2 (peca-frente.webp) = the garment authority: construction, colour, fit, lengths, seams, closures and asymmetry. Do not copy its person, props or setting.
+Image 3 (peca-detalhe.webp) = only the documented detail and the texture it resolves; colour still follows the garment authority.
+Talent: SC-01 Helena, a fictional Brazilian woman, 27 years old, 1.76 m tall, slim natural build; medium brown skin (Monk skin tone 6) with warm undertone; oval face with high cheekbones, softly defined jaw; almond-shaped dark brown eyes; thick straight dark brows; full natural lips; a small mole just above the left side of the upper lip; long wavy dark brown hair, center part, reaching mid-back. The talent lightly touches a visible detail of the garment with the fingertips. The face stays out of frame; only the hands may enter, relaxed, without folding the fabric.
 Wardrobe: Vestido slip midi de seda in champagne silk-satin; construction: bias-cut midi slip dress, thin adjustable spaghetti straps, soft cowl neckline, low scoop back with crossed straps, hem at mid-calf, no logo, no print. Fabric behavior: liquid drape, soft specular sheen that travels with the light, fine natural creases, never stiff.
-Camera: extreme close-up of a single visible detail, three-quarter view from camera right, camera at chest height, 100mm full-frame look at f/8, about 0.4 m from the subject. Focus on the visible garment detail.
+Camera: extreme close-up of one garment detail, a field about 14 cm tall, filled by the fabric surface: weave, sheen and how the folds catch the light, three-quarter view from camera right, camera at chest height, 100mm full-frame look at f/5.6, about 39 cm from the fabric. Focus on the fabric surface: weave, sheen and how the folds catch the light.
 Set: a quiet sunlit apartment atelier with a tall window dressed in sheer ivory voile curtains, pale limestone floor, warm off-white plaster walls, a single linen-covered stool, generous empty space.
-Light: large soft window light from camera left with gentle falloff. Art direction: soft directional window light from camera left wrapping the face and making silk glow, gentle falloff into warm shadows, champagne and ivory palette, calm luxury, no clutter. Color: warm filmic grade with soft highlight roll-off and fine grain.
-Photorealistic, shot on a full-frame digital camera. Natural skin texture with pores and fine vellus hair, no plastic smoothing or beauty filter. Anatomically correct hands with five fingers. Physically plausible seams, stitching and fabric weight. Believable contact shadows and true optical depth of field.
+Light: large soft window light from camera left with gentle falloff. Art direction: soft directional window light from camera left wrapping the face and making silk glow, gentle falloff into warm shadows, champagne and ivory palette, calm and quiet, no clutter. Color: warm filmic grade with soft highlight roll-off and fine grain; the garment keeps the exact colour of the garment authority under this light.
+Photorealistic photograph with true optical depth of field and believable contact shadows. Identity comes from the facial features only: do not copy the retouching, skin smoothing or makeup gloss of the reference. Natural skin with pores, fine vellus hair and small irregularities; individual hair strands with a few loose flyaways. Anatomically correct hands with five fingers; feet read as one left and one right foot, never mirrored. Physically plausible seams, stitching and fabric weight. Light is described by its effect: no lamps, stands, reflectors or studio edges in frame.
+Macro optics: a thin but readable plane of focus that falls off across the fabric, no oversharpening halos. Show only the weave, stitching and finish that the garment references resolve; never fabricate micro-texture, extra stitching or trims.
 Composition: 9:16 (1024x1536 → recorte 9:16). Keep identical across every frame of this film: face, hair, garment construction, color and light direction.
 No text, logos, watermarks, borders or extra panels. The talent is a fictional adult.
 ```
@@ -911,12 +942,15 @@ Tomada 2 · O olhar · keyframe A · Campanha Sarcenet · P0 · onda 3
 ```text
 KEYFRAME A · SHOT 2 · "O olhar". ONE photographic still frame for a fashion film; not a collage, not a contact sheet.
 Attach and follow: sc-01-rosto-frente.webp, sc-01-corpo-frente.webp, peca-frente.webp.
+Image 1 (sc-01-rosto-frente.webp) = identity only: facial features, adult age, hair and skin tone. Ignore its clothing, makeup gloss, retouching, light and background.
+Image 2 (sc-01-corpo-frente.webp) = body proportions and height only. Ignore its clothing and setting.
+Image 3 (peca-frente.webp) = the garment authority: construction, colour, fit, lengths, seams, closures and asymmetry. Do not copy its person, props or setting.
 Talent: SC-01 Helena, a fictional Brazilian woman, 27 years old, 1.76 m tall, slim natural build; medium brown skin (Monk skin tone 6) with warm undertone; oval face with high cheekbones, softly defined jaw; almond-shaped dark brown eyes; thick straight dark brows; full natural lips; a small mole just above the left side of the upper lip; long wavy dark brown hair, center part, reaching mid-back. The talent slowly shifts the gaze toward the lens and holds.
 Wardrobe: Vestido slip midi de seda in champagne silk-satin; construction: bias-cut midi slip dress, thin adjustable spaghetti straps, soft cowl neckline, low scoop back with crossed straps, hem at mid-calf, no logo, no print. Fabric behavior: liquid drape, soft specular sheen that travels with the light, fine natural creases, never stiff.
-Camera: tight close-up of the face, straight-on frontal view, camera at eye level, 85mm full-frame look at f/2.8, about 0.8 m from the subject. Focus on the eyes.
+Camera: tight close-up of the face, straight-on frontal view, camera at eye level, 85mm full-frame look at f/2.8, about 76 cm from the subject. Focus on the eyes.
 Set: a quiet sunlit apartment atelier with a tall window dressed in sheer ivory voile curtains, pale limestone floor, warm off-white plaster walls, a single linen-covered stool, generous empty space.
-Light: large soft window light from camera left with gentle falloff. Art direction: soft directional window light from camera left wrapping the face and making silk glow, gentle falloff into warm shadows, champagne and ivory palette, calm luxury, no clutter. Color: warm filmic grade with soft highlight roll-off and fine grain.
-Photorealistic, shot on a full-frame digital camera. Natural skin texture with pores and fine vellus hair, no plastic smoothing or beauty filter. Anatomically correct hands with five fingers. Physically plausible seams, stitching and fabric weight. Believable contact shadows and true optical depth of field.
+Light: large soft window light from camera left with gentle falloff. Art direction: soft directional window light from camera left wrapping the face and making silk glow, gentle falloff into warm shadows, champagne and ivory palette, calm and quiet, no clutter. Color: warm filmic grade with soft highlight roll-off and fine grain; the garment keeps the exact colour of the garment authority under this light.
+Photorealistic photograph with true optical depth of field and believable contact shadows. Identity comes from the facial features only: do not copy the retouching, skin smoothing or makeup gloss of the reference. Natural skin with pores, fine vellus hair and small irregularities; individual hair strands with a few loose flyaways. Anatomically correct hands with five fingers; feet read as one left and one right foot, never mirrored. Physically plausible seams, stitching and fabric weight. Light is described by its effect: no lamps, stands, reflectors or studio edges in frame.
 Composition: 9:16 (1024x1536 → recorte 9:16). Keep identical across every frame of this film: face, hair, garment construction, color and light direction.
 No text, logos, watermarks, borders or extra panels. The talent is a fictional adult.
 ```
@@ -937,12 +971,15 @@ Tomada 3 · O caimento · keyframe A · Campanha Sarcenet · P0 · onda 3
 ```text
 KEYFRAME A · SHOT 3 · "O caimento". ONE photographic still frame for a fashion film; not a collage, not a contact sheet.
 Attach and follow: sc-01-rosto-frente.webp, sc-01-corpo-frente.webp, peca-frente.webp.
+Image 1 (sc-01-rosto-frente.webp) = identity only: facial features, adult age, hair and skin tone. Ignore its clothing, makeup gloss, retouching, light and background.
+Image 2 (sc-01-corpo-frente.webp) = body proportions and height only. Ignore its clothing and setting.
+Image 3 (peca-frente.webp) = the garment authority: construction, colour, fit, lengths, seams, closures and asymmetry. Do not copy its person, props or setting.
 Talent: SC-01 Helena, a fictional Brazilian woman, 27 years old, 1.76 m tall, slim natural build; medium brown skin (Monk skin tone 6) with warm undertone; oval face with high cheekbones, softly defined jaw; almond-shaped dark brown eyes; thick straight dark brows; full natural lips; a small mole just above the left side of the upper lip; long wavy dark brown hair, center part, reaching mid-back. The talent holds still with calm natural breathing.
 Wardrobe: Vestido slip midi de seda in champagne silk-satin; construction: bias-cut midi slip dress, thin adjustable spaghetti straps, soft cowl neckline, low scoop back with crossed straps, hem at mid-calf, no logo, no print. Fabric behavior: liquid drape, soft specular sheen that travels with the light, fine natural creases, never stiff.
 Camera: full-body shot, head to toe with margins, three-quarter view from camera left, camera at chest height, 50mm full-frame look at f/5.6, about 2.8 m from the subject. Focus on the garment.
 Set: a quiet sunlit apartment atelier with a tall window dressed in sheer ivory voile curtains, pale limestone floor, warm off-white plaster walls, a single linen-covered stool, generous empty space.
-Light: large soft window light from camera left with gentle falloff. Art direction: soft directional window light from camera left wrapping the face and making silk glow, gentle falloff into warm shadows, champagne and ivory palette, calm luxury, no clutter. Color: warm filmic grade with soft highlight roll-off and fine grain.
-Photorealistic, shot on a full-frame digital camera. Natural skin texture with pores and fine vellus hair, no plastic smoothing or beauty filter. Anatomically correct hands with five fingers. Physically plausible seams, stitching and fabric weight. Believable contact shadows and true optical depth of field.
+Light: large soft window light from camera left with gentle falloff. Art direction: soft directional window light from camera left wrapping the face and making silk glow, gentle falloff into warm shadows, champagne and ivory palette, calm and quiet, no clutter. Color: warm filmic grade with soft highlight roll-off and fine grain; the garment keeps the exact colour of the garment authority under this light.
+Photorealistic photograph with true optical depth of field and believable contact shadows. Identity comes from the facial features only: do not copy the retouching, skin smoothing or makeup gloss of the reference. Natural skin with pores, fine vellus hair and small irregularities; individual hair strands with a few loose flyaways. Anatomically correct hands with five fingers; feet read as one left and one right foot, never mirrored. Physically plausible seams, stitching and fabric weight. Light is described by its effect: no lamps, stands, reflectors or studio edges in frame.
 Composition: 9:16 (1024x1536 → recorte 9:16). Keep identical across every frame of this film: face, hair, garment construction, color and light direction.
 No text, logos, watermarks, borders or extra panels. The talent is a fictional adult.
 ```
@@ -963,12 +1000,15 @@ Tomada 4 · As costas · keyframe A · Campanha Sarcenet · P0 · onda 3
 ```text
 KEYFRAME A · SHOT 4 · "As costas". ONE photographic still frame for a fashion film; not a collage, not a contact sheet.
 Attach and follow: sc-01-rosto-frente.webp, sc-01-corpo-frente.webp, peca-frente.webp.
+Image 1 (sc-01-rosto-frente.webp) = identity only: facial features, adult age, hair and skin tone. Ignore its clothing, makeup gloss, retouching, light and background.
+Image 2 (sc-01-corpo-frente.webp) = body proportions and height only. Ignore its clothing and setting.
+Image 3 (peca-frente.webp) = the garment authority: construction, colour, fit, lengths, seams, closures and asymmetry. Do not copy its person, props or setting.
 Talent: SC-01 Helena, a fictional Brazilian woman, 27 years old, 1.76 m tall, slim natural build; medium brown skin (Monk skin tone 6) with warm undertone; oval face with high cheekbones, softly defined jaw; almond-shaped dark brown eyes; thick straight dark brows; full natural lips; a small mole just above the left side of the upper lip; long wavy dark brown hair, center part, reaching mid-back. The talent faces the camera, about to turn.
 Wardrobe: Vestido slip midi de seda in champagne silk-satin; construction: bias-cut midi slip dress, thin adjustable spaghetti straps, soft cowl neckline, low scoop back with crossed straps, hem at mid-calf, no logo, no print. Fabric behavior: liquid drape, soft specular sheen that travels with the light, fine natural creases, never stiff.
 Camera: medium long shot from the knees up, straight-on frontal view, camera at waist height, 50mm full-frame look at f/4, about 1.8 m from the subject. Focus on the garment.
 Set: a quiet sunlit apartment atelier with a tall window dressed in sheer ivory voile curtains, pale limestone floor, warm off-white plaster walls, a single linen-covered stool, generous empty space.
-Light: large soft window light from camera left with gentle falloff. Art direction: soft directional window light from camera left wrapping the face and making silk glow, gentle falloff into warm shadows, champagne and ivory palette, calm luxury, no clutter. Color: warm filmic grade with soft highlight roll-off and fine grain.
-Photorealistic, shot on a full-frame digital camera. Natural skin texture with pores and fine vellus hair, no plastic smoothing or beauty filter. Anatomically correct hands with five fingers. Physically plausible seams, stitching and fabric weight. Believable contact shadows and true optical depth of field.
+Light: large soft window light from camera left with gentle falloff. Art direction: soft directional window light from camera left wrapping the face and making silk glow, gentle falloff into warm shadows, champagne and ivory palette, calm and quiet, no clutter. Color: warm filmic grade with soft highlight roll-off and fine grain; the garment keeps the exact colour of the garment authority under this light.
+Photorealistic photograph with true optical depth of field and believable contact shadows. Identity comes from the facial features only: do not copy the retouching, skin smoothing or makeup gloss of the reference. Natural skin with pores, fine vellus hair and small irregularities; individual hair strands with a few loose flyaways. Anatomically correct hands with five fingers; feet read as one left and one right foot, never mirrored. Physically plausible seams, stitching and fabric weight. Light is described by its effect: no lamps, stands, reflectors or studio edges in frame.
 Composition: 9:16 (1024x1536 → recorte 9:16). Keep identical across every frame of this film: face, hair, garment construction, color and light direction.
 No text, logos, watermarks, borders or extra panels. The talent is a fictional adult.
 ```
@@ -989,12 +1029,15 @@ Tomada 5 · Dois passos · keyframe A · Campanha Sarcenet · P0 · onda 3
 ```text
 KEYFRAME A · SHOT 5 · "Dois passos". ONE photographic still frame for a fashion film; not a collage, not a contact sheet.
 Attach and follow: sc-01-rosto-frente.webp, sc-01-corpo-frente.webp, peca-frente.webp.
+Image 1 (sc-01-rosto-frente.webp) = identity only: facial features, adult age, hair and skin tone. Ignore its clothing, makeup gloss, retouching, light and background.
+Image 2 (sc-01-corpo-frente.webp) = body proportions and height only. Ignore its clothing and setting.
+Image 3 (peca-frente.webp) = the garment authority: construction, colour, fit, lengths, seams, closures and asymmetry. Do not copy its person, props or setting.
 Talent: SC-01 Helena, a fictional Brazilian woman, 27 years old, 1.76 m tall, slim natural build; medium brown skin (Monk skin tone 6) with warm undertone; oval face with high cheekbones, softly defined jaw; almond-shaped dark brown eyes; thick straight dark brows; full natural lips; a small mole just above the left side of the upper lip; long wavy dark brown hair, center part, reaching mid-back. The talent is about to take the first step, weight on the back foot.
 Wardrobe: Vestido slip midi de seda in champagne silk-satin; construction: bias-cut midi slip dress, thin adjustable spaghetti straps, soft cowl neckline, low scoop back with crossed straps, hem at mid-calf, no logo, no print. Fabric behavior: liquid drape, soft specular sheen that travels with the light, fine natural creases, never stiff.
 Camera: full-body shot, head to toe with margins, three-quarter view from camera right, camera at chest height, 35mm full-frame look at f/5.6, about 2.0 m from the subject. Focus on the garment.
 Set: a quiet sunlit apartment atelier with a tall window dressed in sheer ivory voile curtains, pale limestone floor, warm off-white plaster walls, a single linen-covered stool, generous empty space.
-Light: large soft window light from camera left with gentle falloff. Art direction: soft directional window light from camera left wrapping the face and making silk glow, gentle falloff into warm shadows, champagne and ivory palette, calm luxury, no clutter. Color: warm filmic grade with soft highlight roll-off and fine grain.
-Photorealistic, shot on a full-frame digital camera. Natural skin texture with pores and fine vellus hair, no plastic smoothing or beauty filter. Anatomically correct hands with five fingers. Physically plausible seams, stitching and fabric weight. Believable contact shadows and true optical depth of field.
+Light: large soft window light from camera left with gentle falloff. Art direction: soft directional window light from camera left wrapping the face and making silk glow, gentle falloff into warm shadows, champagne and ivory palette, calm and quiet, no clutter. Color: warm filmic grade with soft highlight roll-off and fine grain; the garment keeps the exact colour of the garment authority under this light.
+Photorealistic photograph with true optical depth of field and believable contact shadows. Identity comes from the facial features only: do not copy the retouching, skin smoothing or makeup gloss of the reference. Natural skin with pores, fine vellus hair and small irregularities; individual hair strands with a few loose flyaways. Anatomically correct hands with five fingers; feet read as one left and one right foot, never mirrored. Physically plausible seams, stitching and fabric weight. Light is described by its effect: no lamps, stands, reflectors or studio edges in frame.
 Composition: 9:16 (1024x1536 → recorte 9:16). Keep identical across every frame of this film: face, hair, garment construction, color and light direction.
 No text, logos, watermarks, borders or extra panels. The talent is a fictional adult.
 ```
@@ -1015,12 +1058,15 @@ Tomada 6 · Assinatura · keyframe A · Campanha Sarcenet · P0 · onda 3
 ```text
 KEYFRAME A · SHOT 6 · "Assinatura". ONE photographic still frame for a fashion film; not a collage, not a contact sheet.
 Attach and follow: sc-01-rosto-frente.webp, sc-01-corpo-frente.webp, peca-frente.webp.
+Image 1 (sc-01-rosto-frente.webp) = identity only: facial features, adult age, hair and skin tone. Ignore its clothing, makeup gloss, retouching, light and background.
+Image 2 (sc-01-corpo-frente.webp) = body proportions and height only. Ignore its clothing and setting.
+Image 3 (peca-frente.webp) = the garment authority: construction, colour, fit, lengths, seams, closures and asymmetry. Do not copy its person, props or setting.
 Talent: SC-01 Helena, a fictional Brazilian woman, 27 years old, 1.76 m tall, slim natural build; medium brown skin (Monk skin tone 6) with warm undertone; oval face with high cheekbones, softly defined jaw; almond-shaped dark brown eyes; thick straight dark brows; full natural lips; a small mole just above the left side of the upper lip; long wavy dark brown hair, center part, reaching mid-back. The talent holds still with calm natural breathing.
 Wardrobe: Vestido slip midi de seda in champagne silk-satin; construction: bias-cut midi slip dress, thin adjustable spaghetti straps, soft cowl neckline, low scoop back with crossed straps, hem at mid-calf, no logo, no print. Fabric behavior: liquid drape, soft specular sheen that travels with the light, fine natural creases, never stiff.
 Camera: medium long shot from the knees up, straight-on frontal view, camera at chest height, 85mm full-frame look at f/4, about 3.1 m from the subject. Focus on the eyes.
 Set: a quiet sunlit apartment atelier with a tall window dressed in sheer ivory voile curtains, pale limestone floor, warm off-white plaster walls, a single linen-covered stool, generous empty space.
-Light: large soft window light from camera left with gentle falloff. Art direction: soft directional window light from camera left wrapping the face and making silk glow, gentle falloff into warm shadows, champagne and ivory palette, calm luxury, no clutter. Color: warm filmic grade with soft highlight roll-off and fine grain.
-Photorealistic, shot on a full-frame digital camera. Natural skin texture with pores and fine vellus hair, no plastic smoothing or beauty filter. Anatomically correct hands with five fingers. Physically plausible seams, stitching and fabric weight. Believable contact shadows and true optical depth of field.
+Light: large soft window light from camera left with gentle falloff. Art direction: soft directional window light from camera left wrapping the face and making silk glow, gentle falloff into warm shadows, champagne and ivory palette, calm and quiet, no clutter. Color: warm filmic grade with soft highlight roll-off and fine grain; the garment keeps the exact colour of the garment authority under this light.
+Photorealistic photograph with true optical depth of field and believable contact shadows. Identity comes from the facial features only: do not copy the retouching, skin smoothing or makeup gloss of the reference. Natural skin with pores, fine vellus hair and small irregularities; individual hair strands with a few loose flyaways. Anatomically correct hands with five fingers; feet read as one left and one right foot, never mirrored. Physically plausible seams, stitching and fabric weight. Light is described by its effect: no lamps, stands, reflectors or studio edges in frame.
 Composition: 9:16 (1024x1536 → recorte 9:16). Keep identical across every frame of this film: face, hair, garment construction, color and light direction.
 No text, logos, watermarks, borders or extra panels. The talent is a fictional adult.
 ```
@@ -1064,12 +1110,16 @@ Tomada 2 · O olhar · keyframe B · Campanha Sarcenet · P0 · onda 4
 ```text
 KEYFRAME B · SHOT 2 · "O olhar". ONE photographic still frame for a fashion film; not a collage, not a contact sheet.
 Attach and follow: sc-01-rosto-frente.webp, sc-01-corpo-frente.webp, peca-frente.webp, sarcenet-capsula-seda-s02-a.png.
+Image 1 (sc-01-rosto-frente.webp) = identity only: facial features, adult age, hair and skin tone. Ignore its clothing, makeup gloss, retouching, light and background.
+Image 2 (sc-01-corpo-frente.webp) = body proportions and height only. Ignore its clothing and setting.
+Image 3 (peca-frente.webp) = the garment authority: construction, colour, fit, lengths, seams, closures and asymmetry. Do not copy its person, props or setting.
+Image 4 (sarcenet-capsula-seda-s02-a.png) = continuity only: set, light, pose and framing of the start frame. The garment references still govern the garment.
 Talent: SC-01 Helena, a fictional Brazilian woman, 27 years old, 1.76 m tall, slim natural build; medium brown skin (Monk skin tone 6) with warm undertone; oval face with high cheekbones, softly defined jaw; almond-shaped dark brown eyes; thick straight dark brows; full natural lips; a small mole just above the left side of the upper lip; long wavy dark brown hair, center part, reaching mid-back. The talent slowly shifts the gaze toward the lens and holds, final moment.
 Wardrobe: Vestido slip midi de seda in champagne silk-satin; construction: bias-cut midi slip dress, thin adjustable spaghetti straps, soft cowl neckline, low scoop back with crossed straps, hem at mid-calf, no logo, no print. Fabric behavior: liquid drape, soft specular sheen that travels with the light, fine natural creases, never stiff.
 Camera: medium shot from the waist up, straight-on frontal view, camera at eye level, 85mm full-frame look at f/4, about 2.0 m from the subject. Focus on the eyes.
 Set: a quiet sunlit apartment atelier with a tall window dressed in sheer ivory voile curtains, pale limestone floor, warm off-white plaster walls, a single linen-covered stool, generous empty space.
-Light: large soft window light from camera left with gentle falloff. Art direction: soft directional window light from camera left wrapping the face and making silk glow, gentle falloff into warm shadows, champagne and ivory palette, calm luxury, no clutter. Color: warm filmic grade with soft highlight roll-off and fine grain.
-Photorealistic, shot on a full-frame digital camera. Natural skin texture with pores and fine vellus hair, no plastic smoothing or beauty filter. Anatomically correct hands with five fingers. Physically plausible seams, stitching and fabric weight. Believable contact shadows and true optical depth of field.
+Light: large soft window light from camera left with gentle falloff. Art direction: soft directional window light from camera left wrapping the face and making silk glow, gentle falloff into warm shadows, champagne and ivory palette, calm and quiet, no clutter. Color: warm filmic grade with soft highlight roll-off and fine grain; the garment keeps the exact colour of the garment authority under this light.
+Photorealistic photograph with true optical depth of field and believable contact shadows. Identity comes from the facial features only: do not copy the retouching, skin smoothing or makeup gloss of the reference. Natural skin with pores, fine vellus hair and small irregularities; individual hair strands with a few loose flyaways. Anatomically correct hands with five fingers; feet read as one left and one right foot, never mirrored. Physically plausible seams, stitching and fabric weight. Light is described by its effect: no lamps, stands, reflectors or studio edges in frame.
 Composition: 9:16 (1024x1536 → recorte 9:16). Keep identical across every frame of this film: face, hair, garment construction, color and light direction.
 No text, logos, watermarks, borders or extra panels. The talent is a fictional adult.
 ```
@@ -1090,12 +1140,16 @@ Tomada 3 · O caimento · keyframe B · Campanha Sarcenet · P0 · onda 4
 ```text
 KEYFRAME B · SHOT 3 · "O caimento". ONE photographic still frame for a fashion film; not a collage, not a contact sheet.
 Attach and follow: sc-01-rosto-frente.webp, sc-01-corpo-frente.webp, peca-frente.webp, sarcenet-capsula-seda-s03-a.png.
+Image 1 (sc-01-rosto-frente.webp) = identity only: facial features, adult age, hair and skin tone. Ignore its clothing, makeup gloss, retouching, light and background.
+Image 2 (sc-01-corpo-frente.webp) = body proportions and height only. Ignore its clothing and setting.
+Image 3 (peca-frente.webp) = the garment authority: construction, colour, fit, lengths, seams, closures and asymmetry. Do not copy its person, props or setting.
+Image 4 (sarcenet-capsula-seda-s03-a.png) = continuity only: set, light, pose and framing of the start frame. The garment references still govern the garment.
 Talent: SC-01 Helena, a fictional Brazilian woman, 27 years old, 1.76 m tall, slim natural build; medium brown skin (Monk skin tone 6) with warm undertone; oval face with high cheekbones, softly defined jaw; almond-shaped dark brown eyes; thick straight dark brows; full natural lips; a small mole just above the left side of the upper lip; long wavy dark brown hair, center part, reaching mid-back. The talent holds still with calm natural breathing, final moment.
 Wardrobe: Vestido slip midi de seda in champagne silk-satin; construction: bias-cut midi slip dress, thin adjustable spaghetti straps, soft cowl neckline, low scoop back with crossed straps, hem at mid-calf, no logo, no print. Fabric behavior: liquid drape, soft specular sheen that travels with the light, fine natural creases, never stiff.
 Camera: full-body shot, head to toe with margins, straight-on frontal view, camera at chest height, 50mm full-frame look at f/5.6, about 2.8 m from the subject. Focus on the garment.
 Set: a quiet sunlit apartment atelier with a tall window dressed in sheer ivory voile curtains, pale limestone floor, warm off-white plaster walls, a single linen-covered stool, generous empty space.
-Light: large soft window light from camera left with gentle falloff. Art direction: soft directional window light from camera left wrapping the face and making silk glow, gentle falloff into warm shadows, champagne and ivory palette, calm luxury, no clutter. Color: warm filmic grade with soft highlight roll-off and fine grain.
-Photorealistic, shot on a full-frame digital camera. Natural skin texture with pores and fine vellus hair, no plastic smoothing or beauty filter. Anatomically correct hands with five fingers. Physically plausible seams, stitching and fabric weight. Believable contact shadows and true optical depth of field.
+Light: large soft window light from camera left with gentle falloff. Art direction: soft directional window light from camera left wrapping the face and making silk glow, gentle falloff into warm shadows, champagne and ivory palette, calm and quiet, no clutter. Color: warm filmic grade with soft highlight roll-off and fine grain; the garment keeps the exact colour of the garment authority under this light.
+Photorealistic photograph with true optical depth of field and believable contact shadows. Identity comes from the facial features only: do not copy the retouching, skin smoothing or makeup gloss of the reference. Natural skin with pores, fine vellus hair and small irregularities; individual hair strands with a few loose flyaways. Anatomically correct hands with five fingers; feet read as one left and one right foot, never mirrored. Physically plausible seams, stitching and fabric weight. Light is described by its effect: no lamps, stands, reflectors or studio edges in frame.
 Composition: 9:16 (1024x1536 → recorte 9:16). Keep identical across every frame of this film: face, hair, garment construction, color and light direction.
 No text, logos, watermarks, borders or extra panels. The talent is a fictional adult.
 ```
@@ -1116,12 +1170,18 @@ Tomada 4 · As costas · keyframe B · Campanha Sarcenet · P0 · onda 4
 ```text
 KEYFRAME B · SHOT 4 · "As costas". ONE photographic still frame for a fashion film; not a collage, not a contact sheet.
 Attach and follow: sc-01-rosto-frente.webp, sc-01-corpo-frente.webp, sc-01-corpo-costas.webp, peca-frente.webp, peca-costas.webp, sarcenet-capsula-seda-s04-a.png.
+Image 1 (sc-01-rosto-frente.webp) = identity only: facial features, adult age, hair and skin tone. Ignore its clothing, makeup gloss, retouching, light and background.
+Image 2 (sc-01-corpo-frente.webp) = body proportions and height only. Ignore its clothing and setting.
+Image 3 (sc-01-corpo-costas.webp) = how the hair and body read from behind only. Ignore its clothing.
+Image 4 (peca-frente.webp) = the garment authority: construction, colour, fit, lengths, seams, closures and asymmetry. Do not copy its person, props or setting.
+Image 5 (peca-costas.webp) = the documented back construction of the garment only.
+Image 6 (sarcenet-capsula-seda-s04-a.png) = continuity only: set, light, pose and framing of the start frame. The garment references still govern the garment.
 Talent: SC-01 Helena, a fictional Brazilian woman, 27 years old, 1.76 m tall, slim natural build; medium brown skin (Monk skin tone 6) with warm undertone; oval face with high cheekbones, softly defined jaw; almond-shaped dark brown eyes; thick straight dark brows; full natural lips; a small mole just above the left side of the upper lip; long wavy dark brown hair, center part, reaching mid-back. The talent has completed the turn and now faces away from the camera.
 Wardrobe: Vestido slip midi de seda in champagne silk-satin; construction: bias-cut midi slip dress, thin adjustable spaghetti straps, soft cowl neckline, low scoop back with crossed straps, hem at mid-calf, no logo, no print. Fabric behavior: liquid drape, soft specular sheen that travels with the light, fine natural creases, never stiff.
 Camera: medium long shot from the knees up, view from directly behind, camera at waist height, 50mm full-frame look at f/4, about 1.8 m from the subject. Focus on the garment.
 Set: a quiet sunlit apartment atelier with a tall window dressed in sheer ivory voile curtains, pale limestone floor, warm off-white plaster walls, a single linen-covered stool, generous empty space.
-Light: large soft window light from camera left with gentle falloff. Art direction: soft directional window light from camera left wrapping the face and making silk glow, gentle falloff into warm shadows, champagne and ivory palette, calm luxury, no clutter. Color: warm filmic grade with soft highlight roll-off and fine grain.
-Photorealistic, shot on a full-frame digital camera. Natural skin texture with pores and fine vellus hair, no plastic smoothing or beauty filter. Anatomically correct hands with five fingers. Physically plausible seams, stitching and fabric weight. Believable contact shadows and true optical depth of field.
+Light: large soft window light from camera left with gentle falloff. Art direction: soft directional window light from camera left wrapping the face and making silk glow, gentle falloff into warm shadows, champagne and ivory palette, calm and quiet, no clutter. Color: warm filmic grade with soft highlight roll-off and fine grain; the garment keeps the exact colour of the garment authority under this light.
+Photorealistic photograph with true optical depth of field and believable contact shadows. Identity comes from the facial features only: do not copy the retouching, skin smoothing or makeup gloss of the reference. Natural skin with pores, fine vellus hair and small irregularities; individual hair strands with a few loose flyaways. Anatomically correct hands with five fingers; feet read as one left and one right foot, never mirrored. Physically plausible seams, stitching and fabric weight. Light is described by its effect: no lamps, stands, reflectors or studio edges in frame.
 Composition: 9:16 (1024x1536 → recorte 9:16). Keep identical across every frame of this film: face, hair, garment construction, color and light direction.
 No text, logos, watermarks, borders or extra panels. The talent is a fictional adult.
 ```
@@ -1142,12 +1202,16 @@ Tomada 5 · Dois passos · keyframe B · Campanha Sarcenet · P0 · onda 4
 ```text
 KEYFRAME B · SHOT 5 · "Dois passos". ONE photographic still frame for a fashion film; not a collage, not a contact sheet.
 Attach and follow: sc-01-rosto-frente.webp, sc-01-corpo-frente.webp, peca-frente.webp, sarcenet-capsula-seda-s05-a.png.
+Image 1 (sc-01-rosto-frente.webp) = identity only: facial features, adult age, hair and skin tone. Ignore its clothing, makeup gloss, retouching, light and background.
+Image 2 (sc-01-corpo-frente.webp) = body proportions and height only. Ignore its clothing and setting.
+Image 3 (peca-frente.webp) = the garment authority: construction, colour, fit, lengths, seams, closures and asymmetry. Do not copy its person, props or setting.
+Image 4 (sarcenet-capsula-seda-s05-a.png) = continuity only: set, light, pose and framing of the start frame. The garment references still govern the garment.
 Talent: SC-01 Helena, a fictional Brazilian woman, 27 years old, 1.76 m tall, slim natural build; medium brown skin (Monk skin tone 6) with warm undertone; oval face with high cheekbones, softly defined jaw; almond-shaped dark brown eyes; thick straight dark brows; full natural lips; a small mole just above the left side of the upper lip; long wavy dark brown hair, center part, reaching mid-back. The talent is mid-way through the second step, weight on the front foot.
 Wardrobe: Vestido slip midi de seda in champagne silk-satin; construction: bias-cut midi slip dress, thin adjustable spaghetti straps, soft cowl neckline, low scoop back with crossed straps, hem at mid-calf, no logo, no print. Fabric behavior: liquid drape, soft specular sheen that travels with the light, fine natural creases, never stiff.
 Camera: full-body shot, head to toe with margins, three-quarter view from camera right, camera at chest height, 35mm full-frame look at f/5.6, about 2.0 m from the subject. Focus on the garment.
 Set: a quiet sunlit apartment atelier with a tall window dressed in sheer ivory voile curtains, pale limestone floor, warm off-white plaster walls, a single linen-covered stool, generous empty space.
-Light: large soft window light from camera left with gentle falloff. Art direction: soft directional window light from camera left wrapping the face and making silk glow, gentle falloff into warm shadows, champagne and ivory palette, calm luxury, no clutter. Color: warm filmic grade with soft highlight roll-off and fine grain.
-Photorealistic, shot on a full-frame digital camera. Natural skin texture with pores and fine vellus hair, no plastic smoothing or beauty filter. Anatomically correct hands with five fingers. Physically plausible seams, stitching and fabric weight. Believable contact shadows and true optical depth of field.
+Light: large soft window light from camera left with gentle falloff. Art direction: soft directional window light from camera left wrapping the face and making silk glow, gentle falloff into warm shadows, champagne and ivory palette, calm and quiet, no clutter. Color: warm filmic grade with soft highlight roll-off and fine grain; the garment keeps the exact colour of the garment authority under this light.
+Photorealistic photograph with true optical depth of field and believable contact shadows. Identity comes from the facial features only: do not copy the retouching, skin smoothing or makeup gloss of the reference. Natural skin with pores, fine vellus hair and small irregularities; individual hair strands with a few loose flyaways. Anatomically correct hands with five fingers; feet read as one left and one right foot, never mirrored. Physically plausible seams, stitching and fabric weight. Light is described by its effect: no lamps, stands, reflectors or studio edges in frame.
 Composition: 9:16 (1024x1536 → recorte 9:16). Keep identical across every frame of this film: face, hair, garment construction, color and light direction.
 No text, logos, watermarks, borders or extra panels. The talent is a fictional adult.
 ```
@@ -2088,6 +2152,29 @@ Photorealistic, shot on a full-frame digital camera. Natural skin texture with p
 Vertical 2:3 composition, 1024x1536. Fictional adult model: not a real person and not resembling any celebrity or public figure. No text, no logos, no watermarks, no borders, no extra panels.
 ```
 
+## DIR-ESTUDIO-SARCENET-PLATE
+
+Estúdio Sarcenet · cenário vazio · Direções · P1 · onda 4
+
+- Salvar como: `incoming/DIR-ESTUDIO-SARCENET-PLATE.png`
+- Destino: `assets/directions/estudio-sarcenet/plate.webp` (1536x1024)
+- Anexar: `assets/directions/estudio-sarcenet/hero.webp`
+- Depende de: `DIR-ESTUDIO-SARCENET-HERO`
+- Aceite:
+  - Nenhuma pessoa.
+  - Mesmo cenário e direção de luz da imagem-chave.
+  - Verticais retas, sem texto ou placas legíveis.
+
+```text
+Empty set plate · "Estúdio Sarcenet". ONE photograph of the location with nobody in it, used as a background and continuity reference.
+Attach for location continuity: estudio-sarcenet/hero.webp (same set, same light, no person).
+Set: a seamless warm sand-grey paper backdrop curving into the floor with no horizon line, wall about #CFC3B4 with a soft falloff toward the upper right, floor one tone lighter, fine uniform paper grain, no props except a plain upholstered ottoman in the same tone when a seated pose needs it; no windows, plants, furniture, marble, skirting or patterns.
+Light: broad soft key light from camera left at about 45 degrees, slightly above eye level, gentle fill from the right, short soft shadows falling to the right, neutral daylight white balance. Art direction: quiet editorial catalogue photograph, the garment fully legible and colour faithful, short soft shadows falling to the right and a discreet contact shadow under the feet, small gold hoop earrings, nothing covering the neckline, cuffs, waist or hem. Color: true-to-life neutral color. Palette: Parede #CFC3B4, Chão #DDD1C3, Queda de luz #C4B8AA, Fundo do site #F2ECE3, Tinta #191512, Dourado #8A6B2F.
+Camera at chest height, 35mm, wide establishing composition with clear floor area where a model could stand.
+Photorealistic architectural photography, true perspective, straight verticals, natural materials.
+Horizontal 3:2, 1536x1024. No people. No text, no logos, no watermarks, no borders, no extra panels.
+```
+
 ## DIR-SEDA-JANELA-PLATE
 
 Seda & janela · cenário vazio · Direções · P1 · onda 4
@@ -2105,7 +2192,7 @@ Seda & janela · cenário vazio · Direções · P1 · onda 4
 Empty set plate · "Seda & janela". ONE photograph of the location with nobody in it, used as a background and continuity reference.
 Attach for location continuity: seda-janela/hero.webp (same set, same light, no person).
 Set: a quiet sunlit apartment atelier with a tall window dressed in sheer ivory voile curtains, pale limestone floor, warm off-white plaster walls, a single linen-covered stool, generous empty space.
-Light: large soft window light from camera left with gentle falloff. Art direction: soft directional window light from camera left wrapping the face and making silk glow, gentle falloff into warm shadows, champagne and ivory palette, calm luxury, no clutter. Color: warm filmic grade with soft highlight roll-off and fine grain. Palette: Champagne #D8C3A5, Marfim #F2EDE4, Rosé seco #B88A7E, Sombra quente #5B4B3E.
+Light: large soft window light from camera left with gentle falloff. Art direction: soft directional window light from camera left wrapping the face and making silk glow, gentle falloff into warm shadows, champagne and ivory palette, calm and quiet, no clutter. Color: warm filmic grade with soft highlight roll-off and fine grain. Palette: Champagne #D8C3A5, Marfim #F2EDE4, Rosé seco #B88A7E, Sombra quente #5B4B3E.
 Camera at chest height, 35mm, wide establishing composition with clear floor area where a model could stand.
 Photorealistic architectural photography, true perspective, straight verticals, natural materials.
 Horizontal 3:2, 1536x1024. No people. No text, no logos, no watermarks, no borders, no extra panels.
@@ -2151,7 +2238,7 @@ Atelier & provador · cenário vazio · Direções · P1 · onda 4
 Empty set plate · "Atelier & provador". ONE photograph of the location with nobody in it, used as a background and continuity reference.
 Attach for location continuity: atelier-provador/hero.webp (same set, same light, no person).
 Set: an elegant boutique fitting room with a tall brass-framed mirror, walnut clothing rail with a few neutral garments, cream velvet curtain, warm wall sconces, small round ottoman.
-Light: large softbox key at 45 degrees camera left with a subtle ivory bounce fill. Art direction: warm intimate interior light, practical sconces glowing softly, honest behind-the-scenes boutique atmosphere, natural skin, readable garment color. Color: warm filmic grade with soft highlight roll-off and fine grain. Palette: Nogueira #6E4E37, Latão #B08D57, Creme #EFE5D3.
+Light: broad soft key light from camera left at about 45 degrees, slightly above eye level, gentle fill from the right, short soft shadows falling to the right, neutral daylight white balance. Art direction: warm intimate interior light, practical sconces glowing softly, honest behind-the-scenes boutique atmosphere, natural skin, readable garment color. Color: warm filmic grade with soft highlight roll-off and fine grain. Palette: Nogueira #6E4E37, Latão #B08D57, Creme #EFE5D3.
 Camera at chest height, 35mm, wide establishing composition with clear floor area where a model could stand.
 Photorealistic architectural photography, true perspective, straight verticals, natural materials.
 Horizontal 3:2, 1536x1024. No people. No text, no logos, no watermarks, no borders, no extra panels.

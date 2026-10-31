@@ -17,7 +17,7 @@ O roteamento usa fragmentos (`#studio/4`, `#elenco/sc-01`, `#direcoes/seda-janel
 | `ui/routes.js` | Registro de rotas, grupos do menu e aliases |
 | `ui/shell.js` | Menu recolhível (desktop), gaveta (celular), atalho `[`, persistência e breadcrumb |
 | `ui/icons.js` | Família única de ícones SVG em traço |
-| `ui/studio.js` | Studio de cenas em 5 etapas, linha do tempo, inspetor, saídas e importação |
+| `ui/studio.js` | Studio de cenas em 5 etapas, linha do tempo, inspetor, painel Produzir (passos, referências baixáveis, progresso), saídas e importação |
 | `ui/diagram.js` | Planta de câmera, vista lateral, enquadramento, planta de luz e placeholders (SVG puro) |
 | `ui/pages.js` | Elenco, direções de arte e fila de imagens |
 | `ui/gallery.js`, `ui/quickstart.js` | Biblioteca visual e guia de uso |
@@ -26,6 +26,7 @@ O roteamento usa fragmentos (`#studio/4`, `#elenco/sc-01`, `#direcoes/seda-janel
 | `data/studio.js` | Esquema v2, vocabulário de câmera, modelos de cena, validação, migração v1 e compilação de prompts |
 | `data/brand.js` | Perfis de marca (Sarcenet proposta, moda, produto, beleza) |
 | `data/cast.js` | Elenco fictício e vistas de referência |
+| `data/store-models.js` | Modelos da loja (MODELO-A e 20 fichas): identidade em texto e nomes dos arquivos privados |
 | `data/directions.js` | Direções de arte com planta de luz |
 | `data/image-requests.js` | Fila de imagens derivada de elenco, direções e campanha |
 | `data/generated-assets.js` | Registro de imagens ingeridas (escrito pelo script) |
@@ -33,6 +34,7 @@ O roteamento usa fragmentos (`#studio/4`, `#elenco/sc-01`, `#direcoes/seda-janel
 | `scripts/build.mjs` | Publicação por allowlist, guia, biblioteca e fila do Codex |
 | `scripts/codex-queue.mjs` | Gera `docs/codex/FILA-DE-IMAGENS.md` e `fila.json` |
 | `scripts/ingest-images.py` | Converte `incoming/` em WebP + miniatura e registra proveniência |
+| `scripts/prepare-store-models.py` | Lê a pasta da loja (somente leitura) e grava recortes de rosto, corpo e costas em `references/sarcenet/modelos/` |
 | `scripts/check-syntax.mjs` | Verificação sintática de todos os módulos |
 | `tests/` | Conteúdo, biblioteca, produção, Studio, elenco, direções e fila |
 
@@ -47,9 +49,10 @@ studioIssues ──► mensagens por campo e por etapa (UI)
         ▼
 validateStudio (cópia estrita: só campos conhecidos)
         │
-        ├─► compileShot ──► keyframe A · keyframe B · movimento · distâncias · alertas
+        ├─► compileShot ──► keyframe A · keyframe B · movimento · referências por keyframe · distâncias · alertas
         │                         │
-        │                         └─► diagram.js (planta, lateral, enquadramento)
+        │                         ├─► diagram.js (planta, lateral, enquadramento)
+        │                         └─► painel Produzir (refs + assetSrc → miniatura e download com o nome do prompt)
         ├─► exportStudioText (pacote)    ├─► exportCodexRequest (Markdown)
         └─► localStorage (somente versão válida)
 ```

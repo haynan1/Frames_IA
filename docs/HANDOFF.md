@@ -15,7 +15,7 @@ Construir uma referência pública em português para direção de arte de criat
 
 O projeto virou o **FRAME Studio**: Studio de cenas em cinco etapas (`ui/studio.js`, `data/studio.js`), elenco fictício (`data/cast.js`), direções de arte (`data/directions.js`), perfis de marca (`data/brand.js`) e fila de 100 imagens (`data/image-requests.js`) com protocolo para o Codex em `docs/codex/`. O menu lateral é agrupado e recolhível (`ui/shell.js`, `ui/routes.js`). O antigo plano de produção foi substituído pelo Studio; `#producao` redireciona e planos v1 são migrados. Leia `docs/ANALISE.md` para o diagnóstico e os próximos ciclos.
 
-**Nenhuma das 100 imagens novas foi gerada ainda.** O site mostra placeholders até a ingestão. Não declarar campanha, clipe ou identidade testados. O perfil Sarcenet é proposta, não guia oficial.
+A fila 2.0 (100 imagens) foi gerada e ingerida. A versão 2.2 acrescentou a direção Estúdio Sarcenet (2 imagens pendentes), planos macro com região do detalhe, modelos da loja como referência privada (`data/store-models.js`, `scripts/prepare-store-models.py`) e dois modelos de cena com uma peça real (Champagne Drape Satin Gown). O perfil Sarcenet resume o manual de imagens da loja lido em 31.10.2026; o manual da loja prevalece. Nenhum clipe foi gerado nem testado.
 
 ## Histórico · 1.x
 

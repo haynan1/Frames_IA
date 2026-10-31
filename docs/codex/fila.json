@@ -1,6 +1,6 @@
 {
   "generatedFrom": "data/image-requests.js",
-  "total": 100,
+  "total": 102,
   "requests": [
     {
       "id": "CAST-SC-01-ROSTO-FRENTE",
@@ -369,6 +369,25 @@
       "generated": true
     },
     {
+      "id": "DIR-ESTUDIO-SARCENET-HERO",
+      "group": "Direções",
+      "priority": "P0",
+      "wave": 3,
+      "title": "Estúdio Sarcenet · imagem-chave",
+      "target": "assets/directions/estudio-sarcenet/hero.webp",
+      "incoming": "incoming/DIR-ESTUDIO-SARCENET-HERO.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-01/rosto-frente.webp",
+        "assets/cast/sc-01/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-01-ROSTO-FRENTE",
+        "CAST-SC-01-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
       "id": "DIR-SEDA-JANELA-HERO",
       "group": "Direções",
       "priority": "P0",
@@ -530,13 +549,11 @@
       "incoming": "incoming/SHOW-S01-A.png",
       "size": "1024x1536",
       "references": [
-        "assets/cast/sc-01/rosto-frente.webp",
         "assets/cast/sc-01/corpo-frente.webp",
         "assets/projects/sarcenet-capsula-seda/peca-frente.webp",
         "assets/projects/sarcenet-capsula-seda/peca-detalhe.webp"
       ],
       "dependsOn": [
-        "CAST-SC-01-ROSTO-FRENTE",
         "CAST-SC-01-CORPO-FRENTE",
         "SHOW-PECA-FRENTE",
         "SHOW-PECA-DETALHE"
@@ -1505,6 +1522,23 @@
         "CAST-SC-10-CORPO-FRENTE"
       ],
       "generated": true
+    },
+    {
+      "id": "DIR-ESTUDIO-SARCENET-PLATE",
+      "group": "Direções",
+      "priority": "P1",
+      "wave": 4,
+      "title": "Estúdio Sarcenet · cenário vazio",
+      "target": "assets/directions/estudio-sarcenet/plate.webp",
+      "incoming": "incoming/DIR-ESTUDIO-SARCENET-PLATE.png",
+      "size": "1536x1024",
+      "references": [
+        "assets/directions/estudio-sarcenet/hero.webp"
+      ],
+      "dependsOn": [
+        "DIR-ESTUDIO-SARCENET-HERO"
+      ],
+      "generated": false
     },
     {
       "id": "DIR-SEDA-JANELA-PLATE",

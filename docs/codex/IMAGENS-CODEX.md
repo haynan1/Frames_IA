@@ -11,11 +11,11 @@
 | Grupo | Quantidade | Para quê |
 | --- | --- | --- |
 | Elenco | 70 (10 modelos × 7 vistas) | Fichas de identidade: rosto frente, corpo frente, três quartos, perfil, costas, lateral e editorial. São a base de consistência de todo o estúdio. |
-| Direções | 16 (8 × imagem-chave + cenário vazio) | Mostram cada direção de arte e servem de referência de luz e locação. |
+| Direções | 18 (9 × imagem-chave + cenário vazio) | Mostram cada direção de arte e servem de referência de luz e locação. |
 | Campanha Sarcenet | 13 (3 vistas da peça + 10 keyframes) | Demonstração completa da sequência “Cápsula Seda · 15s” do Studio, tomada por tomada. |
 | Site | 1 | Capa da página inicial. |
 
-**P0 = 43 imagens**: as âncoras de identidade de todo o elenco, todas as vistas da Helena (SC-01) usadas na campanha, as 8 imagens-chave, a peça, os keyframes e a capa. Comece por elas.
+**P0 = 44 imagens**: as âncoras de identidade de todo o elenco, todas as vistas da Helena (SC-01) usadas na campanha, as 9 imagens-chave, a peça, os keyframes e a capa. Comece por elas.
 
 ## 2. Ordem de trabalho
 

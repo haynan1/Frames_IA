@@ -1,27 +1,29 @@
-// Brand profiles drive defaults in the Studio. Sarcenet is a working proposal:
-// nothing here is an official brand guideline until the store validates it.
+// Brand profiles drive defaults in the Studio. Sarcenet follows the store's own image manual and the
+// Vesper theme (read on 31.10.2026); when they change, the store's files win over this summary.
 export const brandPresets = {
   sarcenet: {
-    label: 'Sarcenet · proposta',
+    label: 'Sarcenet · loja',
     name: 'Sarcenet',
-    status: 'Perfil proposto pelo FRAME. Validar paleta, tom e público com a loja antes de publicar campanhas.',
-    segment: 'Loja de moda · coleções femininas e masculinas',
-    origin: 'Sarcenet (ou sarsenet) é o nome de uma fita de seda muito fina e macia, de tela simples, hoje usada sobretudo em forros. A proposta visual parte dessa matéria: brilho líquido, toque leve e luz suave.',
-    tone: ['Sofisticado sem distância', 'Luminoso', 'Tátil', 'Brasileiro e contemporâneo'],
+    status: 'Resumo do manual de imagens e do tema da loja, lidos em 31.10.2026. Em caso de conflito, vale o manual da loja.',
+    segment: 'Moda feminina de noite e social · Reino Unido · sarcenet.uk',
+    origin: 'Vestidos longos, blusas de cetim, conjuntos e tricôs para quem se veste para a noite. Copy em inglês britânico. O nome vem da sarsenet, uma seda fina e macia.',
+    tone: ['Quiet elegance', 'Editorial', 'Calmo', 'Fiel à peça'],
     palette: [
-      {name: 'Champagne', hex: '#D8C3A5'},
-      {name: 'Marfim', hex: '#F2EDE4'},
-      {name: 'Rosé seco', hex: '#B88A7E'},
-      {name: 'Oliva profundo', hex: '#4B4F3A'},
-      {name: 'Grafite', hex: '#2B2A28'}
+      {name: 'Fundo do site', hex: '#F2ECE3'},
+      {name: 'Tinta', hex: '#191512'},
+      {name: 'Dourado', hex: '#8A6B2F'},
+      {name: 'Parede do estúdio', hex: '#CFC3B4'},
+      {name: 'Chão do estúdio', hex: '#DDD1C3'}
     ],
     rules: [
-      'A peça é a protagonista: tecido, caimento e construção sempre legíveis.',
-      'Pele real, sem plastificação. Mãos e costuras plausíveis em todo frame.',
-      'Logo e textos entram na edição, nunca gerados dentro da imagem.',
-      'Elenco fictício até haver autorização registrada das modelos da loja.'
+      'Fidelidade antes da estética: a foto do produto manda na cor e na construção. Nada de costas, forro, bolso ou trama inventados.',
+      'Sem foto de costas, sem vista de costas. Sem foto macro, sem plano macro.',
+      'Galeria em 3:4, no estúdio padrão, com luz suave pela esquerda. Nenhum equipamento no quadro.',
+      'Anúncio em vídeo: cenário de uso real no Reino Unido, ação concreta, tempo real. Planos abertos cortam abaixo do joelho.',
+      'Sem as palavras luxury, premium ou cinematic nos prompts: elas puxam o brilho de IA.',
+      'Logo, texto e CTA entram na edição. Nenhuma avaliação escrita pela loja.'
     ],
-    defaults: {direction: 'seda-janela', castId: 'sc-01', format: '9:16', objective: 'launch'}
+    defaults: {direction: 'estudio-sarcenet', castId: 'loja-a', format: '9:16', objective: 'social'}
   },
   fashion: {
     label: 'Moda · genérico',

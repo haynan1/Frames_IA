@@ -1,5 +1,27 @@
 # Histórico
 
+## 2.2.0 — 2026-10-31 · Ultra close e a loja real
+
+- **Macro de textura (MAC, campo de 4 cm)** e plano detalhe pousados numa **região da peça** (tecido, decote, alças, corpete, cintura, fecho, punho, fenda, barra, costas).
+- Movimentos de detalhe: deslize macro, deslize vertical, órbita em volta do detalhe, giro lento da modelo com o brilho varrendo o tecido, rack focus nas dobras e aproximação ao macro. Distâncias em centímetros.
+- **Fidelidade do manual da loja:** cada anexo tem papel declarado no prompt (identidade, corpo, autoridade da peça, detalhe, continuidade). O rosto sai dos planos fechados. Sem foto de detalhe, aviso e proibição de inventar trama. Novos alertas para giro acima de 45° no detalhe, modelo andando no macro e salto de escala de 8× ou mais.
+- **Realismo:** identidade só pelos traços, sem copiar retoque; pés esquerdo e direito; luz descrita pelo efeito, sem equipamento no quadro; tempo real, sem câmera lenta; nada de luxury, premium ou cinematic.
+- **Perfil Sarcenet** refeito a partir do manual de imagens e do tema Vesper: moda feminina de noite, Reino Unido, paleta do site e regras de fidelidade. Nova direção **Estúdio Sarcenet** (fundo infinito areia, luz suave pela esquerda) e formato **3:4** da galeria.
+- **Modelos da loja:** MODELO-A e 20 fichas como referência privada; `npm run modelos` gera recortes limpos (rosto, corpo, costas) em `references/sarcenet/modelos/` sem tocar na pasta da loja.
+- Modelos de cena com uma peça real (Champagne Drape Satin Gown, fatos da ficha verificada): **Ultra close no cetim · 14s** e **Anúncio em 3 takes · 8s**, na estrutura dos anúncios da loja.
+- Cetim de poliéster, chiffon e malha canelada entre os materiais. Fila com 102 imagens (+2 da nova direção).
+- 44 testes.
+
+## 2.1.0 — 2026-10-31 · Guia de produção
+
+- **Painel Produzir** em cada tomada: passos numerados (imagem inicial, imagem final quando houver, clipe), com a ferramenta de cada passo, as referências a anexar e o prompt a copiar.
+- **Referências baixáveis**: cada referência mostra miniatura e baixa com o nome exato citado no prompt. Fotos próprias da peça e da modelo aparecem como “sua foto”, com o nome esperado.
+- **Progresso por tomada** (imagem A, imagem B, clipe) salvo no projeto e no `.json`; keyframes já ingeridos contam como prontos. Bolinhas na linha do tempo, contador no painel, coluna e total na Entrega.
+- Faixa **Como funciona** no topo do Studio: quem faz o quê entre FRAME, ferramenta de imagem, ferramenta de vídeo e edição. Recolhível e lembrada.
+- Entrega com as referências do filme em cartões baixáveis.
+- O compilador passa a expor as referências de cada keyframe como dados (`refs.a`, `refs.b`, `projectReferences`); o prompt e a interface usam a mesma lista.
+- 40 testes: referências idênticas ao prompt, progresso com ida e volta no JSON, progresso inválido rejeitado e escape no painel Produzir.
+
 ## 2.0.0 — 2026-10-31 · FRAME Studio
 
 - **Studio de cenas** em cinco etapas (briefing, peça e elenco, cenário e luz, sequência, entrega) com estado e pendências por etapa, erros por campo e desfazer.

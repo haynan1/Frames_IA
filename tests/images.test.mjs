@@ -25,7 +25,7 @@ test('The fictional cast is complete, diverse in build and described for prompts
 });
 
 test('Art directions are complete repeatable sets', () => {
-  assert.equal(directions.length, 8); assert.equal(new Set(directions.map(d => d.id)).size, 8);
+  assert.equal(directions.length, 9); assert.equal(new Set(directions.map(d => d.id)).size, 9);
   for (const d of directions) {
     assert.ok(Object.hasOwn(lights, d.light) && Object.hasOwn(grades, d.grade));
     assert.ok(d.setup.length >= 2); assert.ok(d.environment.length > 80 && d.artDirection.length > 80);
@@ -37,7 +37,7 @@ test('Art directions are complete repeatable sets', () => {
 test('The image queue is unique, ordered by dependency and safe to publish', () => {
   const ids = new Set(imageRequests.map(r => r.id)), targets = new Set(imageRequests.map(r => r.target));
   assert.equal(ids.size, imageRequests.length); assert.equal(targets.size, imageRequests.length);
-  assert.equal(imageRequests.length, 100);
+  assert.equal(imageRequests.length, 102);
   const byId = new Map(imageRequests.map(r => [r.id, r]));
   const rank = {P0: 0, P1: 1, P2: 2};
   imageRequests.forEach((r, i) => {
@@ -55,7 +55,7 @@ test('The image queue is unique, ordered by dependency and safe to publish', () 
     }
     if (i) { const prev = imageRequests[i - 1]; assert.ok(rank[prev.priority] < rank[r.priority] || (prev.priority === r.priority && prev.wave <= r.wave)); }
   });
-  assert.equal(imageRequests.filter(r => r.priority === 'P0').length, 43);
+  assert.equal(imageRequests.filter(r => r.priority === 'P0').length, 44);
 });
 
 test('The Codex queue documents are generated from data', async () => {
