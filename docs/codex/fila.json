@@ -13,7 +13,7 @@
       "size": "1024x1536",
       "references": [],
       "dependsOn": [],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-02-ROSTO-FRENTE",
@@ -26,7 +26,7 @@
       "size": "1024x1536",
       "references": [],
       "dependsOn": [],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-03-ROSTO-FRENTE",
@@ -39,7 +39,7 @@
       "size": "1024x1536",
       "references": [],
       "dependsOn": [],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-04-ROSTO-FRENTE",
@@ -52,7 +52,7 @@
       "size": "1024x1536",
       "references": [],
       "dependsOn": [],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-05-ROSTO-FRENTE",
@@ -65,7 +65,7 @@
       "size": "1024x1536",
       "references": [],
       "dependsOn": [],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-06-ROSTO-FRENTE",
@@ -78,7 +78,7 @@
       "size": "1024x1536",
       "references": [],
       "dependsOn": [],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-07-ROSTO-FRENTE",
@@ -91,7 +91,7 @@
       "size": "1024x1536",
       "references": [],
       "dependsOn": [],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-08-ROSTO-FRENTE",
@@ -104,7 +104,7 @@
       "size": "1024x1536",
       "references": [],
       "dependsOn": [],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-09-ROSTO-FRENTE",
@@ -117,7 +117,7 @@
       "size": "1024x1536",
       "references": [],
       "dependsOn": [],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-10-ROSTO-FRENTE",
@@ -130,7 +130,7 @@
       "size": "1024x1536",
       "references": [],
       "dependsOn": [],
-      "generated": false
+      "generated": true
     },
     {
       "id": "SHOW-PECA-FRENTE",
@@ -143,7 +143,7 @@
       "size": "1024x1536",
       "references": [],
       "dependsOn": [],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-01-CORPO-FRENTE",
@@ -160,7 +160,7 @@
       "dependsOn": [
         "CAST-SC-01-ROSTO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-02-CORPO-FRENTE",
@@ -177,7 +177,7 @@
       "dependsOn": [
         "CAST-SC-02-ROSTO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-03-CORPO-FRENTE",
@@ -194,7 +194,7 @@
       "dependsOn": [
         "CAST-SC-03-ROSTO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-04-CORPO-FRENTE",
@@ -211,7 +211,7 @@
       "dependsOn": [
         "CAST-SC-04-ROSTO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-05-CORPO-FRENTE",
@@ -228,7 +228,7 @@
       "dependsOn": [
         "CAST-SC-05-ROSTO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-06-CORPO-FRENTE",
@@ -245,7 +245,7 @@
       "dependsOn": [
         "CAST-SC-06-ROSTO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-07-CORPO-FRENTE",
@@ -262,7 +262,7 @@
       "dependsOn": [
         "CAST-SC-07-ROSTO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-08-CORPO-FRENTE",
@@ -279,7 +279,7 @@
       "dependsOn": [
         "CAST-SC-08-ROSTO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-09-CORPO-FRENTE",
@@ -296,7 +296,7 @@
       "dependsOn": [
         "CAST-SC-09-ROSTO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-10-CORPO-FRENTE",
@@ -313,7 +313,7 @@
       "dependsOn": [
         "CAST-SC-10-ROSTO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "SHOW-PECA-COSTAS",
@@ -330,7 +330,7 @@
       "dependsOn": [
         "SHOW-PECA-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "SHOW-PECA-DETALHE",
@@ -347,7 +347,7 @@
       "dependsOn": [
         "SHOW-PECA-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-01-CORPO-COSTAS",
@@ -366,7 +366,7 @@
         "CAST-SC-01-ROSTO-FRENTE",
         "CAST-SC-01-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "DIR-SEDA-JANELA-HERO",
@@ -385,7 +385,7 @@
         "CAST-SC-01-ROSTO-FRENTE",
         "CAST-SC-01-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "DIR-CICLORAMA-MARFIM-HERO",
@@ -404,7 +404,7 @@
         "CAST-SC-05-ROSTO-FRENTE",
         "CAST-SC-05-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "DIR-ATELIER-PROVADOR-HERO",
@@ -423,7 +423,7 @@
         "CAST-SC-06-ROSTO-FRENTE",
         "CAST-SC-06-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "DIR-RUA-GOLDEN-HOUR-HERO",
@@ -442,7 +442,7 @@
         "CAST-SC-08-ROSTO-FRENTE",
         "CAST-SC-08-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "DIR-NOITE-FLASH-HERO",
@@ -461,7 +461,7 @@
         "CAST-SC-10-ROSTO-FRENTE",
         "CAST-SC-10-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "DIR-COLOR-BLOCK-HERO",
@@ -480,7 +480,7 @@
         "CAST-SC-03-ROSTO-FRENTE",
         "CAST-SC-03-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "DIR-CONCRETO-MINIMAL-HERO",
@@ -499,7 +499,7 @@
         "CAST-SC-02-ROSTO-FRENTE",
         "CAST-SC-02-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "DIR-NATUREZA-LINHO-HERO",
@@ -518,7 +518,7 @@
         "CAST-SC-07-ROSTO-FRENTE",
         "CAST-SC-07-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "SHOW-S01-A",
@@ -541,7 +541,7 @@
         "SHOW-PECA-FRENTE",
         "SHOW-PECA-DETALHE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "SHOW-S02-A",
@@ -562,7 +562,7 @@
         "CAST-SC-01-CORPO-FRENTE",
         "SHOW-PECA-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "SHOW-S03-A",
@@ -583,7 +583,7 @@
         "CAST-SC-01-CORPO-FRENTE",
         "SHOW-PECA-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "SHOW-S04-A",
@@ -604,7 +604,7 @@
         "CAST-SC-01-CORPO-FRENTE",
         "SHOW-PECA-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "SHOW-S05-A",
@@ -625,7 +625,7 @@
         "CAST-SC-01-CORPO-FRENTE",
         "SHOW-PECA-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "SHOW-S06-A",
@@ -646,7 +646,7 @@
         "CAST-SC-01-CORPO-FRENTE",
         "SHOW-PECA-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "HOME-CAPA",
@@ -667,7 +667,7 @@
         "CAST-SC-01-CORPO-FRENTE",
         "SHOW-PECA-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "SHOW-S02-B",
@@ -690,7 +690,7 @@
         "SHOW-PECA-FRENTE",
         "SHOW-S02-A"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "SHOW-S03-B",
@@ -713,7 +713,7 @@
         "SHOW-PECA-FRENTE",
         "SHOW-S03-A"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "SHOW-S04-B",
@@ -740,7 +740,7 @@
         "SHOW-PECA-COSTAS",
         "SHOW-S04-A"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "SHOW-S05-B",
@@ -763,7 +763,7 @@
         "SHOW-PECA-FRENTE",
         "SHOW-S05-A"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-01-ROSTO-34",
@@ -782,7 +782,7 @@
         "CAST-SC-01-ROSTO-FRENTE",
         "CAST-SC-01-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-01-PERFIL",
@@ -801,7 +801,7 @@
         "CAST-SC-01-ROSTO-FRENTE",
         "CAST-SC-01-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-01-CORPO-LATERAL",
@@ -820,7 +820,7 @@
         "CAST-SC-01-ROSTO-FRENTE",
         "CAST-SC-01-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-02-ROSTO-34",
@@ -839,7 +839,7 @@
         "CAST-SC-02-ROSTO-FRENTE",
         "CAST-SC-02-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-02-PERFIL",
@@ -858,7 +858,7 @@
         "CAST-SC-02-ROSTO-FRENTE",
         "CAST-SC-02-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-02-CORPO-COSTAS",
@@ -877,7 +877,7 @@
         "CAST-SC-02-ROSTO-FRENTE",
         "CAST-SC-02-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-02-CORPO-LATERAL",
@@ -896,7 +896,7 @@
         "CAST-SC-02-ROSTO-FRENTE",
         "CAST-SC-02-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-03-ROSTO-34",
@@ -915,7 +915,7 @@
         "CAST-SC-03-ROSTO-FRENTE",
         "CAST-SC-03-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-03-PERFIL",
@@ -934,7 +934,7 @@
         "CAST-SC-03-ROSTO-FRENTE",
         "CAST-SC-03-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-03-CORPO-COSTAS",
@@ -953,7 +953,7 @@
         "CAST-SC-03-ROSTO-FRENTE",
         "CAST-SC-03-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-03-CORPO-LATERAL",
@@ -972,7 +972,7 @@
         "CAST-SC-03-ROSTO-FRENTE",
         "CAST-SC-03-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-04-ROSTO-34",
@@ -991,7 +991,7 @@
         "CAST-SC-04-ROSTO-FRENTE",
         "CAST-SC-04-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-04-PERFIL",
@@ -1010,7 +1010,7 @@
         "CAST-SC-04-ROSTO-FRENTE",
         "CAST-SC-04-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-04-CORPO-COSTAS",
@@ -1029,7 +1029,7 @@
         "CAST-SC-04-ROSTO-FRENTE",
         "CAST-SC-04-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-04-CORPO-LATERAL",
@@ -1048,7 +1048,7 @@
         "CAST-SC-04-ROSTO-FRENTE",
         "CAST-SC-04-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-05-ROSTO-34",
@@ -1067,7 +1067,7 @@
         "CAST-SC-05-ROSTO-FRENTE",
         "CAST-SC-05-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-05-PERFIL",
@@ -1086,7 +1086,7 @@
         "CAST-SC-05-ROSTO-FRENTE",
         "CAST-SC-05-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-05-CORPO-COSTAS",
@@ -1105,7 +1105,7 @@
         "CAST-SC-05-ROSTO-FRENTE",
         "CAST-SC-05-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-05-CORPO-LATERAL",
@@ -1124,7 +1124,7 @@
         "CAST-SC-05-ROSTO-FRENTE",
         "CAST-SC-05-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-06-ROSTO-34",
@@ -1143,7 +1143,7 @@
         "CAST-SC-06-ROSTO-FRENTE",
         "CAST-SC-06-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-06-PERFIL",
@@ -1162,7 +1162,7 @@
         "CAST-SC-06-ROSTO-FRENTE",
         "CAST-SC-06-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-06-CORPO-COSTAS",
@@ -1181,7 +1181,7 @@
         "CAST-SC-06-ROSTO-FRENTE",
         "CAST-SC-06-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-06-CORPO-LATERAL",
@@ -1200,7 +1200,7 @@
         "CAST-SC-06-ROSTO-FRENTE",
         "CAST-SC-06-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-07-ROSTO-34",
@@ -1219,7 +1219,7 @@
         "CAST-SC-07-ROSTO-FRENTE",
         "CAST-SC-07-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-07-PERFIL",
@@ -1238,7 +1238,7 @@
         "CAST-SC-07-ROSTO-FRENTE",
         "CAST-SC-07-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-07-CORPO-COSTAS",
@@ -1257,7 +1257,7 @@
         "CAST-SC-07-ROSTO-FRENTE",
         "CAST-SC-07-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-07-CORPO-LATERAL",
@@ -1276,7 +1276,7 @@
         "CAST-SC-07-ROSTO-FRENTE",
         "CAST-SC-07-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-08-ROSTO-34",
@@ -1295,7 +1295,7 @@
         "CAST-SC-08-ROSTO-FRENTE",
         "CAST-SC-08-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-08-PERFIL",
@@ -1314,7 +1314,7 @@
         "CAST-SC-08-ROSTO-FRENTE",
         "CAST-SC-08-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-08-CORPO-COSTAS",
@@ -1333,7 +1333,7 @@
         "CAST-SC-08-ROSTO-FRENTE",
         "CAST-SC-08-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-08-CORPO-LATERAL",
@@ -1352,7 +1352,7 @@
         "CAST-SC-08-ROSTO-FRENTE",
         "CAST-SC-08-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-09-ROSTO-34",
@@ -1371,7 +1371,7 @@
         "CAST-SC-09-ROSTO-FRENTE",
         "CAST-SC-09-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-09-PERFIL",
@@ -1390,7 +1390,7 @@
         "CAST-SC-09-ROSTO-FRENTE",
         "CAST-SC-09-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-09-CORPO-COSTAS",
@@ -1409,7 +1409,7 @@
         "CAST-SC-09-ROSTO-FRENTE",
         "CAST-SC-09-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-09-CORPO-LATERAL",
@@ -1428,7 +1428,7 @@
         "CAST-SC-09-ROSTO-FRENTE",
         "CAST-SC-09-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-10-ROSTO-34",
@@ -1447,7 +1447,7 @@
         "CAST-SC-10-ROSTO-FRENTE",
         "CAST-SC-10-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-10-PERFIL",
@@ -1466,7 +1466,7 @@
         "CAST-SC-10-ROSTO-FRENTE",
         "CAST-SC-10-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-10-CORPO-COSTAS",
@@ -1485,7 +1485,7 @@
         "CAST-SC-10-ROSTO-FRENTE",
         "CAST-SC-10-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-10-CORPO-LATERAL",
@@ -1504,7 +1504,7 @@
         "CAST-SC-10-ROSTO-FRENTE",
         "CAST-SC-10-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "DIR-SEDA-JANELA-PLATE",
@@ -1521,7 +1521,7 @@
       "dependsOn": [
         "DIR-SEDA-JANELA-HERO"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "DIR-CICLORAMA-MARFIM-PLATE",
@@ -1538,7 +1538,7 @@
       "dependsOn": [
         "DIR-CICLORAMA-MARFIM-HERO"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "DIR-ATELIER-PROVADOR-PLATE",
@@ -1555,7 +1555,7 @@
       "dependsOn": [
         "DIR-ATELIER-PROVADOR-HERO"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "DIR-RUA-GOLDEN-HOUR-PLATE",
@@ -1572,7 +1572,7 @@
       "dependsOn": [
         "DIR-RUA-GOLDEN-HOUR-HERO"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "DIR-NOITE-FLASH-PLATE",
@@ -1589,7 +1589,7 @@
       "dependsOn": [
         "DIR-NOITE-FLASH-HERO"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "DIR-COLOR-BLOCK-PLATE",
@@ -1606,7 +1606,7 @@
       "dependsOn": [
         "DIR-COLOR-BLOCK-HERO"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "DIR-CONCRETO-MINIMAL-PLATE",
@@ -1623,7 +1623,7 @@
       "dependsOn": [
         "DIR-CONCRETO-MINIMAL-HERO"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "DIR-NATUREZA-LINHO-PLATE",
@@ -1640,7 +1640,7 @@
       "dependsOn": [
         "DIR-NATUREZA-LINHO-HERO"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-01-EDITORIAL",
@@ -1659,7 +1659,7 @@
         "CAST-SC-01-ROSTO-FRENTE",
         "CAST-SC-01-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-02-EDITORIAL",
@@ -1678,7 +1678,7 @@
         "CAST-SC-02-ROSTO-FRENTE",
         "CAST-SC-02-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-03-EDITORIAL",
@@ -1697,7 +1697,7 @@
         "CAST-SC-03-ROSTO-FRENTE",
         "CAST-SC-03-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-04-EDITORIAL",
@@ -1716,7 +1716,7 @@
         "CAST-SC-04-ROSTO-FRENTE",
         "CAST-SC-04-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-05-EDITORIAL",
@@ -1735,7 +1735,7 @@
         "CAST-SC-05-ROSTO-FRENTE",
         "CAST-SC-05-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-06-EDITORIAL",
@@ -1754,7 +1754,7 @@
         "CAST-SC-06-ROSTO-FRENTE",
         "CAST-SC-06-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-07-EDITORIAL",
@@ -1773,7 +1773,7 @@
         "CAST-SC-07-ROSTO-FRENTE",
         "CAST-SC-07-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-08-EDITORIAL",
@@ -1792,7 +1792,7 @@
         "CAST-SC-08-ROSTO-FRENTE",
         "CAST-SC-08-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-09-EDITORIAL",
@@ -1811,7 +1811,7 @@
         "CAST-SC-09-ROSTO-FRENTE",
         "CAST-SC-09-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "CAST-SC-10-EDITORIAL",
@@ -1830,7 +1830,7 @@
         "CAST-SC-10-ROSTO-FRENTE",
         "CAST-SC-10-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     }
   ]
 }
