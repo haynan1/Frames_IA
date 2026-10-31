@@ -8,7 +8,7 @@ if(dirname(output)!==root || basename(output)!=='dist')throw new Error('Unsafe b
 await rm(output,{recursive:true,force:true});
 await mkdir(output,{recursive:true});
 // Explicit publication allowlist prevents private references and credentials from shipping.
-const entries=['index.html','styles.css','app.js','assets','data','docs','README.md','LICENSE'];
+const entries=['index.html','styles.css','app.js','assets','data','ui','docs','README.md','LICENSE'];
 for(const name of entries) await cp(resolve(root,name),resolve(output,name),{recursive:true});
 await writeFile(resolve(output,'.nojekyll'),'');
 await writeFile(resolve(root,'docs/GUIA.md'),`# FRAME — Guia de direção de arte com IA\n\nConteúdo autoral · revisão 30.10.2026. Consulte o site para imagens e ferramentas interativas.\n\n`+chapters.map(c=>`## ${c.number} · ${c.title}\n\n${c.intro}\n\n`+c.items.map(([title,body])=>`### ${title}\n\n${body}`).join('\n\n')).join('\n\n')+'\n\n## Atlas de câmera\n\n'+movements.map(m=>`### ${m.name}\n\n${m.description}\n\nUso: ${m.use}\n\nRevisão: ${m.risk}\n\n\`\`\`text\n${m.prompt}\n\`\`\``).join('\n\n')+'\n\n## Prompts autorais\n\n'+promptLibrary.map(p=>`### ${p.title}\n\n${p.description}\n\n\`\`\`text\n${p.prompt}\n\`\`\``).join('\n\n')+'\n');

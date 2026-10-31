@@ -33,7 +33,7 @@ if (Test-Path -LiteralPath '.git') {
     Assert-Exit 'Não foi possível inicializar Git.'
 }
 
-$publishFiles = @('index.html', 'styles.css', 'app.js', 'package.json', 'README.md', 'LICENSE', 'AGENTS.md', 'CONTRIBUTING.md', 'CHANGELOG.md', '.gitignore', '.github', 'assets', 'data', 'docs', 'scripts', 'tests')
+$publishFiles = @('index.html', 'styles.css', 'app.js', 'package.json', 'README.md', 'LICENSE', 'AGENTS.md', 'CONTRIBUTING.md', 'CHANGELOG.md', '.gitignore', '.github', 'assets', 'data', 'ui', 'docs', 'scripts', 'tests')
 git add -- $publishFiles
 Assert-Exit 'Não foi possível preparar os arquivos públicos.'
 git diff --cached --quiet

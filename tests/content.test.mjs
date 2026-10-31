@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFile,readdir} from 'node:fs/promises';
 import {movements,chapters,promptLibrary,tools,storyboard,qaItems,reviewedAt} from '../data/content.js';
 import {buildPrompt} from '../data/prompt-builder.js';
+import {escapeHTML} from '../ui/html.js';
 
 test('Content identifiers are unique and every section is substantive',()=>{
   for(const list of [movements,chapters,promptLibrary,tools])assert.equal(new Set(list.map(x=>x.id)).size,list.length);
@@ -20,6 +21,10 @@ test('Image mode removes video motion, duration and audio instructions',()=>{
   const prompt=buildPrompt({mode:'image',duration:9,movement:'orbit',subject:'approved linen jacket',format:'4:5'});
   assert.match(prompt,/photographic still/);assert.match(prompt,/4:5/);assert.match(prompt,/approved linen jacket/);assert.doesNotMatch(prompt,/9-second|clockwise|dialogue|music/);
 });
+
+test('Every three-second storyboard interval requests the matching clip duration',()=>{
+  for(const shot of storyboard)assert.match(shot.prompt,/three[- ]second/);
+});
 test('Invalid parameters receive bounded defaults',()=>{
   const prompt=buildPrompt({duration:900,format:'bogus',movement:'missing'});
   assert.match(prompt,/10-second/);assert.match(prompt,/9:16/);assert.doesNotMatch(prompt,/undefined/);
@@ -36,7 +41,10 @@ test('Published HTML uses a content security policy and relative assets',async()
 test('Production has no third-party runtime requests or HTML interpolation of user fields',async()=>{
   const app=await readFile(new URL('../app.js',import.meta.url),'utf8');
   assert.doesNotMatch(app,/eval\(|new Function|fetch\(|https?:\/\//);
-  assert.match(app,/prompt-output'\)\.value=buildPrompt/);
   const build=await readFile(new URL('../scripts/build.mjs',import.meta.url),'utf8');
   assert.doesNotMatch(build,/cp\(root,/);assert.match(build,/publication allowlist/);
+});
+
+test('User-supplied markup is escaped for text and quoted attribute contexts',()=>{
+  assert.equal(escapeHTML('<img src=x onerror="alert(1)"> & \'test\''),'&lt;img src=x onerror=&quot;alert(1)&quot;&gt; &amp; &#39;test&#39;');
 });

@@ -1,9 +1,10 @@
 import {chapters, movements, promptLibrary, tools, sources, storyboard, qaItems, reviewedAt} from './data/content.js';
 
 import {buildPrompt} from './data/prompt-builder.js';
+import {productionMarkup,mountProduction} from './ui/production.js';
+import {escapeHTML} from './ui/html.js';
 
 const main = document.querySelector('main');
-const escapeHTML = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const photo = (name, alt, extra = '') => `<img src="./assets/${name}.webp" alt="${escapeHTML(alt)}" width="720" height="960" ${extra}>`;
 const button = (text, href, secondary = false) => `<a class="button${secondary ? ' secondary' : ''}" href="${href}">${text}<span aria-hidden="true">↗</span></a>`;
 const head = (tag,title,description) => `<div class="page-head"><span class="eyebrow">${tag}</span><h1>${title}</h1><p class="intro">${description}</p></div>`;
@@ -26,7 +27,7 @@ function home(){
   <div class="section-title"><div><small>O QUE VOCÊ VAI DIRIGIR</small><h2>Três frentes. <em>Uma linguagem.</em></h2></div><a class="text-link" href="#guia">Abrir o manual ↗</a></div>
   <div class="feature-grid"><a class="feature" href="#guia/produto"><figure>${photo('product','Estudo conceitual de vidro âmbar sobre superfície escura','loading="lazy"')}<span class="index">01 / PRODUCT HERO</span></figure><div class="feature-body"><h3>Produto com presença.</h3><p>Packshot, cenário, materialidade e movimento. O produto no centro da intenção.</p><span>DIRIGIR O PRODUTO ↗</span></div></a><a class="feature" href="#guia/identidade"><figure>${photo('model','Retrato de personagem adulta fictícia em blazer marfim','loading="lazy"')}<span class="index">02 / IDENTIDADE</span></figure><div class="feature-body"><h3>A mesma identidade.</h3><p>Da ficha da modelo ao portfólio. Construa consistência antes de criar a campanha.</p><span>CONSTRUIR A MODELO ↗</span></div></a><a class="feature" href="#storyboard"><figure>${photo('scene','Frasco conceitual em cenário cinematográfico de pedra','loading="lazy"')}<span class="index">03 / FILME</span></figure><div class="feature-body"><h3>Do frame ao filme.</h3><p>Roteiro, imagem-base, câmera e montagem. Cada plano com um trabalho a fazer.</p><span>PLANEJAR O VÍDEO ↗</span></div></a></div>
   <div class="section-title"><div><small>UM PERCURSO DE PRODUÇÃO</small><h2>Crie na ordem certa.</h2></div><span class="muted text-link">DO BRIEFING AO QA</span></div><div class="journey">${[['01','Defina','Uma ideia e uma verdade de produto.'],['02','Construa','Identidade, ambiente e luz.'],['03','Aprove','O frame antes do movimento.'],['04','Anime','Uma intenção por tomada.'],['05','Revise','Continuidade, mensagem e entrega.']].map(([n,t,d])=>`<div><b>${n}</b><h3>${t}</h3><p>${d}</p></div>`).join('')}</div>
-  <div class="callout"><div><span class="eyebrow">DO CONCEITO AO COMANDO</span><h3>Seu próximo plano começa no laboratório.</h3><p>Combine sujeito, câmera e luz. Leve um prompt estruturado para a sua ferramenta.</p></div>${button('Abrir laboratório','#laboratorio')}</div><p class="note">Biblioteca educativa independente. Os exemplos fotográficos são gerados com IA e os produtos são fictícios. As simulações de câmera são esquemáticas; não representam vídeos gerados por um modelo.</p>`;
+  <div class="callout"><div><span class="eyebrow">DO CONCEITO AO COMANDO</span><h3>Seu próximo filme começa com um plano.</h3><p>Organize o briefing, defina cada tomada e leve o pacote de produção para a sua ferramenta.</p></div>${button('Montar produção','#producao')}</div><p class="note">Biblioteca educativa independente. Os exemplos fotográficos são gerados com IA e os produtos são fictícios. As simulações de câmera são esquemáticas; não representam vídeos gerados por um modelo.</p>`;
 }
 
 function guide(section){
@@ -119,8 +120,12 @@ function references(){
   return `${head('FONTES & MANUTENÇÃO','Repertório aberto.<br><em>Origem transparente.</em>','Os materiais enviados foram tratados como fontes de estudo. O site organiza conteúdo próprio, exemplos autorais e links para os originais. Revisão editorial e de ferramentas: 30 de outubro de 2026.')}<div class="source-list">${sources.map(s=>`<article class="source"><span>${s.type}</span><div><h3>${s.url?`<a href="${s.url}" target="_blank" rel="noopener noreferrer">${s.name} ↗</a>`:s.name}</h3><p>${s.note}</p></div></article>`).join('')}</div><div class="section-title"><div><small>DOCUMENTAÇÃO DE FABRICANTES</small><h2>Modelos e plataformas.</h2></div></div><div class="source-list">${tools.map(t=>`<article class="source"><span>${t.checked} · ${t.kind}</span><div><h3><a href="${t.source}" target="_blank" rel="noopener noreferrer">${t.name} · ${t.maker} ↗</a></h3><p>Fonte para a existência, o nome e o posicionamento da ferramenta. Não comprova superioridade universal. Disponibilidade e funções precisam ser conferidas no provedor.</p></div></article>`).join('')}</div><div class="two-column actions"><section class="panel"><h2>Como manter atual.</h2><p>Atualize o catálogo a cada lançamento relevante. Registre modelo exato, fonte oficial, data, modo testado e limitações. Preserve histórico; nunca transforme uma promessa do fabricante em resultado observado.</p><a class="text-link" href="./docs/ATUALIZACAO.md">Abrir protocolo de atualização ↗</a></section><section class="panel"><h2>Como retomar o projeto.</h2><p>Arquitetura, comandos, decisões e pontos pendentes ficam documentados para GPT, Claude e outros colaboradores. Materiais privados e credenciais permanecem fora do repositório.</p><a class="text-link" href="./docs/HANDOFF.md">Abrir instruções de continuidade ↗</a></section></div><p class="note">As imagens deste projeto foram produzidas com a ferramenta integrada de geração de imagens. Não são amostras geradas em Seedance, Nano Banana, Runway ou outros modelos do catálogo. Os prompts dos assets estão no registro de imagens do projeto.</p>`;
 }
 
-function download(filename,text){
-  const url=URL.createObjectURL(new Blob([text],{type:'text/plain;charset=utf-8'}));
+function production(){
+  return head('PLANO DE PRODUÇÃO','Sua campanha.<br><em>Uma direção por tomada.</em>','Transforme o repertório em um plano de vídeo próprio. Organize o briefing, ajuste a sequência e exporte os prompts. Nenhum arquivo ou dado é enviado para um servidor.')+productionMarkup();
+}
+
+function download(filename,text,type='text/plain;charset=utf-8'){
+  const url=URL.createObjectURL(new Blob([text],{type}));
   const a=document.createElement('a');a.href=url;a.download=filename;a.click();
   setTimeout(()=>URL.revokeObjectURL(url),1000);
 }
@@ -129,6 +134,7 @@ function storageGet(key,fallback){try{const x=JSON.parse(localStorage.getItem(ke
 function storageSet(key,value){try{localStorage.setItem(key,JSON.stringify(value));return true;}catch{return false;}}
 
 function bind(page,section){
+  if(page==='producao')dispose=mountProduction({notify,download});
   if(page==='camera'){
     const current=movements.find(m=>m.id===section)||movements[0];
     const range=document.querySelector('#camera-position'), play=document.querySelector('#play');
@@ -150,15 +156,23 @@ function bind(page,section){
   }
   if(page==='laboratorio'){
     const form=document.querySelector('#prompt-form');
+    const output=document.querySelector('#prompt-output');
+    const controls=[document.querySelector('[data-copy="lab"]'),document.querySelector('#download-prompt')];
     const update=()=>{
+      // Enable conditional controls before reading FormData; otherwise switching
+      // back to video silently drops the duration and selected movement once.
+      const mode=form.elements.mode.value;
+      document.querySelectorAll('.video-only').forEach(el=>{el.hidden=mode==='image';el.querySelector('input,select').disabled=mode==='image';});
       const values=Object.fromEntries(new FormData(form));
-      document.querySelectorAll('.video-only').forEach(el=>{el.hidden=values.mode==='image';el.querySelector('input,select').disabled=values.mode==='image';});
-      if(!form.checkValidity()) return;
-      document.querySelector('#prompt-output').value=buildPrompt(values);
+      const ready=form.checkValidity() && values.subject.trim().length>0 && values.environment.trim().length>0;
+      controls.forEach(control=>{control.disabled=!ready;});
+      if(!ready){output.value='';document.querySelector('#output-meta').textContent='Complete os campos e informe uma duração inteira de 2 a 10 segundos.';return false;}
+      output.value=buildPrompt(values);
       document.querySelector('#output-meta').textContent=`${values.mode==='image'?'IMAGEM':`${values.duration}s SOLICITADOS`} · ${values.format} · REFERÊNCIA OBRIGATÓRIA`;
+      return true;
     };
     form.addEventListener('input',update);form.addEventListener('change',update);
-    form.addEventListener('submit',e=>{e.preventDefault();update();notify('Prompt atualizado. Confira os anexos antes de gerar.');});
+    form.addEventListener('submit',e=>{e.preventDefault();if(update())notify('Prompt atualizado. Confira os anexos antes de gerar.');});
     document.querySelector('#download-prompt').addEventListener('click',()=>download('frame-prompt.txt',document.querySelector('#prompt-output').value));update();
   }
   if(page==='prompts'){
@@ -189,12 +203,12 @@ function bind(page,section){
   }
 }
 
-const pageNames={inicio:'Visão geral',guia:'Manual de direção',camera:'Atlas de câmera',laboratorio:'Laboratório',prompts:'Biblioteca de prompts',storyboard:'Do frame ao filme',modelos:'Modelos & ferramentas',qualidade:'Controle de qualidade',fontes:'Fontes & atualização'};
+const pageNames={inicio:'Visão geral',guia:'Manual de direção',camera:'Atlas de câmera',laboratorio:'Laboratório',prompts:'Biblioteca de prompts',storyboard:'Do frame ao filme',modelos:'Modelos & ferramentas',qualidade:'Controle de qualidade',fontes:'Fontes & atualização',producao:'Plano de produção'};
 let previousPage;
 function route(){
   dispose();dispose=()=>{};
   const [raw,section]=location.hash.slice(1).split('/');const page=Object.hasOwn(pageNames,raw)?raw:'inicio';
-  const renders={inicio:home,guia:guide,camera,laboratorio:lab,prompts,storyboard:film,modelos:models,qualidade:quality,fontes:references};
+  const renders={inicio:home,guia:guide,camera,laboratorio:lab,prompts,storyboard:film,modelos:models,qualidade:quality,fontes:references,producao:production};
   const previousScroll=window.scrollY;
   main.innerHTML=renders[page](section);
   document.title=`${pageNames[page]} — FRAME`;
@@ -217,6 +231,6 @@ document.addEventListener('click',async e=>{
   try{await navigator.clipboard.writeText(text);notify('Prompt copiado.');}catch{notify('Cópia indisponível. Selecione o texto do prompt ou baixe o arquivo.');}
 });
 document.querySelector('.menu-toggle').addEventListener('click',e=>{const open=document.querySelector('.sidebar').classList.toggle('open');e.currentTarget.setAttribute('aria-expanded',String(open));});
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.querySelector('.sidebar').classList.remove('open');document.querySelector('.menu-toggle').setAttribute('aria-expanded','false');}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.querySelector('.sidebar').classList.contains('open')){document.querySelector('.sidebar').classList.remove('open');const menu=document.querySelector('.menu-toggle');menu.setAttribute('aria-expanded','false');menu.focus();}});
 window.addEventListener('hashchange',route);
 route();

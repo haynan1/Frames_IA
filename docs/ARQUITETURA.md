@@ -15,6 +15,9 @@ O roteamento usa fragmentos (`#camera/orbit`, `#guia/identidade`), funcionando s
 | `app.js` | Roteamento, renderização, simulação, busca, clipboard, downloads e QA |
 | `data/content.js` | Capítulos, movimentos, prompts, ferramentas, fontes e storyboard |
 | `data/prompt-builder.js` | Função pura de composição de prompts |
+| `data/production.js` | Esquema versionado, validação, timeline e exportação de projetos |
+| `ui/production.js` | Editor de briefing e tomadas, rascunho local e importação reversível |
+| `ui/html.js` | Escape compartilhado de texto e atributos |
 | `assets/` | WebP locais e favicon SVG |
 | `scripts/build.mjs` | Publicação por allowlist e geração do guia Markdown |
 | `scripts/serve.mjs` | Prévia local com headers e proteção de caminhos |
@@ -29,6 +32,8 @@ O roteamento usa fragmentos (`#camera/orbit`, `#guia/identidade`), funcionando s
 - Não existe execução de código vindo de prompts, documentos ou links.
 - Não há chamadas de API de geração, segredo no navegador ou telemetria.
 - QA usa somente `localStorage`, com tratamento de acesso indisponível e validação do tipo lido.
+- Produção usa um esquema estrito com campos permitidos, limites de tamanho, 1–12 tomadas e durações inteiras de 2–10s. Chaves desconhecidas de arquivos importados não são propagadas. Um arquivo inválido mantém o plano atual; uma importação válida oferece desfazer. Nenhuma mídia é enviada.
+- Uma edição inválida limpa os comandos e bloqueia cópia/exportação. A última versão válida permanece no armazenamento. Se a restauração local falhar, o valor anterior não é sobrescrito silenciosamente.
 - O build copia somente arquivos explicitamente permitidos. PDFs, `.work`, Git e arquivos de ambiente ficam fora de `dist`.
 - CSP via meta funciona no Pages; headers adicionais da prévia são específicos do servidor local. Não afirmar que GitHub Pages entrega headers personalizados definidos pelo projeto.
 - Workflow com ações fixadas por SHA, credenciais de checkout não persistidas e permissão de implantação separada.

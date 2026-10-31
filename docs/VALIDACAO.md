@@ -41,6 +41,20 @@ Registrar os resultados observados ao final da execução, sem confundir protoco
 
 Não foi feita uma auditoria completa com leitor de tela, medição de Core Web Vitals, ensaio automatizado de todos os breakpoints ou execução de deploy remoto. Melhorias de foco e skip link foram revisadas no código; não são apresentadas como certificação de acessibilidade.
 
+## Evidência observada · versão 1.1
+
+- Quinze testes automatizados passaram, incluindo projeto exportado/importado, continuidade dos intervalos e bloqueio de dados inválidos.
+- No navegador, a duração total mudou de 15s para 17s ao alterar a primeira tomada de 3s para 5s.
+- Ao informar 0s, o plano mostrou o erro e desabilitou a exportação.
+- Remover uma tomada mudou a contagem para quatro; desfazer a remoção restaurou cinco.
+- O nome editado do projeto foi recuperado depois de recarregar a página.
+- Um JSON válido substituiu o plano; desfazer restaurou o anterior. Um JSON inválido exibiu erro sem alterar o nome ou apagar o rascunho.
+- Alternar o laboratório vídeo → imagem → vídeo preservou orbit e 7s no prompt. Limpar o sujeito esvaziou o comando e bloqueou a cópia.
+- Na revisão responsiva, viewport de 1366px mostrou duas colunas (520px e 441px). Em 390px, o editor passou para uma coluna de 331px; não houve overflow horizontal nas duas medidas.
+- Nenhum erro de console foi retornado na consulta após esses fluxos.
+
+Importação foi exercitada no navegador; os bytes dos arquivos baixados desta versão e o conteúdo efetivo do clipboard não foram auditados por comparação. A exportação de texto e a serialização foram verificadas em testes de função pura.
+
 ## Limites
 
 Não foi realizado benchmark de modelos, geração de clipes nas plataformas listadas, avaliação de conversão ou auditoria automática de arquivos de campanha. Deploy público não foi executado: o usuário escolheu publicar depois. Sessão GitHub verificada com rede disponível. Um build local aprovado não comprova publicação.

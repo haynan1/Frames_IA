@@ -13,6 +13,7 @@ Biblioteca visual em português para planejar e dirigir criativos de produto, mo
 - **Laboratório de prompts:** sujeito, ambiente, luz, enquadramento, movimento, ritmo, duração e proporção; saídas para imagem ou vídeo; cópia e download.
 - **Biblioteca pesquisável:** 12 exemplos autorais, com anexos necessários e cuidados de fidelidade.
 - **Storyboard de 15 segundos:** cinco planos, intenção, direção e shot list para baixar.
+- **Plano de produção editável:** briefing próprio, sequência de até 12 tomadas, duração por plano e prompts derivados de cada escolha. Salva rascunho local e permite exportar/importar o projeto ou baixar o pacote em texto.
 - **Identidade de modelo:** retrato mestre, ficha, turnaround, portfólio e controle de consistência.
 - **Product hero / “product hit”:** packshot, cenário, vidro, tecido, rotação e demonstração de mecanismo.
 - **Catálogo de ferramentas:** Seedance, GPT Image, Nano Banana Pro, Higgsfield, Magnific, Runway, Veo, Kling, Luma e MiniMax, com fontes e data de revisão.
@@ -64,6 +65,8 @@ Consulte [publicação e limitações](docs/PUBLICACAO.md). A hospedagem do cont
 **HTML semântico + CSS + JavaScript nativo em módulos.** Uma biblioteca editorial e um laboratório local não precisam de servidor, banco, login, framework de hidratação ou dependências de produção. Isso reduz transferência, superfície de ataque e manutenção, e mantém o site compatível com subpastas de GitHub Pages.
 
 Conteúdo estruturado em `data/content.js`; construtor puro em `data/prompt-builder.js`; interface em `app.js`; design em `styles.css`. Todas as imagens são locais e otimizadas em WebP. O site não carrega analytics, scripts de terceiros, fontes remotas ou integrações pagas. A CSP limita o carregamento à própria origem.
+
+O planejador usa um esquema versionado em `data/production.js` e uma interface separada em `ui/production.js`. Importações locais são limitadas a 64 KB e validadas antes de substituir o rascunho; a substituição pode ser desfeita. O arquivo de projeto contém briefing e tomadas, sem imagens. Consulte o [percurso de produção](docs/PRODUCAO.md).
 
 ## Fontes, escopo e honestidade editorial
 

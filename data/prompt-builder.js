@@ -1,6 +1,6 @@
 import {movements} from './content.js';
 
-export function buildPrompt(values){
+export function buildPrompt(values = {}){
   const mode = values.mode === 'image' ? 'image' : 'video';
   const subject = String(values.subject || 'the approved product in the reference image').trim();
   const environment = String(values.environment || 'a quiet sandstone studio').trim();
@@ -9,8 +9,10 @@ export function buildPrompt(values){
   const light = {window:'large soft window light from camera left',hard:'hard grazing light from camera left with defined shadows',back:'controlled backlight with subtle front fill',overcast:'soft neutral overcast daylight'}[values.light] || 'large soft window light from camera left';
   const rhythm = {slow:'slow and controlled',moderate:'moderate and fluid',fast:'brisk but readable'}[values.rhythm] || 'slow and controlled';
   const format = ['9:16','4:5','16:9','1:1'].includes(values.format) ? values.format : '9:16';
-  const duration = Math.max(2,Math.min(10, Number(values.duration) || 4));
-  const base = `Reference attachment: referencia-aprovada.png controls the visible subject identity and design. Subject: ${subject}. Setting: ${environment}. Framing: ${framing}, eye-level view. Lighting: ${light}, consistent natural color and physically plausible shadows.`;
+  const requestedDuration = Number(values.duration);
+  const duration = Number.isFinite(requestedDuration) ? Math.max(2,Math.min(10, Math.round(requestedDuration))) : 4;
+  const reference = typeof values.reference==='string' && /^[\p{L}\p{N}_. -]+\.(png|jpe?g|webp)$/iu.test(values.reference) && !values.reference.includes('..') ? values.reference : 'referencia-aprovada.png';
+  const base = `Reference attachment: ${reference} controls the visible subject identity and design. Subject: ${subject}. Setting: ${environment}. Framing: ${framing}, eye-level view. Lighting: ${light}, consistent natural color and physically plausible shadows.`;
   const invariants = 'Preserve the approved face when present, product geometry, proportions, garment construction, colors and visible label characters. Keep grounded contact, plausible hands and material behavior. Do not invent hidden details, branding or product claims. No generated overlay text.';
   if(mode === 'image') return `${base}\n\nCreate one photographic still. Stable composition with clear subject separation and space for layout. ${invariants}\n\nTarget composition: ${format}. Set actual dimensions in the image tool. Human reference comparison required before approval.`;
   const moveInstructions = {

@@ -13,7 +13,9 @@ Construir uma referência pública em português para direção de arte de criat
 
 ## Estado inicial
 
-Há nove áreas de navegação: visão geral, manual, atlas, laboratório, prompts, storyboard, ferramentas, qualidade e fontes. O manual tem oito capítulos. Os assets raster são originais gerados com a ferramenta integrada e foram otimizados localmente. As fontes privadas não entram no Git.
+Há dez áreas de navegação: visão geral, manual, atlas, laboratório, prompts, storyboard, plano de produção, ferramentas, qualidade e fontes. O manual tem oito capítulos. Os assets raster são originais gerados com a ferramenta integrada e foram otimizados localmente. As fontes privadas não entram no Git.
+
+Na versão 1.1, o plano de produção permite criar briefing e tomadas, recalcular a timeline e exportar/importar um JSON validado, além do pacote de texto com prompts. Modelo e validadores ficam em `data/production.js`; a interface, em `ui/production.js`. É planejamento local, sem geração de mídia. Durações são solicitadas; precisam ser conferidas no provedor. A mensagem editorial não é uma afirmação factual automática.
 
 Não há backend, login, analytics ou dependências instaláveis. O laboratório compõe texto; não gera mídia. O storyboard é uma proposta e não um filme final. O simulador é geométrico e esquemático. Não inventar um benchmark ou anunciar integração inexistente.
 
@@ -37,4 +39,4 @@ Não transformar “Cidence” em um novo modelo: foi interpretado como Seedance
 
 ## Publicação
 
-O usuário autorizou repositório público e GitHub Pages. Execute publicação somente dos arquivos próprios deste projeto. Verifique o resultado remoto antes de afirmar sucesso. Se autenticação expirar, conclua trabalho local e explique a etapa específica que depende de login humano; não solicite tokens na conversa.
+O usuário autorizou repositório público e GitHub Pages, mas escolheu deixar a publicação para depois. O pedido seguinte de continuar os trabalhos manteve o desenvolvimento local; não interpretar isso sozinho como nova ordem de publicar. Quando a publicação for retomada, envie somente arquivos próprios e verifique jobs e URL antes de afirmar sucesso. A sessão GitHub estava válida na última checagem com rede; distinguir restrição de rede de autenticação expirada.
