@@ -246,3 +246,18 @@ CORRECTION: This is a CLOSE head-and-shoulders identity portrait, not a full-bod
 ```
 
 Para SHOW-S04-B, a ferramenta aceitou no máximo cinco referências por chamada. Foram usadas rosto-frente.webp, corpo-costas.webp (SC-01), peca-frente.webp, peca-costas.webp e s04-a.webp (campanha sarcenet-capsula-seda). A referência redundante de corpo-frente neutro foi omitida. A primeira tentativa não produziu imagem por exceder esse limite. SHOW-S01-A teve duas tentativas sem imagem antes da variante selecionada; SHOW-S02-A teve uma tentativa sem imagem e foi repetida com o mesmo prompt.
+### Complemento · Estúdio Sarcenet — 2026-10-31
+
+| Pedido | Data | Método | Tentativas | Revisão e origem |
+| --- | --- | --- | --- | --- |
+| DIR-ESTUDIO-SARCENET-HERO | 2026-10-31 | image_gen integrado | 3 | Selecionada: plano dos joelhos para cima, cetim champagne opaco, alças largas, decote drapeado, fundo areia-cinza e luz suave da esquerda. Traços e sinal facial visualmente coerentes com as duas referências fictícias SC-01. Origem: exec-09bcb075-1428-4eba-b6af-2ce9ae49c36d.png. |
+| DIR-ESTUDIO-SARCENET-PLATE | 2026-10-31 | image_gen integrado | 1 | Cenário vazio em papel contínuo areia-cinza, piso claro, sem objetos ou pessoas; luz suave coerente com a imagem-chave anexada. Origem: exec-c67a2f35-8b97-4307-83ce-b085649abedc.png. |
+
+Os prompts originais completos estão na fila de imagens, pedidos acima. A imagem-chave usou exatamente as duas referências indicadas; o plate usou a imagem-chave selecionada. A primeira versão da imagem-chave ficou de corpo inteiro e foi descartada. A segunda tentativa não produziu arquivo por rejeição automática de saída. A terceira acrescentou as duas correções literais abaixo ao prompt original e foi selecionada:
+
+```text
+CORRECTION: The camera is too far away: frame from just below the knees to a little above the head, not full body. Keep the small mole above the anatomical left side of the upper lip visible (viewer right), matching the face reference. Keep everything else identical to the previous attempt and the attached references.
+CORRECTION: This is a fully clothed adult catalogue photograph. The satin gown is opaque, with a modest draped neckline covering the chest; keep the high slit below the upper thigh, no underwear or intimate detail visible. The pose is neutral and professional.
+```
+
+Arquivos principais nativos: hero 1024×1536 e plate 1536×1024, convertidos para WebP pelo importador oficial sem recorte ou ampliação; miniaturas derivadas separadamente. Revisão visual de imagens estáticas pelo agente, sem teste de animação ou garantia de identidade. O plate infere as áreas antes ocultas pela pessoa.

@@ -385,7 +385,7 @@
         "CAST-SC-01-ROSTO-FRENTE",
         "CAST-SC-01-CORPO-FRENTE"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "DIR-SEDA-JANELA-HERO",
@@ -1538,7 +1538,7 @@
       "dependsOn": [
         "DIR-ESTUDIO-SARCENET-HERO"
       ],
-      "generated": false
+      "generated": true
     },
     {
       "id": "DIR-SEDA-JANELA-PLATE",

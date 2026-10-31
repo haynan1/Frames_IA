@@ -2,7 +2,7 @@
 
 Gerado por `npm run build` a partir de `data/image-requests.js`. Não edite à mão.
 
-**100/102 geradas** · P0: 43/44. Siga a ordem da tabela (prioridade, depois onda). Protocolo completo: [IMAGENS-CODEX.md](IMAGENS-CODEX.md).
+**102/102 geradas** · P0: 44/44. Siga a ordem da tabela (prioridade, depois onda). Protocolo completo: [IMAGENS-CODEX.md](IMAGENS-CODEX.md).
 
 | # | ID | Prioridade | Onda | Tamanho | Destino | Status |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -30,7 +30,7 @@ Gerado por `npm run build` a partir de `data/image-requests.js`. Não edite à m
 | 22 | `SHOW-PECA-COSTAS` | P0 | 2 | 1024x1536 | `assets/projects/sarcenet-capsula-seda/peca-costas.webp` | gerada |
 | 23 | `SHOW-PECA-DETALHE` | P0 | 2 | 1024x1536 | `assets/projects/sarcenet-capsula-seda/peca-detalhe.webp` | gerada |
 | 24 | `CAST-SC-01-CORPO-COSTAS` | P0 | 3 | 1024x1536 | `assets/cast/sc-01/corpo-costas.webp` | gerada |
-| 25 | `DIR-ESTUDIO-SARCENET-HERO` | P0 | 3 | 1024x1536 | `assets/directions/estudio-sarcenet/hero.webp` | pendente |
+| 25 | `DIR-ESTUDIO-SARCENET-HERO` | P0 | 3 | 1024x1536 | `assets/directions/estudio-sarcenet/hero.webp` | gerada |
 | 26 | `DIR-SEDA-JANELA-HERO` | P0 | 3 | 1024x1536 | `assets/directions/seda-janela/hero.webp` | gerada |
 | 27 | `DIR-CICLORAMA-MARFIM-HERO` | P0 | 3 | 1024x1536 | `assets/directions/ciclorama-marfim/hero.webp` | gerada |
 | 28 | `DIR-ATELIER-PROVADOR-HERO` | P0 | 3 | 1024x1536 | `assets/directions/atelier-provador/hero.webp` | gerada |
@@ -89,7 +89,7 @@ Gerado por `npm run build` a partir de `data/image-requests.js`. Não edite à m
 | 81 | `CAST-SC-10-PERFIL` | P1 | 3 | 1024x1536 | `assets/cast/sc-10/perfil.webp` | gerada |
 | 82 | `CAST-SC-10-CORPO-COSTAS` | P1 | 3 | 1024x1536 | `assets/cast/sc-10/corpo-costas.webp` | gerada |
 | 83 | `CAST-SC-10-CORPO-LATERAL` | P1 | 3 | 1024x1536 | `assets/cast/sc-10/corpo-lateral.webp` | gerada |
-| 84 | `DIR-ESTUDIO-SARCENET-PLATE` | P1 | 4 | 1536x1024 | `assets/directions/estudio-sarcenet/plate.webp` | pendente |
+| 84 | `DIR-ESTUDIO-SARCENET-PLATE` | P1 | 4 | 1536x1024 | `assets/directions/estudio-sarcenet/plate.webp` | gerada |
 | 85 | `DIR-SEDA-JANELA-PLATE` | P1 | 4 | 1536x1024 | `assets/directions/seda-janela/plate.webp` | gerada |
 | 86 | `DIR-CICLORAMA-MARFIM-PLATE` | P1 | 4 | 1536x1024 | `assets/directions/ciclorama-marfim/plate.webp` | gerada |
 | 87 | `DIR-ATELIER-PROVADOR-PLATE` | P1 | 4 | 1536x1024 | `assets/directions/atelier-provador/plate.webp` | gerada |

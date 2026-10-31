@@ -859,6 +859,28 @@ export const generatedAssets = {
     "method": "Codex image generation",
     "upscaled": false
   },
+  "assets/directions/estudio-sarcenet/hero.webp": {
+    "width": 1024,
+    "height": 1536,
+    "bytes": 98006,
+    "thumb": "assets/directions/estudio-sarcenet/hero-thumb.webp",
+    "request": "DIR-ESTUDIO-SARCENET-HERO",
+    "sourceFilename": "DIR-ESTUDIO-SARCENET-HERO.png",
+    "generatedAt": "2026-10-31",
+    "method": "Codex image generation",
+    "upscaled": false
+  },
+  "assets/directions/estudio-sarcenet/plate.webp": {
+    "width": 1536,
+    "height": 1024,
+    "bytes": 20856,
+    "thumb": "assets/directions/estudio-sarcenet/plate-thumb.webp",
+    "request": "DIR-ESTUDIO-SARCENET-PLATE",
+    "sourceFilename": "DIR-ESTUDIO-SARCENET-PLATE.png",
+    "generatedAt": "2026-10-31",
+    "method": "Codex image generation",
+    "upscaled": false
+  },
   "assets/directions/natureza-linho/hero.webp": {
     "width": 1024,
     "height": 1536,
