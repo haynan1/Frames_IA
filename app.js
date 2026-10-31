@@ -3,6 +3,8 @@ import {chapters, movements, promptLibrary, tools, sources, storyboard, qaItems,
 import {buildPrompt} from './data/prompt-builder.js';
 import {productionMarkup,mountProduction} from './ui/production.js';
 import {escapeHTML} from './ui/html.js';
+import {galleryMarkup,mountGallery} from './ui/gallery.js';
+import {quickstartMarkup} from './ui/quickstart.js';
 
 const main = document.querySelector('main');
 const photo = (name, alt, extra = '') => `<img src="./assets/${name}.webp" alt="${escapeHTML(alt)}" width="720" height="960" ${extra}>`;
@@ -22,7 +24,7 @@ function notify(message){
 
 
 function home(){
-  return `<section class="hero"><div class="hero-copy"><span class="eyebrow">DA INTENÇÃO À IMAGEM</span><h1>Não peça só<br>uma imagem.<br><em>Dirija a cena.</em></h1><p>Um sistema visual para criar com IA: da primeira referência ao último corte. Câmera, luz, identidade e produto, com uma direção clara.</p><div class="actions">${button('Começar o percurso','#guia')}${button('Explorar a câmera','#camera',true)}</div></div><figure class="hero-visual">${photo('scene','Frasco fictício de vidro âmbar em pedestal de pedra ao pôr do sol','fetchpriority="high"')}<div class="hero-overlay"><span class="image-badge">ESTUDO VISUAL · GERADO COM IA</span><figcaption><span>01 / PRODUTO · LUZ · ATMOSFERA</span><p>Uma escolha muda tudo.</p></figcaption></div><span class="cross tl" aria-hidden="true"></span><span class="cross br" aria-hidden="true"></span></figure></section>
+  return `<section class="hero"><div class="hero-copy"><span class="eyebrow">DA INTENÇÃO À IMAGEM</span><h1>Não peça só<br>uma imagem.<br><em>Dirija a cena.</em></h1><p>Um sistema visual para criar com IA: da primeira referência ao último corte. Câmera, luz, identidade e produto, com uma direção clara.</p><div class="actions">${button('Explorar biblioteca','#biblioteca')}${button('Como usar','#como-usar',true)}</div></div><figure class="hero-visual">${photo('scene','Frasco fictício de vidro âmbar em pedestal de pedra ao pôr do sol','fetchpriority="high"')}<div class="hero-overlay"><span class="image-badge">ESTUDO VISUAL · GERADO COM IA</span><figcaption><span>01 / PRODUTO · LUZ · ATMOSFERA</span><p>Uma escolha muda tudo.</p></figcaption></div><span class="cross tl" aria-hidden="true"></span><span class="cross br" aria-hidden="true"></span></figure></section>
   <div class="strip"><div><strong>08</strong><small>CAPÍTULOS PARA<br>CONSTRUIR REPERTÓRIO</small></div><div><strong>14</strong><small>OPERAÇÕES DE CÂMERA<br>PARA EXPLORAR</small></div><div><strong>12</strong><small>PROMPTS COM CONTEXTO<br>PARA COMEÇAR</small></div></div>
   <div class="section-title"><div><small>O QUE VOCÊ VAI DIRIGIR</small><h2>Três frentes. <em>Uma linguagem.</em></h2></div><a class="text-link" href="#guia">Abrir o manual ↗</a></div>
   <div class="feature-grid"><a class="feature" href="#guia/produto"><figure>${photo('product','Estudo conceitual de vidro âmbar sobre superfície escura','loading="lazy"')}<span class="index">01 / PRODUCT HERO</span></figure><div class="feature-body"><h3>Produto com presença.</h3><p>Packshot, cenário, materialidade e movimento. O produto no centro da intenção.</p><span>DIRIGIR O PRODUTO ↗</span></div></a><a class="feature" href="#guia/identidade"><figure>${photo('model','Retrato de personagem adulta fictícia em blazer marfim','loading="lazy"')}<span class="index">02 / IDENTIDADE</span></figure><div class="feature-body"><h3>A mesma identidade.</h3><p>Da ficha da modelo ao portfólio. Construa consistência antes de criar a campanha.</p><span>CONSTRUIR A MODELO ↗</span></div></a><a class="feature" href="#storyboard"><figure>${photo('scene','Frasco conceitual em cenário cinematográfico de pedra','loading="lazy"')}<span class="index">03 / FILME</span></figure><div class="feature-body"><h3>Do frame ao filme.</h3><p>Roteiro, imagem-base, câmera e montagem. Cada plano com um trabalho a fazer.</p><span>PLANEJAR O VÍDEO ↗</span></div></a></div>
@@ -134,6 +136,7 @@ function storageGet(key,fallback){try{const x=JSON.parse(localStorage.getItem(ke
 function storageSet(key,value){try{localStorage.setItem(key,JSON.stringify(value));return true;}catch{return false;}}
 
 function bind(page,section){
+  if(page==='biblioteca')dispose=mountGallery({id:section,notify,download});
   if(page==='producao')dispose=mountProduction({notify,download});
   if(page==='camera'){
     const current=movements.find(m=>m.id===section)||movements[0];
@@ -203,12 +206,12 @@ function bind(page,section){
   }
 }
 
-const pageNames={inicio:'Visão geral',guia:'Manual de direção',camera:'Atlas de câmera',laboratorio:'Laboratório',prompts:'Biblioteca de prompts',storyboard:'Do frame ao filme',modelos:'Modelos & ferramentas',qualidade:'Controle de qualidade',fontes:'Fontes & atualização',producao:'Plano de produção'};
+const pageNames={inicio:'Visão geral',guia:'Manual de direção',camera:'Atlas de câmera',laboratorio:'Laboratório',prompts:'Biblioteca de prompts',storyboard:'Do frame ao filme',modelos:'Modelos & ferramentas',qualidade:'Controle de qualidade',fontes:'Fontes & atualização',producao:'Plano de produção',biblioteca:'Biblioteca visual','como-usar':'Como usar'};
 let previousPage;
 function route(){
   dispose();dispose=()=>{};
   const [raw,section]=location.hash.slice(1).split('/');const page=Object.hasOwn(pageNames,raw)?raw:'inicio';
-  const renders={inicio:home,guia:guide,camera,laboratorio:lab,prompts,storyboard:film,modelos:models,qualidade:quality,fontes:references,producao:production};
+  const renders={inicio:home,guia:guide,camera,laboratorio:lab,prompts,storyboard:film,modelos:models,qualidade:quality,fontes:references,producao:production,biblioteca:galleryMarkup,'como-usar':quickstartMarkup};
   const previousScroll=window.scrollY;
   main.innerHTML=renders[page](section);
   document.title=`${pageNames[page]} — FRAME`;

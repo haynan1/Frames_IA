@@ -57,4 +57,20 @@ Importação foi exercitada no navegador; os bytes dos arquivos baixados desta v
 
 ## Limites
 
-Não foi realizado benchmark de modelos, geração de clipes nas plataformas listadas, avaliação de conversão ou auditoria automática de arquivos de campanha. Deploy público não foi executado: o usuário escolheu publicar depois. Sessão GitHub verificada com rede disponível. Um build local aprovado não comprova publicação.
+## Evidência observada · versão 1.2
+
+- Vinte e um testes passaram, incluindo presença dos trinta WebP individuais e miniaturas, metadados, seis estudos de roupas, pesquisa com acentos, duração dos prompts e exportação dos roteiros.
+- Os trinta resultados selecionados e a tentativa rejeitada foram inspecionados visualmente. Não houve upscale; os arquivos finais preservam as dimensões nativas.
+- No navegador, Clothing mostrou seis estudos e Produto mostrou quatro; a busca por linho mostrou um. Consulta sem resultado exibiu a opção de limpar filtros, que restaurou dez estudos.
+- Salvar um estudo e filtrar Meus salvos manteve o resultado; a marcação de teste foi removida ao final.
+- No estudo de linho, selecionar o frame 02 e a aba de animação mostrou a referência correta e cinco segundos solicitados. A ampliação avançou para o frame 03 com seta, fechou com Escape e devolveu o foco ao botão de ampliar.
+- Os quatro elementos de imagem da área visual carregaram. A comparação de enquadramento do perfume tem duas imagens, tentativa e reparo.
+- O guia mostrou seis etapas e primeiro exercício com links para as telas correspondentes. O menu de celular abriu e navegou para a biblioteca.
+- Não houve overflow horizontal nas medidas de 390, 768 e 1366 pixels verificadas. A revisão foi executada em `/preview/`, simulando uma subpasta de GitHub Pages.
+- Prompts de animação foram ajustados à imagem observada: o linho começa na composição de corpo inteiro; o café termina o despejo quase imediatamente para acomodar o nível já alto.
+
+As exportações de roteiro foram verificadas em função pura; nesta versão, não houve nova comparação dos bytes baixados pelo navegador nem auditoria do clipboard.
+
+## Limites atuais
+
+Não foi realizado benchmark de modelos, geração de clipes nas plataformas listadas, avaliação de conversão ou auditoria automática de arquivos de campanha. Envio ao repositório e implantação de Pages são eventos distintos. Um build local aprovado não comprova publicação do site.

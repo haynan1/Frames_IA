@@ -13,6 +13,8 @@ Construir uma referência pública em português para direção de arte de criat
 
 ## Estado inicial
 
+Versão 1.2: Biblioteca visual com dez cenários e trinta gerações individuais, seis sequências de clothing, uma tentativa de perfume rejeitada e sua correção, prompts de imagem/vídeo por frame e curadoria específica. `data/gallery.js` é a fonte dos roteiros; `data/gallery-assets.js` registra dimensões e origem; `data/gallery-review.js` guarda a revisão visual. Não declarar vídeo testado: nenhum desses trinta frames foi animado neste ciclo. A rota `#como-usar` e `docs/COMO-USAR.md` explicam a operação em seis passos.
+
 Há dez áreas de navegação: visão geral, manual, atlas, laboratório, prompts, storyboard, plano de produção, ferramentas, qualidade e fontes. O manual tem oito capítulos. Os assets raster são originais gerados com a ferramenta integrada e foram otimizados localmente. As fontes privadas não entram no Git.
 
 Na versão 1.1, o plano de produção permite criar briefing e tomadas, recalcular a timeline e exportar/importar um JSON validado, além do pacote de texto com prompts. Modelo e validadores ficam em `data/production.js`; a interface, em `ui/production.js`. É planejamento local, sem geração de mídia. Durações são solicitadas; precisam ser conferidas no provedor. A mensagem editorial não é uma afirmação factual automática.
@@ -39,4 +41,4 @@ Não transformar “Cidence” em um novo modelo: foi interpretado como Seedance
 
 ## Publicação
 
-O usuário autorizou repositório público e GitHub Pages, mas escolheu deixar a publicação para depois. O pedido seguinte de continuar os trabalhos manteve o desenvolvimento local; não interpretar isso sozinho como nova ordem de publicar. Quando a publicação for retomada, envie somente arquivos próprios e verifique jobs e URL antes de afirmar sucesso. A sessão GitHub estava válida na última checagem com rede; distinguir restrição de rede de autenticação expirada.
+Após ter escolhido adiar a publicação, o usuário solicitou explicitamente configurar `https://github.com/haynan1/Frames_IA.git`, renomear a branch para `main` e enviar o código. Esse envio foi concluído até o commit `2a37621`. O envio não comprova Pages ativo. Verifique o estado real antes de uma nova publicação e confirme jobs e URL antes de anunciar implantação. Distinguir restrição de rede de autenticação expirada.

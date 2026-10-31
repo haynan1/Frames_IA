@@ -26,6 +26,10 @@ O roteamento usa fragmentos (`#camera/orbit`, `#guia/identidade`), funcionando s
 
 ## Segurança e privacidade
 
+A biblioteca visual separa roteiro e prompts (`data/gallery.js`), registro técnico dos assets (`data/gallery-assets.js`) e observações humanas (`data/gallery-review.js`). `ui/gallery.js` controla pesquisa, favoritos, seleção de frame e diálogo nativo; `ui/quickstart.js` apresenta o percurso de operação. Não há geração remota na interface. O build também deriva `docs/BIBLIOTECA.md` desses dados.
+
+Cada frame tem uma imagem WebP na resolução nativa e uma miniatura de até 640 × 800. A listagem carrega miniaturas; a página do estudo carrega o frame selecionado. A preparação local usa Pillow em `scripts/prepare-gallery.py`, sem acrescentar dependência de runtime ou de build público. Os PNGs originais e os manifestos com caminhos locais ficam fora da publicação.
+
 - Dados de formulário entram em `value`, nunca em HTML executável.
 - O texto variável exibido no HTML passa por escape de caracteres.
 - SVG de simulação é produzido apenas com estados e números internos.

@@ -28,6 +28,18 @@ Original educational photographic contact sheet with 4 equal panels in a 2 by 2 
 
 Revisão: quatro vistas legíveis, corpo inteiro com pés visíveis, fundo e roupa coerentes. É um candidato ilustrativo: a identidade ainda requer comparação detalhada antes de produção. A vista de corpo inteiro tem menos pixels de rosto do que os retratos; use vistas individuais em alta resolução para uma campanha real. O turnaround completo também precisaria de perfil oposto e costas aprovados.
 
+## Biblioteca visual — edição 01
+
+São **30 gerações individuais selecionadas**, em dez cenários, e **uma tentativa rejeitada** preservada para comparação. Seis cenários estudam roupas: trench na chuva, linho na costa, alfaiataria no concreto, activewear na pista, tricô na biblioteca e cápsula de três looks. Quatro estudam produto: perfume no deserto, bolsa no atelier, café na cozinha e sérum botânico.
+
+Os prompts completos usados estão em `data/gallery.js`, um por frame, e no [catálogo derivado](BIBLIOTECA.md). Os frames 02 e 03 foram gerados anexando o frame 01 do mesmo estudo como referência. No lookbook, a mudança de roupa é intencional. Cada resultado tem seu próprio arquivo de geração: não são recortes de uma única contact sheet.
+
+`data/gallery-assets.js` registra arquivo original de geração, data, dimensões nativas, bytes, referência e método. `assets/gallery/<estudo>/01.webp` a `03.webp` são versões otimizadas sem upscale nem recorte; arquivos `-thumb.webp` são miniaturas. `assets/gallery/overview.webp` é apenas uma montagem de navegação feita a partir dos frames existentes, não uma geração adicional.
+
+A primeira tentativa do frame 02 do perfume repetiu o enquadramento da base. Foi preservada em `assets/gallery/ambar-deserto/tentativa-repetida.webp`. A nova tentativa usou o mesmo prompt acrescido da instrução explícita de afastar a câmera, limitar o frasco a 40% da altura e revelar o pedestal completo; essa versão integral está no prompt registrado do frame 02. A comparação aparece no estudo do perfume.
+
+Observações específicas estão em `data/gallery-review.js`: por exemplo, o café durante o despejo já está quase cheio, e o primeiro frame do perfume mostra o frasco inteiro apesar da solicitação de detalhe. Esses desvios não foram ocultados. A revisão é visual e estática; animações, narrações e resultados de vendas não foram produzidos ou medidos.
+
 ## Simulação
 
 O atlas usa SVG construído em código com projeção de perspectiva. Não é mídia gerada por IA. A função mostra trajetória e paralaxe usando um objeto geométrico simples; não se apresenta como render fotorrealista de vidro ou previsão de saída de vídeo.

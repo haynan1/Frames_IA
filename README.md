@@ -8,6 +8,8 @@ Biblioteca visual em português para planejar e dirigir criativos de produto, mo
 
 ## O que você encontra
 
+- **Biblioteca visual:** 10 cenários, 30 frames individuais gerados e seis estudos de roupas. Sequências de 15 ou 24 segundos planejados, com prompts de imagem e animação por frame, narração proposta, favoritos, busca, downloads e curadoria visual. Inclui uma tentativa rejeitada e seu reparo de enquadramento.
+- **Como usar:** percurso de operação em seis passos e um primeiro exercício prático. Consulte também o [guia rápido](docs/COMO-USAR.md).
 - **Manual em oito capítulos:** briefing, direção visual, óptica, identidade, produto, vídeo, performance e revisão.
 - **Atlas com 14 operações:** dolly in/out, zoom, pan, tilt, truck, orbit, pedestal, tracking, crane, roll, dolly zoom, rack focus e câmera fixa. Demonstração esquemática interativa, trajetória, aplicação e prompt.
 - **Laboratório de prompts:** sujeito, ambiente, luz, enquadramento, movimento, ritmo, duração e proporção; saídas para imagem ou vídeo; cópia e download.
@@ -44,10 +46,10 @@ Abra `http://127.0.0.1:4173`. Para testar hospedagem em subpasta, abra `http://1
 
 ## Publicar gratuitamente no GitHub Pages
 
-O projeto foi preparado para um repositório público chamado `direcao_de_arte_com_IA`. O endereço final é determinado pelo proprietário e pelo nome reais do repositório; esta documentação não afirma que já existe uma implantação.
+O remoto configurado é [haynan1/Frames_IA](https://github.com/haynan1/Frames_IA), na branch `main`. O código inicial foi enviado ao repositório; isso não confirma uma implantação do site. Para atualizações, revise o commit e envie para esse remoto existente. Não crie outro repositório com o assistente abaixo.
 
 1. Autentique o GitHub CLI com `gh auth login`, se necessário.
-2. Execute o assistente local de publicação, que valida os arquivos antes de criar e enviar o repositório:
+2. O assistente abaixo é destinado apenas a uma primeira publicação em outro repositório ainda não configurado:
 
 ```powershell
 ./scripts/publish.ps1
@@ -84,6 +86,8 @@ As imagens foram produzidas pela ferramenta integrada de geração de imagens e 
 - [Atualizar modelos e fontes](docs/ATUALIZACAO.md)
 - [Retomar com GPT, Claude ou outro colaborador](docs/HANDOFF.md)
 - [Registro de validação](docs/VALIDACAO.md)
+- [Operação do sistema](docs/COMO-USAR.md)
+- [Roteiros e prompts dos 30 frames](docs/BIBLIOTECA.md)
 - [Contribuir](CONTRIBUTING.md)
 
 Código e documentação original sob [MIT](LICENSE). Referências externas mantêm seus próprios direitos e condições.
