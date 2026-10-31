@@ -873,13 +873,14 @@ export const generatedAssets = {
   "assets/directions/estudio-sarcenet/plate.webp": {
     "width": 1536,
     "height": 1024,
-    "bytes": 20856,
+    "bytes": 18826,
     "thumb": "assets/directions/estudio-sarcenet/plate-thumb.webp",
     "request": "DIR-ESTUDIO-SARCENET-PLATE",
     "sourceFilename": "DIR-ESTUDIO-SARCENET-PLATE.png",
     "generatedAt": "2026-10-31",
     "method": "Codex image generation",
-    "upscaled": false
+    "upscaled": false,
+    "revision": "R1"
   },
   "assets/directions/natureza-linho/hero.webp": {
     "width": 1024,

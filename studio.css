@@ -129,6 +129,8 @@ footer { padding: 24px clamp(18px, 3.4vw, 54px); }
 
 /* ---------- shared bits ---------- */
 .badge.ok { border-color: #4f6b56; background: #18231b; color: var(--ok); }
+.badge.redo { border-color: #6b4a2e; background: #241a12; color: var(--warn); }
+.queue-redo { margin: 0 0 8px; padding: 8px 10px; border-radius: 8px; background: #241a12; border: 1px solid #4d3626; font-size: 12px; color: #f0cfb2; }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 14px; }
 .tags span { font-size: 11px; padding: 4px 10px; border-radius: 99px; border: 1px solid var(--line); color: var(--muted); }
 .swatches { display: flex; flex-wrap: wrap; gap: 10px 14px; margin: 10px 0 16px; }

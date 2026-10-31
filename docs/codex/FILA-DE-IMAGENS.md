@@ -1,8 +1,8 @@
 # Fila de imagens · FRAME Studio
 
-Gerado por `npm run build` a partir de `data/image-requests.js`. Não edite à mão.
+Gerado por `npm run build` a partir de `data/image-requests.js` e `data/image-revisions.js`. Não edite à mão.
 
-**102/102 geradas** · P0: 44/44. Siga a ordem da tabela (prioridade, depois onda). Protocolo completo: [IMAGENS-CODEX.md](IMAGENS-CODEX.md).
+**102/102 concluídas** · P0: 44/44. Siga a ordem da tabela (prioridade, depois onda). Protocolo completo: [IMAGENS-CODEX.md](IMAGENS-CODEX.md).
 
 | # | ID | Prioridade | Onda | Tamanho | Destino | Status |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -2164,6 +2164,7 @@ Estúdio Sarcenet · cenário vazio · Direções · P1 · onda 4
   - Nenhuma pessoa.
   - Mesmo cenário e direção de luz da imagem-chave.
   - Verticais retas, sem texto ou placas legíveis.
+  - Nenhuma linha de horizonte: parede e chão formam uma curva contínua, só com gradiente de tom.
 
 ```text
 Empty set plate · "Estúdio Sarcenet". ONE photograph of the location with nobody in it, used as a background and continuity reference.
@@ -2173,6 +2174,7 @@ Light: broad soft key light from camera left at about 45 degrees, slightly above
 Camera at chest height, 35mm, wide establishing composition with clear floor area where a model could stand.
 Photorealistic architectural photography, true perspective, straight verticals, natural materials.
 Horizontal 3:2, 1536x1024. No people. No text, no logos, no watermarks, no borders, no extra panels.
+CORRECTION: The wall meets the floor in a hard horizontal line. The backdrop must be ONE continuous sheet of paper that sweeps softly from wall to floor like a cyclorama: the transition is a smooth tonal gradient with no visible edge, seam, crease or horizon line anywhere in the frame. Keep the colours, the soft light falloff toward the upper right, the fine paper grain and the empty set identical to the previous attempt.
 ```
 
 ## DIR-SEDA-JANELA-PLATE

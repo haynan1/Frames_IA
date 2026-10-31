@@ -29,6 +29,7 @@ O roteamento usa fragmentos (`#studio/4`, `#elenco/sc-01`, `#direcoes/seda-janel
 | `data/store-models.js` | Modelos da loja (MODELO-A e 20 fichas): identidade em texto e nomes dos arquivos privados |
 | `data/directions.js` | Direções de arte com planta de luz |
 | `data/image-requests.js` | Fila de imagens derivada de elenco, direções e campanha |
+| `data/image-revisions.js` | Imagens reprovadas depois de geradas: motivo, correção e revisão que fecha o pedido |
 | `data/generated-assets.js` | Registro de imagens ingeridas (escrito pelo script) |
 | `data/production.js` | Esquema v1, mantido para migração |
 | `scripts/build.mjs` | Publicação por allowlist, guia, biblioteca e fila do Codex |

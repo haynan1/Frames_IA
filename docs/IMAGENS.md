@@ -261,3 +261,17 @@ CORRECTION: This is a fully clothed adult catalogue photograph. The satin gown i
 ```
 
 Arquivos principais nativos: hero 1024×1536 e plate 1536×1024, convertidos para WebP pelo importador oficial sem recorte ou ampliação; miniaturas derivadas separadamente. Revisão visual de imagens estáticas pelo agente, sem teste de animação ou garantia de identidade. O plate infere as áreas antes ocultas pela pessoa.
+
+### Refação R1 · Estúdio Sarcenet, cenário vazio — 2026-10-31
+
+| Pedido | Revisão | Método | Tentativas | Revisão e origem |
+| --- | --- | --- | --- | --- |
+| DIR-ESTUDIO-SARCENET-PLATE | R1 | image_gen integrado (Codex) | 2 | Reprovada a versão anterior por linha de horizonte nítida, que o padrão da loja proíbe (manual 14, §2 e §7). Selecionada a segunda tentativa: varredura ampla e gradual, sem fronteira identificável entre parede e chão, paleta areia-cinza e grão de papel preservados. Referência anexada: `hero.webp`; a versão reprovada foi só comparada. Origem: exec-2173ef47-ca40-4255-98ef-e3ebdea0fd25.png. Revisão visual pelo Claude antes da ingestão. |
+
+Prompt final: o prompt completo do pedido, incluindo a correção R1 de `data/image-revisions.js`, mais esta linha da segunda tentativa:
+
+```text
+CORRECTION: The previous result still has a narrow horizontal transition band across the lower third. Remove that band completely. Use a very large-radius infinity sweep: a broad, gradual tonal change spread across most of the image height, with absolutely no identifiable wall-floor boundary, no straight horizontal band, no local dark stripe, no crease. The viewer must be unable to point to where wall ends and floor begins. Preserve the subtle paper texture and warm sand-grey palette.
+```
+
+Arquivo nativo 1536×1024 convertido para WebP pelo importador, sem recorte nem ampliação. A ingestão gravou `revision: R1` no registro e fechou o pedido.

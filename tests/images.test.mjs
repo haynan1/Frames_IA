@@ -95,3 +95,31 @@ test('Private intake folders stay out of Git and out of the published site', asy
   const build = await readFile(new URL('scripts/build.mjs', root), 'utf8');
   assert.doesNotMatch(build, /'references'|'incoming'|'private-output'/);
 });
+
+test('Reopened images stay on the site but count as pending until redone under the new revision', async () => {
+  const {imageRevisions} = await import('../data/image-revisions.js');
+  const {isDone, needsRedo, queueStats} = await import('../data/image-requests.js');
+  const byId = new Map(imageRequests.map(r => [r.id, r]));
+  for (const [id, rev] of Object.entries(imageRevisions)) {
+    const r = byId.get(id);
+    assert.ok(r, `${id} is in the queue`);
+    assert.match(rev.id, /^R\d+$/); assert.match(rev.correction, /^CORRECTION: /);
+    assert.ok(r.prompt.endsWith(rev.correction)); assert.equal(r.accept.at(-1), rev.accept);
+    assert.equal(needsRedo(r), Object.hasOwn(generatedAssets, r.target) && generatedAssets[r.target].revision !== rev.id);
+    assert.equal(isDone(r), generatedAssets[r.target]?.revision === rev.id);
+  }
+  const stats = queueStats();
+  assert.equal(stats.done + stats.pending, stats.total);
+  assert.equal(stats.redo, imageRequests.filter(needsRedo).length);
+  const dir = await mkdtemp(join(tmpdir(), 'frame-redo-'));
+  try {
+    await writeCodexQueue(dir);
+    const md = await readFile(join(dir, 'docs/codex/FILA-DE-IMAGENS.md'), 'utf8');
+    const json = JSON.parse(await readFile(join(dir, 'docs/codex/fila.json'), 'utf8'));
+    for (const r of imageRequests.filter(needsRedo)) {
+      assert.ok(md.indexOf(r.id, md.indexOf('## Refazer primeiro')) > md.indexOf('## Refazer primeiro'));
+      assert.equal(json.requests.find(x => x.id === r.id).revision, r.revision);
+      assert.equal(json.requests.find(x => x.id === r.id).done, false);
+    }
+  } finally { await rm(dir, {recursive: true, force: true}); }
+});

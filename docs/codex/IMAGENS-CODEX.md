@@ -79,6 +79,17 @@ CORRECTION: <o que está errado, visível>. Keep everything else identical to th
 
 Exemplos: `the left hand has six fingers`, `the camera must be much farther away: full body with both feet visible`, `the mole above the upper lip is missing`. Depois de três tentativas sem sucesso, gere de novo do zero com as referências e registre o problema.
 
+### 6.1 Imagens para refazer
+
+Uma imagem já ingerida pode ser reprovada depois, na revisão do fundador. Ela volta à fila com status **refazer (R1, R2…)** e aparece em “Refazer primeiro”, no topo de `FILA-DE-IMAGENS.md`. A refação é registrada em `data/image-revisions.js`, e o prompt do item já termina com a linha `CORRECTION` certa. Para refazer:
+
+1. Gere de novo com o prompt completo do item e as mesmas referências. Use a versão atual (o arquivo em “Destino”) só para comparar, nunca como referência de geração.
+2. Confira o novo critério de aceite, o último da lista do item.
+3. Salve com o mesmo nome (`incoming/<ID>.png`) e rode a ingestão. Ela substitui o WebP e grava a revisão no registro, e o item volta a contar como concluído.
+4. Registre em `docs/IMAGENS.md` a revisão, o motivo e a `CORRECTION` usada.
+
+Não edite `data/image-revisions.js`: quem abre e fecha revisões é o fundador.
+
 ## 7. Referências reais da Sarcenet (opcional e privado)
 
 O repositório é **público**. Fotos reais da loja e das modelos da loja **nunca** entram no Git:

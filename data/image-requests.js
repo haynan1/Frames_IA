@@ -5,6 +5,7 @@ import {cast, castViews, castAssetPath, castFileName, castById} from './cast.js'
 import {directions, directionAssetPath} from './directions.js';
 import {createStudioProject, compileProject, keyframeAsset, projectSlug, lights, grades} from './studio.js';
 import {generatedAssets} from './generated-assets.js';
+import {imageRevisions} from './image-revisions.js';
 
 export const SHOWCASE_ID = 'sarcenet-capsula-seda';
 const realism = 'Photorealistic, shot on a full-frame digital camera. Natural skin texture with pores and fine vellus hair, no plastic smoothing or beauty filter. Anatomically correct hands with five fingers. Physically plausible seams, stitching and fabric weight. Believable contact shadows and true optical depth of field.';
@@ -155,11 +156,20 @@ function withDependencies(list) {
   return list.sort((a, b) => rank[a.priority] - rank[b.priority] || a.wave - b.wave);
 }
 
-export const imageRequests = withDependencies([...castRequests(), ...directionRequests(), ...showcaseRequests(), cover]);
+// A reopened request keeps its ID and target; the correction rides at the end of the original prompt.
+const withRevisions = list => list.map(r => {
+  const rev = imageRevisions[r.id];
+  return rev ? {...r, revision: rev.id, revisionReason: rev.reason, prompt: `${r.prompt}\n${rev.correction}`, accept: [...r.accept, rev.accept]} : r;
+});
+
+export const imageRequests = withRevisions(withDependencies([...castRequests(), ...directionRequests(), ...showcaseRequests(), cover]));
 export const requestGroups = ['Elenco', 'Direções', 'Campanha Sarcenet', 'Site'];
 export const isGenerated = path => Object.hasOwn(generatedAssets, path);
+/** Done means generated and, for a reopened request, generated again under the current revision. */
+export const isDone = r => isGenerated(r.target) && (!r.revision || generatedAssets[r.target].revision === r.revision);
+export const needsRedo = r => isGenerated(r.target) && !isDone(r);
 export const assetSrc = (path, thumb = false) => isGenerated(path) ? `./${thumb && generatedAssets[path].thumb ? generatedAssets[path].thumb : path}` : null;
 export function queueStats(list = imageRequests) {
-  const done = list.filter(r => isGenerated(r.target)).length;
-  return {total: list.length, done, pending: list.length - done, p0: list.filter(r => r.priority === 'P0').length, p0Done: list.filter(r => r.priority === 'P0' && isGenerated(r.target)).length};
+  const done = list.filter(isDone).length;
+  return {total: list.length, done, pending: list.length - done, redo: list.filter(needsRedo).length, p0: list.filter(r => r.priority === 'P0').length, p0Done: list.filter(r => r.priority === 'P0' && isDone(r)).length};
 }

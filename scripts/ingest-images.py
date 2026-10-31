@@ -65,6 +65,12 @@ def save_registry(registry: dict) -> None:
     )
 
 
+def queue_revisions() -> dict[str, str]:
+    """Request id -> current revision, for requests reopened in data/image-revisions.js."""
+    queue = json.loads(QUEUE.read_text(encoding='utf-8'))
+    return {r['id']: r['revision'] for r in queue['requests'] if r.get('revision')}
+
+
 def plan() -> list[tuple[Path, str, str]]:
     """Return (source, target, request id) for every file waiting in incoming/."""
     queue = json.loads(QUEUE.read_text(encoding='utf-8'))
@@ -96,7 +102,7 @@ def plan() -> list[tuple[Path, str, str]]:
     return jobs
 
 
-def ingest(source: Path, target: str, request: str, registry: dict) -> None:
+def ingest(source: Path, target: str, request: str, registry: dict, revision: str | None = None) -> None:
     destination = ROOT / target
     if not inside(destination, ROOT / 'assets') or destination.suffix != '.webp':
         raise ValueError(f'Destino fora de assets/: {target}')
@@ -121,6 +127,9 @@ def ingest(source: Path, target: str, request: str, registry: dict) -> None:
         'method': 'Codex image generation',
         'upscaled': False,
     }
+    if revision:
+        # Marks the reopened request as redone; without it the queue keeps asking for this image.
+        registry[target]['revision'] = revision
     processed = INCOMING / 'processed'
     processed.mkdir(exist_ok=True)
     shutil.move(str(source), processed / f'{request.replace(":", "-").replace("/", "-")}{source.suffix.lower()}')
@@ -140,10 +149,11 @@ def main() -> None:
             print(f'{source.relative_to(ROOT)} -> {target} ({request})')
         return
     registry = load_registry()
+    revisions = queue_revisions()
     done = 0
     for source, target, request in jobs:
         try:
-            ingest(source, target, request, registry)
+            ingest(source, target, request, registry, revisions.get(request))
             save_registry(registry)  # persist per image so an interrupted batch never orphans files
             done += 1
             print(f'OK · {request} -> {target}')

@@ -1,5 +1,13 @@
 # Histórico
 
+## 2.2.1 — 2026-10-31 · Refação de imagens
+
+- Imagens já geradas podem ser reabertas em `data/image-revisions.js` com motivo, linha `CORRECTION` e novo critério de aceite. A fila mostra o item como **refazer** (topo do `FILA-DE-IMAGENS.md`, selo na página Fila, contador 101/102), e a versão antiga continua no site até a nova chegar.
+- A ingestão grava a revisão no registro e fecha o pedido sozinha.
+- Primeira refação: o cenário vazio do Estúdio Sarcenet (R1), que tinha linha de horizonte, proibida pelo padrão da loja.
+- O texto da página inicial deixou de chamar o perfil Sarcenet de proposta.
+- 45 testes.
+
 ## 2.2.0 — 2026-10-31 · Ultra close e a loja real
 
 - **Macro de textura (MAC, campo de 4 cm)** e plano detalhe pousados numa **região da peça** (tecido, decote, alças, corpete, cintura, fecho, punho, fenda, barra, costas).
