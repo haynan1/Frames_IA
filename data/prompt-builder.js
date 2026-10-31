@@ -29,7 +29,9 @@ export function buildPrompt(values = {}){
     roll:'Rotate the camera 12 degrees clockwise around the optical axis and settle. Keep the subject centered and rigid.',
     'dolly-zoom':'Dolly backward and zoom in simultaneously to keep subject size similar while the background perspective changes. Preserve rigid straight lines.',
     'rack-focus':'Camera stays locked. Shift focus from a visible foreground detail to a second visible plane. Keep geometry unchanged.',
-    static:'Keep the camera locked and the subject stationary. Only a restrained natural highlight changes.'
+    static:'Keep the camera locked and the subject stationary. Only a restrained natural highlight changes.',
+    turntable:'Keep the camera locked. The subject turns 90 degrees in place on a slow, steady rotation, revealing a new side; background and light remain fixed.',
+    'arc-push':'Move the camera along a short 20-degree clockwise arc while dollying forward one framing step. Fixed focal length; the subject stays still and centered.'
   };
   return `${base}\n\nOne continuous ${duration}-second shot, ${rhythm}. ${moveInstructions[movement.id]} End with a brief stable hold. ${invariants}\n\nTarget composition: ${format}. No dialogue or music; add cleared sound in editing. Configure actual duration and resolution in the video tool. Review start, middle and end frames before approval.`;
 }

@@ -8,3 +8,10 @@ dist/
 Thumbs.db
 .DS_Store
 *.pdf
+
+# Image intake: raw generations and private references never ship.
+incoming/
+references/*
+!references/README.md
+private-output/
+.claude/

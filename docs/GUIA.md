@@ -396,6 +396,30 @@ Revisão: Uma cena estática também exige continuidade. Observe dedos, rótulos
 Locked-off medium shot of the amber bottle on the stone table for four seconds. A soft reflection travels across the glass. The bottle remains completely stationary with unchanged geometry. Hold composition for a clean end card.
 ```
 
+### Giro no eixo
+
+A câmera fica parada e o sujeito gira sobre o próprio eixo, numa plataforma ou com pequenos passos. O fundo permanece estável; só a pessoa ou o produto muda de face.
+
+Uso: Catálogo, giro de 90° a 180° para mostrar costas e lateral de uma roupa, apresentação de bolsa ou calçado.
+
+Revisão: Um giro completo exige referência de costas e lateral aprovadas. Comece com 90° ou 180° e confira barra, costuras e cabelo no fim do giro.
+
+```text
+Locked camera. The adult model slowly turns 180 degrees in place with small natural steps over four seconds, revealing the back of the garment, then holds. Background and light stay fixed. Preserve face, hair, garment construction and hem length.
+```
+
+### Arco com aproximação
+
+A câmera percorre um arco curto enquanto se aproxima. Combina a revelação de volume do orbit com a ênfase do dolly in.
+
+Uso: Hero de lançamento, passagem do look inteiro para o rosto ou para um detalhe da peça.
+
+Revisão: Duas mudanças ao mesmo tempo aumentam a deriva. Mantenha o arco entre 15° e 30° e a aproximação em um único salto de enquadramento.
+
+```text
+Camera moves along a gentle 20-degree clockwise arc while dollying forward from a full-body shot to a medium shot over four seconds. The adult model stays still and centered. Fixed focal length, preserve face, garment and light direction.
+```
+
 ## Prompts autorais
 
 ### O frasco como escultura

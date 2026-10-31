@@ -1,5 +1,21 @@
 # Histórico
 
+## 2.0.0 — 2026-10-31 · FRAME Studio
+
+- **Studio de cenas** em cinco etapas (briefing, peça e elenco, cenário e luz, sequência, entrega) com estado e pendências por etapa, erros por campo e desfazer.
+- Tomadas com enquadramento inicial e final (PD a PG), 16 operações de câmera, graus de arco/giro, lente, altura inicial e final, ângulo, ação do sujeito, foco, ritmo e transição.
+- **Pré-visualização de câmera**: planta vista de cima, vista lateral e enquadramento sobre figura de 1,75 m, com progresso e reprodução no tempo da tomada. Distância câmera–sujeito calculada pela óptica.
+- **Keyframe A, keyframe B e movimento** por tomada, com referências de costas quando a câmera ou a modelo giram. Alertas de direção (ex.: dolly in que abre o plano, arco ≥ 90°, caminhada em close).
+- Saídas: pacote de produção, **pedido de keyframes para o Codex** e projeto `.json` (esquema v2, 128 KB, migração automática de planos v1).
+- Seis modelos de cena, incluindo a campanha demonstrativa **Sarcenet · Cápsula Seda · 15s**.
+- **Elenco** de 10 modelos fictícias com ficha de identidade e 7 vistas; **8 direções de arte** com planta de luz, lente, exposição e paleta; perfis de marca (Sarcenet proposta, moda, produto, beleza).
+- **Fila de 100 imagens** para o Codex com prioridade, ondas de dependência, destino e aceite; protocolo em `docs/codex/`; ingestão `scripts/ingest-images.py` que publica WebP e miniatura e atualiza o site sozinho.
+- Novo shell: **menu lateral agrupado e recolhível** (tecla `[`, persistente, dicas no trilho), gaveta acessível no celular, barra superior com status da fila.
+- Atlas com **giro no eixo** e **arco com aproximação**; simulador com faces ordenadas por profundidade.
+- Página inicial refeita como painel do estúdio. Tokens de cor e tipografia refinados.
+- Referências privadas em `references/` (ignorado), com protocolo de consentimento para modelos reais.
+- 38 testes, incluindo importação hostil, XSS em todos os campos do Studio, geometria finita dos diagramas e integridade da fila.
+
 ## 1.1.0 — 2026-10-30
 
 - Plano de produção próprio: briefing, 1–12 tomadas, duração e câmera por tomada, timeline e prompts com nome de referência configurável.

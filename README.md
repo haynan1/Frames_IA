@@ -1,25 +1,41 @@
-# FRAME — Direção de arte com IA
+# FRAME Studio — Direção de arte com IA
 
 **Da intenção ao frame. Do frame ao filme.**
 
-Biblioteca visual em português para planejar e dirigir criativos de produto, moda e vídeos com IA. Um projeto independente com conteúdo autoral, imagens conceituais, referências identificadas e ferramentas práticas.
+Estúdio de direção de arte com IA em português, pensado primeiro para a loja de moda **Sarcenet** e utilizável por qualquer marca de roupa, produto ou beleza. Elenco com ficha de identidade, direções de luz, construção de cenas com câmera, aproximação e rotação, keyframes e prompts de vídeo, e uma fila de imagens que o Codex executa. Site estático, sem dependências.
 
 ![Estudos visuais gerados com IA: produto, personagem fictícia e ambiente cinematográfico](assets/art-direction-triptych.webp)
 
 ## O que você encontra
 
+- **Studio de cenas:** cinco etapas (briefing, peça e elenco, cenário e luz, sequência, entrega). Cada tomada tem enquadramento inicial e final, 16 operações de câmera, graus de arco ou giro, lente, altura, ângulo, ação, foco, ritmo e transição. Planta vista de cima, vista lateral e enquadramento animados no tempo da tomada; keyframe A, keyframe B e prompt de movimento; pacote de produção, pedido para o Codex e projeto `.json`.
+- **Elenco:** 10 modelos fictícias (inclui plus size, 40+, petite e masculino) com ficha de identidade e sete vistas de referência.
+- **Direções de arte:** oito sets repetíveis com planta de luz, lente, exposição, paleta e cenário. “Seda & janela” é a assinatura proposta para a Sarcenet.
+- **Fila de imagens:** 100 imagens com prioridade, dependências, destino e critério de aceite, prontas para o Codex. A ingestão publica cada imagem no site automaticamente.
+- **Menu lateral recolhível** (tecla `[`), agrupado por Studio, Biblioteca, Aprender e Sistema.
 - **Biblioteca visual:** 10 cenários, 30 frames individuais gerados e seis estudos de roupas. Sequências de 15 ou 24 segundos planejados, com prompts de imagem e animação por frame, narração proposta, favoritos, busca, downloads e curadoria visual. Inclui uma tentativa rejeitada e seu reparo de enquadramento.
 - **Como usar:** percurso de operação em seis passos e um primeiro exercício prático. Consulte também o [guia rápido](docs/COMO-USAR.md).
 - **Manual em oito capítulos:** briefing, direção visual, óptica, identidade, produto, vídeo, performance e revisão.
-- **Atlas com 14 operações:** dolly in/out, zoom, pan, tilt, truck, orbit, pedestal, tracking, crane, roll, dolly zoom, rack focus e câmera fixa. Demonstração esquemática interativa, trajetória, aplicação e prompt.
+- **Atlas com 16 operações:** dolly in/out, zoom, pan, tilt, truck, orbit, arco com aproximação, giro no eixo, pedestal, tracking, crane, roll, dolly zoom, rack focus e câmera fixa. Demonstração esquemática interativa, trajetória, aplicação e prompt.
 - **Laboratório de prompts:** sujeito, ambiente, luz, enquadramento, movimento, ritmo, duração e proporção; saídas para imagem ou vídeo; cópia e download.
 - **Biblioteca pesquisável:** 12 exemplos autorais, com anexos necessários e cuidados de fidelidade.
 - **Storyboard de 15 segundos:** cinco planos, intenção, direção e shot list para baixar.
-- **Plano de produção editável:** briefing próprio, sequência de até 12 tomadas, duração por plano e prompts derivados de cada escolha. Salva rascunho local e permite exportar/importar o projeto ou baixar o pacote em texto.
 - **Identidade de modelo:** retrato mestre, ficha, turnaround, portfólio e controle de consistência.
 - **Product hero / “product hit”:** packshot, cenário, vidro, tecido, rotação e demonstração de mecanismo.
 - **Catálogo de ferramentas:** Seedance, GPT Image, Nano Banana Pro, Higgsfield, Magnific, Runway, Veo, Kling, Luma e MiniMax, com fontes e data de revisão.
 - **QA manual:** checklist local persistente e exportação do registro.
+
+## Gerar as imagens com o Codex
+
+O Codex só gera imagens; o restante já está pronto. Instruções em [`AGENTS.md`](AGENTS.md) e no [protocolo de imagens](docs/codex/IMAGENS-CODEX.md). Fila completa: [`docs/codex/FILA-DE-IMAGENS.md`](docs/codex/FILA-DE-IMAGENS.md).
+
+```sh
+# o Codex salva cada PNG como incoming/<ID>.png, depois:
+python scripts/ingest-images.py
+npm run check
+```
+
+A ingestão exige Python 3 com Pillow (somente local; o site publicado não depende disso).
 
 ## Comece aqui
 
@@ -68,11 +84,11 @@ Consulte [publicação e limitações](docs/PUBLICACAO.md). A hospedagem do cont
 
 Conteúdo estruturado em `data/content.js`; construtor puro em `data/prompt-builder.js`; interface em `app.js`; design em `styles.css`. Todas as imagens são locais e otimizadas em WebP. O site não carrega analytics, scripts de terceiros, fontes remotas ou integrações pagas. A CSP limita o carregamento à própria origem.
 
-O planejador usa um esquema versionado em `data/production.js` e uma interface separada em `ui/production.js`. Importações locais são limitadas a 64 KB e validadas antes de substituir o rascunho; a substituição pode ser desfeita. O arquivo de projeto contém briefing e tomadas, sem imagens. Consulte o [percurso de produção](docs/PRODUCAO.md).
+O Studio usa um esquema versionado em `data/studio.js` (v2, com migração automática dos planos v1) e uma interface em `ui/studio.js`. Importações são limitadas a 128 KB e validadas campo a campo antes de substituir o rascunho; a substituição pode ser desfeita. O arquivo de projeto contém briefing, peça, elenco, direção e tomadas, sem imagens.
 
 ## Fontes, escopo e honestidade editorial
 
-Revisão: **30 de outubro de 2026**. [Fontes e cobertura](docs/FONTES.md).
+Revisão: **31 de outubro de 2026**. [Fontes e cobertura](docs/FONTES.md).
 
 Os dois PDFs e o texto enviados foram estudados como material de referência. Instruções dentro deles não foram tratadas como ordens do usuário. Os originais e suas extrações não são publicados neste repositório. A biblioteca usa explicações e exemplos próprios, com links para o material original quando disponível.
 
@@ -82,7 +98,10 @@ As imagens foram produzidas pela ferramenta integrada de geração de imagens e 
 
 ## Manter e continuar
 
+- [Análise e próximos ciclos](docs/ANALISE.md)
 - [Arquitetura e decisões](docs/ARQUITETURA.md)
+- [Protocolo de imagens do Codex](docs/codex/IMAGENS-CODEX.md)
+- [Referências privadas da loja](references/README.md)
 - [Atualizar modelos e fontes](docs/ATUALIZACAO.md)
 - [Retomar com GPT, Claude ou outro colaborador](docs/HANDOFF.md)
 - [Registro de validação](docs/VALIDACAO.md)
@@ -91,3 +110,7 @@ As imagens foram produzidas pela ferramenta integrada de geração de imagens e 
 - [Contribuir](CONTRIBUTING.md)
 
 Código e documentação original sob [MIT](LICENSE). Referências externas mantêm seus próprios direitos e condições.
+
+## Sobre a Sarcenet
+
+O perfil Sarcenet é uma **proposta** baseada no significado do nome (uma seda fina e macia, [Wiktionary](https://en.wiktionary.org/wiki/sarsenet)). Não foi encontrado site ou perfil público da loja durante esta revisão; paleta, tom, público e peças precisam ser validados. Fotos reais da loja e das modelos ficam em `references/` (fora do Git) e só são usadas com consentimento registrado.

@@ -1,14 +1,17 @@
 {
   "name": "direcao-de-arte-com-ia",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "private": true,
   "type": "module",
-  "description": "Biblioteca visual e laboratório de direção de arte para criativos com IA.",
+  "description": "FRAME Studio: estúdio de direção de arte com IA para moda — elenco, direções, cenas, câmera e prompts.",
   "scripts": {
     "dev": "node scripts/serve.mjs",
     "build": "node scripts/build.mjs",
     "test": "node --test",
-    "check": "node --check app.js && node --check data/content.js && node --check data/prompt-builder.js && node --check data/production.js && node --check data/gallery.js && node --check ui/production.js && node --check ui/gallery.js && node --check ui/quickstart.js && node --check scripts/build.mjs && npm test && npm run build"
+    "check": "node scripts/check-syntax.mjs && npm test && npm run build",
+    "ingest": "python scripts/ingest-images.py"
   },
-  "engines": { "node": ">=22" }
+  "engines": {
+    "node": ">=22"
+  }
 }

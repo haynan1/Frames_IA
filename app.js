@@ -1,7 +1,14 @@
 import {chapters, movements, promptLibrary, tools, sources, storyboard, qaItems, reviewedAt} from './data/content.js';
 
 import {buildPrompt} from './data/prompt-builder.js';
-import {productionMarkup,mountProduction} from './ui/production.js';
+import {mountShell} from './ui/shell.js';
+import {routeById,routeAliases} from './ui/routes.js';
+import {studioMarkup,mountStudio} from './ui/studio.js';
+import {castMarkup,mountCast,directionsMarkup,queueMarkup,mountQueue} from './ui/pages.js';
+import {placeholderSVG} from './ui/diagram.js';
+import {cast,castAssetPath} from './data/cast.js';
+import {directions,directionAssetPath} from './data/directions.js';
+import {queueStats,assetSrc} from './data/image-requests.js';
 import {escapeHTML} from './ui/html.js';
 import {galleryMarkup,mountGallery} from './ui/gallery.js';
 import {quickstartMarkup} from './ui/quickstart.js';
@@ -24,12 +31,24 @@ function notify(message){
 
 
 function home(){
-  return `<section class="hero"><div class="hero-copy"><span class="eyebrow">DA INTENÇÃO À IMAGEM</span><h1>Não peça só<br>uma imagem.<br><em>Dirija a cena.</em></h1><p>Um sistema visual para criar com IA: da primeira referência ao último corte. Câmera, luz, identidade e produto, com uma direção clara.</p><div class="actions">${button('Explorar biblioteca','#biblioteca')}${button('Como usar','#como-usar',true)}</div></div><figure class="hero-visual">${photo('scene','Frasco fictício de vidro âmbar em pedestal de pedra ao pôr do sol','fetchpriority="high"')}<div class="hero-overlay"><span class="image-badge">ESTUDO VISUAL · GERADO COM IA</span><figcaption><span>01 / PRODUTO · LUZ · ATMOSFERA</span><p>Uma escolha muda tudo.</p></figcaption></div><span class="cross tl" aria-hidden="true"></span><span class="cross br" aria-hidden="true"></span></figure></section>
-  <div class="strip"><div><strong>08</strong><small>CAPÍTULOS PARA<br>CONSTRUIR REPERTÓRIO</small></div><div><strong>14</strong><small>OPERAÇÕES DE CÂMERA<br>PARA EXPLORAR</small></div><div><strong>12</strong><small>PROMPTS COM CONTEXTO<br>PARA COMEÇAR</small></div></div>
-  <div class="section-title"><div><small>O QUE VOCÊ VAI DIRIGIR</small><h2>Três frentes. <em>Uma linguagem.</em></h2></div><a class="text-link" href="#guia">Abrir o manual ↗</a></div>
-  <div class="feature-grid"><a class="feature" href="#guia/produto"><figure>${photo('product','Estudo conceitual de vidro âmbar sobre superfície escura','loading="lazy"')}<span class="index">01 / PRODUCT HERO</span></figure><div class="feature-body"><h3>Produto com presença.</h3><p>Packshot, cenário, materialidade e movimento. O produto no centro da intenção.</p><span>DIRIGIR O PRODUTO ↗</span></div></a><a class="feature" href="#guia/identidade"><figure>${photo('model','Retrato de personagem adulta fictícia em blazer marfim','loading="lazy"')}<span class="index">02 / IDENTIDADE</span></figure><div class="feature-body"><h3>A mesma identidade.</h3><p>Da ficha da modelo ao portfólio. Construa consistência antes de criar a campanha.</p><span>CONSTRUIR A MODELO ↗</span></div></a><a class="feature" href="#storyboard"><figure>${photo('scene','Frasco conceitual em cenário cinematográfico de pedra','loading="lazy"')}<span class="index">03 / FILME</span></figure><div class="feature-body"><h3>Do frame ao filme.</h3><p>Roteiro, imagem-base, câmera e montagem. Cada plano com um trabalho a fazer.</p><span>PLANEJAR O VÍDEO ↗</span></div></a></div>
-  <div class="section-title"><div><small>UM PERCURSO DE PRODUÇÃO</small><h2>Crie na ordem certa.</h2></div><span class="muted text-link">DO BRIEFING AO QA</span></div><div class="journey">${[['01','Defina','Uma ideia e uma verdade de produto.'],['02','Construa','Identidade, ambiente e luz.'],['03','Aprove','O frame antes do movimento.'],['04','Anime','Uma intenção por tomada.'],['05','Revise','Continuidade, mensagem e entrega.']].map(([n,t,d])=>`<div><b>${n}</b><h3>${t}</h3><p>${d}</p></div>`).join('')}</div>
-  <div class="callout"><div><span class="eyebrow">DO CONCEITO AO COMANDO</span><h3>Seu próximo filme começa com um plano.</h3><p>Organize o briefing, defina cada tomada e leve o pacote de produção para a sua ferramenta.</p></div>${button('Montar produção','#producao')}</div><p class="note">Biblioteca educativa independente. Os exemplos fotográficos são gerados com IA e os produtos são fictícios. As simulações de câmera são esquemáticas; não representam vídeos gerados por um modelo.</p>`;
+  const stats=queueStats();
+  const cover=assetSrc('assets/studio/capa.webp');
+  const coverMedia=cover?`<img src="${cover}" alt="Bastidor de filme de moda: modelo fictícia em vestido de seda champagne diante da câmera" width="1536" height="1024" fetchpriority="high">`:photo('scene','Estudo conceitual gerado com IA: produto em cenário de pedra ao pôr do sol','fetchpriority="high"');
+  const castCard=m=>{const src=assetSrc(castAssetPath(m.id,'rosto-frente'),true);return `<a class="home-cast" href="#elenco/${m.id}"><span class="home-cast-media">${src?`<img src="${src}" alt="${m.code} ${escapeHTML(m.name)}" loading="lazy">`:placeholderSVG({label:`${m.code} ${m.name}`,id:m.code})}</span><b>${m.code}</b><small>${escapeHTML(m.name)}</small></a>`;};
+  const dirCard=(d,i)=>{const src=assetSrc(directionAssetPath(d.id,'hero'),true);return `<a class="home-direction" href="#direcoes/${d.id}"><span class="home-direction-media">${src?`<img src="${src}" alt="${escapeHTML(d.name)}" loading="lazy">`:placeholderSVG({label:d.name,id:d.id})}</span><span class="home-direction-label"><small>${String(i+1).padStart(2,'0')}</small>${escapeHTML(d.name)}</span></a>`;};
+  const flow=[['01','Briefing','Marca, objetivo, formato e mensagem.','1'],['02','Peça & elenco','Construção exata da roupa e a modelo certa.','2'],['03','Cenário & luz','Uma direção de arte preenche luz, lente e cor.','3'],['04','Sequência','Tomadas com enquadramento, câmera, giro e ação.','4'],['05','Entrega','Pacote, keyframes e pedido para o Codex.','5']];
+  return `<section class="studio-hero"><div class="studio-hero-copy"><span class="eyebrow">FRAME STUDIO · SARCENET</span><h1>Dirija a coleção.<br><em>Frame a frame.</em></h1><p>Um estúdio de direção de arte com IA para moda: elenco com ficha, direções de luz, construção de cenas com câmera, aproximação e rotação, e prompts prontos para imagem e vídeo.</p><div class="actions"><a class="button" href="#studio">Abrir o Studio<span aria-hidden="true">↗</span></a><a class="button secondary" href="#como-usar">Como usar<span aria-hidden="true">↗</span></a></div></div><figure class="studio-hero-media">${coverMedia}<figcaption><span class="image-badge">${cover?'IMAGEM GERADA COM IA · ELENCO FICTÍCIO':'ESTUDO VISUAL · CAPA AGUARDANDO GERAÇÃO'}</span></figcaption></figure></section>
+  <div class="home-stats"><a href="#elenco"><strong>${cast.length}</strong><span>MODELOS NO ELENCO</span></a><a href="#direcoes"><strong>${directions.length}</strong><span>DIREÇÕES DE ARTE</span></a><a href="#camera"><strong>${movements.length}</strong><span>OPERAÇÕES DE CÂMERA</span></a><a href="#fila"><strong>${stats.done}<small>/${stats.total}</small></strong><span>IMAGENS NA FILA</span></a></div>
+  <div class="section-title"><div><small>O FLUXO DO ESTÚDIO</small><h2>Cinco etapas. <em>Uma cena pronta.</em></h2></div><a class="text-link" href="#studio">Começar agora ↗</a></div>
+  <ol class="home-flow">${flow.map(([n,t,d,s])=>`<li><a href="#studio/${s}"><b>${n}</b><h3>${t}</h3><p>${d}</p></a></li>`).join('')}</ol>
+  <div class="section-title"><div><small>ELENCO FICTÍCIO · FICHAS DE IDENTIDADE</small><h2>Rostos que <em>se repetem.</em></h2></div><a class="text-link" href="#elenco">Ver elenco ↗</a></div>
+  <div class="home-cast-row">${cast.map(castCard).join('')}</div>
+  <div class="section-title"><div><small>DIREÇÕES DE ARTE</small><h2>Oito sets. <em>Uma linguagem.</em></h2></div><a class="text-link" href="#direcoes">Ver direções ↗</a></div>
+  <div class="home-direction-row">${directions.map(dirCard).join('')}</div>
+  <div class="callout"><div><span class="eyebrow">CAMPANHA DEMONSTRATIVA</span><h3>Sarcenet · Cápsula Seda · 15s</h3><p>Seis tomadas: a matéria, o olhar, o caimento em arco, as costas, dois passos e a assinatura. Abra no Studio e veja cada câmera.</p></div><a class="button" href="#studio/4">Abrir a sequência<span aria-hidden="true">↗</span></a></div>
+  <div class="section-title"><div><small>REPERTÓRIO</small><h2>Para estudar e consultar.</h2></div></div>
+  <div class="feature-grid"><a class="feature" href="#biblioteca"><figure>${photo('model','Retrato de personagem adulta fictícia em blazer marfim','loading="lazy"')}<span class="index">30 FRAMES</span></figure><div class="feature-body"><h3>Biblioteca visual.</h3><p>Dez mundos e trinta frames com prompts de imagem e animação.</p><span>EXPLORAR ↗</span></div></a><a class="feature" href="#camera"><figure>${photo('product','Estudo conceitual de vidro âmbar sobre superfície escura','loading="lazy"')}<span class="index">${movements.length} OPERAÇÕES</span></figure><div class="feature-body"><h3>Atlas de câmera.</h3><p>Dolly, orbit, giro no eixo, arco com aproximação e mais, com simulação.</p><span>VER O ATLAS ↗</span></div></a><a class="feature" href="#guia"><figure>${photo('scene','Frasco conceitual em cenário cinematográfico de pedra','loading="lazy"')}<span class="index">8 CAPÍTULOS</span></figure><div class="feature-body"><h3>Manual de direção.</h3><p>Briefing, óptica, identidade, produto, vídeo e revisão.</p><span>ABRIR O MANUAL ↗</span></div></a></div>
+  <p class="note">Estúdio independente. Elenco, peças e campanhas são fictícios e as imagens são geradas com IA. O perfil Sarcenet é uma proposta a validar com a loja. O site planeja e organiza; a geração de imagem e vídeo acontece na ferramenta que você escolher.</p>`;
 }
 
 function guide(section){
@@ -60,6 +79,8 @@ function simulator(id,t){
   if(id==='crane'){cy=1.4+t*2;cz=8+t*3;pitch=-t*.16;}
   if(id==='roll') roll=t*.21;
   if(id==='dolly-zoom'){cz=6+t*3;f=510*cz/6;}
+  if(id==='arc-push'){let a=t*.45,r=8-t*3;cx=Math.sin(a)*r;cz=Math.cos(a)*r;yaw=Math.atan2(-cx,cz);}
+  const spin=id==='turntable'?t*Math.PI/2:0;
   const project=([x,y,z])=>{
     x-=cx;y-=cy;const depth=cz-z;
     const horizontal=x*Math.cos(yaw)-depth*Math.sin(yaw);
@@ -72,11 +93,14 @@ function simulator(id,t){
   const point=p=>project(p).map(n=>n.toFixed(2)).join(',');
   const poly=(pts,fill,stroke='#cbb98c35')=>`<polygon points="${pts.map(point).join(' ')}" fill="${fill}" stroke="${stroke}" stroke-width="1"/>`;
   const line=(a,b)=>`<line x1="${project(a)[0]}" y1="${project(a)[1]}" x2="${project(b)[0]}" y2="${project(b)[1]}" stroke="#79816238"/>`;
-  function box(x,y,z,w,h,d,color){
-    const a=[x-w/2,y,z+d/2],b=[x+w/2,y,z+d/2],c=[x+w/2,y+h,z+d/2],e=[x-w/2,y+h,z+d/2];
-    const aa=[x-w/2,y,z-d/2],bb=[x+w/2,y,z-d/2],cc=[x+w/2,y+h,z-d/2],ee=[x-w/2,y+h,z-d/2];
-    const faces=[poly([aa,bb,cc,ee],color[0]),poly([a,aa,ee,e],color[1]),poly([b,bb,cc,c],color[1]),poly([a,b,c,e],color[0]),poly([e,c,cc,ee],color[2])];
-    return faces.join('');
+  // Faces are depth-sorted so rotated objects (turntable) and orbits occlude correctly.
+  function box(x,y,z,w,h,d,color,rot=0){
+    const turn=([px,py,pz])=>[x+(px-x)*Math.cos(rot)-(pz-z)*Math.sin(rot),py,z+(px-x)*Math.sin(rot)+(pz-z)*Math.cos(rot)];
+    const a=turn([x-w/2,y,z+d/2]),b=turn([x+w/2,y,z+d/2]),c=turn([x+w/2,y+h,z+d/2]),e=turn([x-w/2,y+h,z+d/2]);
+    const aa=turn([x-w/2,y,z-d/2]),bb=turn([x+w/2,y,z-d/2]),cc=turn([x+w/2,y+h,z-d/2]),ee=turn([x-w/2,y+h,z-d/2]);
+    const depth=pts=>pts.reduce((sum,[px,,pz])=>sum+Math.hypot(px-cx,pz-cz),0)/pts.length;
+    const faces=[[[aa,bb,cc,ee],color[0]],[[a,aa,ee,e],color[1]],[[b,bb,cc,c],color[1]],[[a,b,c,e],color[0]],[[e,c,cc,ee],color[2]]];
+    return faces.sort((p,q)=>depth(q[0])-depth(p[0])).map(([pts,fill])=>poly(pts,fill)).join('');
   }
   let scene='<defs><radialGradient id="glow"><stop stop-color="#464632"/><stop offset="1" stop-color="#181b14"/></radialGradient><filter id="blur"><feGaussianBlur stdDeviation="5"/></filter></defs><rect width="800" height="500" fill="url(#glow)"/>';
   scene+='<g'+(id==='rack-focus'&&t<.5?' filter="url(#blur)"':'')+'>';
@@ -86,11 +110,13 @@ function simulator(id,t){
   scene+='</g><g'+(id==='rack-focus'&&t>.5?' filter="url(#blur)"':'')+'>';
   const x=id==='tracking' ? -t*2 :0;
   scene+=box(x,0,0,2,.65,1.6,['#68654b','#494d36','#989074']);
-  scene+=box(x,.65,0,1.1,1.75,.65,['#b3853d','#684e26','#e0b66b']);
-  scene+=box(x,2.4,0,.76,.38,.6,['#25271e','#1d2118','#53543d']);
-  scene+=poly([[x-.34,1.05,.331],[x+.34,1.05,.331],[x+.34,1.65,.331],[x-.34,1.65,.331]],'#d6c5a7');
+  scene+=box(x,.65,0,1.1,1.75,.65,['#b3853d','#684e26','#e0b66b'],spin);
+  scene+=box(x,2.4,0,.76,.38,.6,['#25271e','#1d2118','#53543d'],spin);
+  // The label turns with the bottle and disappears once it faces away.
+  const lx=.34*Math.cos(spin),lz=.331*Math.cos(spin),lo=.34*Math.sin(spin);
+  if(Math.cos(spin)>.2)scene+=poly([[x-lx,1.05,lz+lo],[x+lx,1.05,lz-lo],[x+lx,1.65,lz-lo],[x-lx,1.65,lz+lo]],'#d6c5a7');
   scene+='</g>';
-  scene+='<path d="M25 60v-25h25 M750 35h25v25 M25 440v25h25 M750 465h25v-25" fill="none" stroke="#d9d8be70"/><path d="M390 250h20 M400 240v20" stroke="#dedcc169"/><text x="35" y="452" fill="#c6c8ae" font-family="monospace" font-size="11">'+(id==='zoom'?'POSIÇÃO FIXA · AMPLIAÇÃO':id==='dolly-zoom'?'TAMANHO COMPENSADO · FUNDO VARIÁVEL':'PERSPECTIVA · PROFUNDIDADE · TRAJETÓRIA')+'</text>';
+  scene+='<path d="M25 60v-25h25 M750 35h25v25 M25 440v25h25 M750 465h25v-25" fill="none" stroke="#d9d8be70"/><path d="M390 250h20 M400 240v20" stroke="#dedcc169"/><text x="35" y="452" fill="#c6c8ae" font-family="monospace" font-size="11">'+(id==='zoom'?'POSIÇÃO FIXA · AMPLIAÇÃO':id==='turntable'?'CÂMERA FIXA · OBJETO GIRA NO EIXO':id==='dolly-zoom'?'TAMANHO COMPENSADO · FUNDO VARIÁVEL':'PERSPECTIVA · PROFUNDIDADE · TRAJETÓRIA')+'</text>';
   svg.innerHTML=scene;
 }
 
@@ -122,10 +148,6 @@ function references(){
   return `${head('FONTES & MANUTENÇÃO','Repertório aberto.<br><em>Origem transparente.</em>','Os materiais enviados foram tratados como fontes de estudo. O site organiza conteúdo próprio, exemplos autorais e links para os originais. Revisão editorial e de ferramentas: 30 de outubro de 2026.')}<div class="source-list">${sources.map(s=>`<article class="source"><span>${s.type}</span><div><h3>${s.url?`<a href="${s.url}" target="_blank" rel="noopener noreferrer">${s.name} ↗</a>`:s.name}</h3><p>${s.note}</p></div></article>`).join('')}</div><div class="section-title"><div><small>DOCUMENTAÇÃO DE FABRICANTES</small><h2>Modelos e plataformas.</h2></div></div><div class="source-list">${tools.map(t=>`<article class="source"><span>${t.checked} · ${t.kind}</span><div><h3><a href="${t.source}" target="_blank" rel="noopener noreferrer">${t.name} · ${t.maker} ↗</a></h3><p>Fonte para a existência, o nome e o posicionamento da ferramenta. Não comprova superioridade universal. Disponibilidade e funções precisam ser conferidas no provedor.</p></div></article>`).join('')}</div><div class="two-column actions"><section class="panel"><h2>Como manter atual.</h2><p>Atualize o catálogo a cada lançamento relevante. Registre modelo exato, fonte oficial, data, modo testado e limitações. Preserve histórico; nunca transforme uma promessa do fabricante em resultado observado.</p><a class="text-link" href="./docs/ATUALIZACAO.md">Abrir protocolo de atualização ↗</a></section><section class="panel"><h2>Como retomar o projeto.</h2><p>Arquitetura, comandos, decisões e pontos pendentes ficam documentados para GPT, Claude e outros colaboradores. Materiais privados e credenciais permanecem fora do repositório.</p><a class="text-link" href="./docs/HANDOFF.md">Abrir instruções de continuidade ↗</a></section></div><p class="note">As imagens deste projeto foram produzidas com a ferramenta integrada de geração de imagens. Não são amostras geradas em Seedance, Nano Banana, Runway ou outros modelos do catálogo. Os prompts dos assets estão no registro de imagens do projeto.</p>`;
 }
 
-function production(){
-  return head('PLANO DE PRODUÇÃO','Sua campanha.<br><em>Uma direção por tomada.</em>','Transforme o repertório em um plano de vídeo próprio. Organize o briefing, ajuste a sequência e exporte os prompts. Nenhum arquivo ou dado é enviado para um servidor.')+productionMarkup();
-}
-
 function download(filename,text,type='text/plain;charset=utf-8'){
   const url=URL.createObjectURL(new Blob([text],{type}));
   const a=document.createElement('a');a.href=url;a.download=filename;a.click();
@@ -137,7 +159,9 @@ function storageSet(key,value){try{localStorage.setItem(key,JSON.stringify(value
 
 function bind(page,section){
   if(page==='biblioteca')dispose=mountGallery({id:section,notify,download});
-  if(page==='producao')dispose=mountProduction({notify,download});
+  if(page==='studio')dispose=mountStudio({section,notify,download});
+  if(page==='elenco')dispose=mountCast({id:section,notify});
+  if(page==='fila')dispose=mountQueue({notify});
   if(page==='camera'){
     const current=movements.find(m=>m.id===section)||movements[0];
     const range=document.querySelector('#camera-position'), play=document.querySelector('#play');
@@ -206,20 +230,21 @@ function bind(page,section){
   }
 }
 
-const pageNames={inicio:'Visão geral',guia:'Manual de direção',camera:'Atlas de câmera',laboratorio:'Laboratório',prompts:'Biblioteca de prompts',storyboard:'Do frame ao filme',modelos:'Modelos & ferramentas',qualidade:'Controle de qualidade',fontes:'Fontes & atualização',producao:'Plano de produção',biblioteca:'Biblioteca visual','como-usar':'Como usar'};
+const shell=mountShell();
+shell.setQueue(queueStats());
 let previousPage;
 function route(){
   dispose();dispose=()=>{};
-  const [raw,section]=location.hash.slice(1).split('/');const page=Object.hasOwn(pageNames,raw)?raw:'inicio';
-  const renders={inicio:home,guia:guide,camera,laboratorio:lab,prompts,storyboard:film,modelos:models,qualidade:quality,fontes:references,producao:production,biblioteca:galleryMarkup,'como-usar':quickstartMarkup};
+  const [hashPage,section]=location.hash.slice(1).split('/');
+  const raw=routeAliases[hashPage]||hashPage;
+  const page=routeById(raw)?raw:'inicio';
+  const renders={inicio:home,studio:studioMarkup,elenco:castMarkup,direcoes:directionsMarkup,fila:queueMarkup,guia:guide,camera,laboratorio:lab,prompts,storyboard:film,modelos:models,qualidade:quality,fontes:references,biblioteca:galleryMarkup,'como-usar':quickstartMarkup};
   const previousScroll=window.scrollY;
   main.innerHTML=renders[page](section);
-  document.title=`${pageNames[page]} — FRAME`;
-  document.querySelector('#breadcrumb').textContent=pageNames[page].toUpperCase();
-  document.querySelectorAll('[data-page]').forEach(a=>{if(a.dataset.page===page)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
-  document.querySelector('.sidebar').classList.remove('open');document.querySelector('.menu-toggle').setAttribute('aria-expanded','false');
+  document.title=`${routeById(page).label} — FRAME Studio`;
+  shell.setActive(page);
   if(page==='camera'&&previousPage==='camera')window.scrollTo({top:previousScroll,behavior:'instant'});
-  else if(!section){window.scrollTo({top:0,behavior:'instant'});}
+  else if(!section||page==='studio'){window.scrollTo({top:0,behavior:'instant'});}
   bind(page,section);
   if(previousPage!==undefined&&page!==previousPage)main.focus({preventScroll:true});
   previousPage=page;
@@ -233,7 +258,5 @@ document.addEventListener('click',async e=>{
   if(!text)return;
   try{await navigator.clipboard.writeText(text);notify('Prompt copiado.');}catch{notify('Cópia indisponível. Selecione o texto do prompt ou baixe o arquivo.');}
 });
-document.querySelector('.menu-toggle').addEventListener('click',e=>{const open=document.querySelector('.sidebar').classList.toggle('open');e.currentTarget.setAttribute('aria-expanded',String(open));});
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.querySelector('.sidebar').classList.contains('open')){document.querySelector('.sidebar').classList.remove('open');const menu=document.querySelector('.menu-toggle');menu.setAttribute('aria-expanded','false');menu.focus();}});
 window.addEventListener('hashchange',route);
 route();

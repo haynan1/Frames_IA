@@ -43,3 +43,12 @@ Observações específicas estão em `data/gallery-review.js`: por exemplo, o ca
 ## Simulação
 
 O atlas usa SVG construído em código com projeção de perspectiva. Não é mídia gerada por IA. A função mostra trajetória e paralaxe usando um objeto geométrico simples; não se apresenta como render fotorrealista de vidro ou previsão de saída de vídeo.
+
+## Edição 02 · Studio (fila do Codex)
+
+A versão 2.0 define **100 imagens** a gerar pelo Codex: 70 do elenco fictício (10 modelos × 7 vistas), 16 das direções de arte (imagem-chave e cenário vazio), 13 da campanha demonstrativa Sarcenet (3 vistas da peça e 10 keyframes) e a capa do estúdio. Os prompts completos, referências, destinos e critérios de aceite estão em [codex/FILA-DE-IMAGENS.md](codex/FILA-DE-IMAGENS.md), gerada a partir de `data/image-requests.js`. Protocolo: [codex/IMAGENS-CODEX.md](codex/IMAGENS-CODEX.md).
+
+Até a primeira ingestão, o site mostra placeholders “aguardando geração”. Cada imagem ingerida é registrada em `data/generated-assets.js` com dimensões, miniatura, ID do pedido, data e método. Registre abaixo a revisão humana de cada uma.
+
+| ID | Data | Método | Tentativas | Revisão |
+| --- | --- | --- | --- | --- |

@@ -3,47 +3,51 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#111210">
-  <meta name="description" content="Um sistema visual para dirigir criativos com IA. Câmera, luz, identidade, produto, prompts e produção de vídeo em um só lugar.">
+  <meta name="theme-color" content="#0c0c0b">
+  <meta name="description" content="FRAME Studio: direção de arte com IA para lojas de moda. Elenco, direções de luz, construção de cenas, câmera, keyframes e prompts de vídeo em um só lugar.">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta property="og:title" content="FRAME — Direção de arte com IA">
-  <meta property="og:description" content="Da intenção ao frame. Do frame ao filme. Uma biblioteca visual para criar com direção.">
+  <meta property="og:title" content="FRAME Studio — Direção de arte com IA">
+  <meta property="og:description" content="Da intenção ao frame. Do frame ao filme. Um estúdio de direção de arte para moda.">
   <meta property="og:type" content="website">
-  <title>FRAME — Direção de arte com IA</title>
+  <title>FRAME Studio — Direção de arte com IA</title>
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./studio.css">
   <link rel="modulepreload" href="./data/content.js">
+  <link rel="modulepreload" href="./data/studio.js">
   <script type="module" src="./app.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Pular para o conteúdo</a>
-  <aside class="sidebar" aria-label="Biblioteca">
-    <a class="brand" href="#inicio" aria-label="FRAME, início"><span class="brand-symbol" aria-hidden="true">F</span><span>FRAME<small>DIREÇÃO DE ARTE COM IA</small></span></a>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Explorar <span aria-hidden="true">☰</span></button>
-    <nav id="navigation" aria-label="Principal">
-      <span class="nav-label">SEU ESTÚDIO DE REFERÊNCIA</span>
-      <a href="#inicio" data-page="inicio"><span aria-hidden="true">◈</span> Visão geral <small>00</small></a>
-      <a href="#como-usar" data-page="como-usar"><span aria-hidden="true">→</span> Como usar <small>GUIA</small></a>
-      <a href="#biblioteca" data-page="biblioteca"><span aria-hidden="true">▧</span> Biblioteca visual <small>30</small></a>
-      <a href="#guia" data-page="guia"><span aria-hidden="true">▤</span> Manual de direção <small>01</small></a>
-      <a href="#camera" data-page="camera"><span aria-hidden="true">⌖</span> Atlas de câmera <small>02</small></a>
-      <a href="#laboratorio" data-page="laboratorio"><span aria-hidden="true">⌘</span> Laboratório <small>03</small></a>
-      <a href="#prompts" data-page="prompts"><span aria-hidden="true">▧</span> Biblioteca de prompts <small>04</small></a>
-      <a href="#storyboard" data-page="storyboard"><span aria-hidden="true">▥</span> Do frame ao filme <small>05</small></a>
-      <a href="#producao" data-page="producao"><span aria-hidden="true">▦</span> Plano de produção <small>NOVO</small></a>
-      <a href="#modelos" data-page="modelos"><span aria-hidden="true">◇</span> Modelos & ferramentas <small>06</small></a>
-      <a href="#qualidade" data-page="qualidade"><span aria-hidden="true">✓</span> Controle de qualidade <small>07</small></a>
-      <a href="#fontes" data-page="fontes"><span aria-hidden="true">↗</span> Fontes & atualização <small>08</small></a>
-    </nav>
-    <div class="sidebar-bottom"><span class="live-dot"></span> EDIÇÃO 01 · OUT 2026<p>Intenção antes da geração.<br>Critério antes da publicação.</p><a href="./README.md">Sobre o projeto ↗</a></div>
-  </aside>
-  <div class="workspace">
-    <header class="topbar"><span>MANUAL ABERTO <span class="muted">/</span> <span id="breadcrumb">VISÃO GERAL</span></span><span class="topbar-note">ESTUDO · DIREÇÃO · PRODUÇÃO <span class="accent">↗</span></span></header>
-    <main id="main" tabindex="-1"></main>
-    <footer><a href="#inicio">FRAME <span class="muted">/ Direção de arte com IA</span></a><span>Conteúdo autoral com fontes · Revisão 30.10.2026</span></footer>
+  <div class="app-shell" data-sidebar="expanded">
+    <aside class="sidebar" id="sidebar" aria-label="Navegação do estúdio">
+      <div class="sidebar-head">
+        <a class="brand" href="#inicio" aria-label="FRAME Studio, visão geral"><span class="brand-mark" aria-hidden="true">F</span><span class="brand-text">FRAME<small>STUDIO DE DIREÇÃO</small></span></a>
+        <button class="icon-button sidebar-toggle" id="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="true" data-tip="Recolher menu  ["><span data-icon="panel"></span><span class="sr-only">Recolher menu</span></button>
+        <button class="icon-button drawer-close" id="drawer-close" type="button" aria-label="Fechar menu"><span data-icon="close"></span></button>
+      </div>
+      <a class="sidebar-cta" href="#studio" data-tip="Abrir o Studio"><span data-icon="plus"></span><span class="nav-text">Construir cena</span></a>
+      <nav id="navigation" aria-label="Principal"></nav>
+      <div class="sidebar-foot">
+        <a class="brand-chip" href="#studio/1" data-tip="Sarcenet · perfil proposto"><span class="brand-chip-mark" aria-hidden="true">S</span><span class="nav-text">Sarcenet<small>Perfil proposto · v2.0</small></span></a>
+      </div>
+    </aside>
+    <div class="scrim" id="scrim" hidden></div>
+    <div class="workspace">
+      <header class="topbar">
+        <button class="icon-button menu-button" id="menu-button" type="button" aria-controls="sidebar" aria-expanded="false" aria-label="Abrir menu"><span data-icon="menu"></span></button>
+        <p class="crumbs"><span id="crumb-group">STUDIO</span><span class="crumb-sep" aria-hidden="true">/</span><span id="breadcrumb">VISÃO GERAL</span></p>
+        <div class="topbar-actions">
+          <a class="queue-pill" id="queue-pill" href="#fila"><span data-icon="queue"></span><span class="queue-label">Imagens</span><b data-queue-count>0/0</b></a>
+          <a class="button small topbar-cta" href="#studio">Abrir Studio<span aria-hidden="true">↗</span></a>
+        </div>
+      </header>
+      <main id="main" tabindex="-1"></main>
+      <footer><a href="#inicio">FRAME Studio <span class="muted">/ Direção de arte com IA</span></a><span>Conteúdo autoral com fontes · Revisão 31.10.2026</span></footer>
+    </div>
   </div>
   <div id="toast" role="status" aria-live="polite"></div>
-  <noscript><div class="noscript">Ative JavaScript para usar o laboratório e explorar a biblioteca. O <a href="./README.md">README</a> e o <a href="./docs/GUIA.md">guia em texto</a> também estão disponíveis.</div></noscript>
+  <noscript><div class="noscript">Ative JavaScript para usar o Studio. O <a href="./README.md">README</a>, o <a href="./docs/GUIA.md">guia em texto</a> e a <a href="./docs/codex/FILA-DE-IMAGENS.md">fila de imagens</a> também estão disponíveis.</div></noscript>
 </body>
 </html>

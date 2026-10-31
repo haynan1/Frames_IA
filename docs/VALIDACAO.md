@@ -71,6 +71,19 @@ Importação foi exercitada no navegador; os bytes dos arquivos baixados desta v
 
 As exportações de roteiro foram verificadas em função pura; nesta versão, não houve nova comparação dos bytes baixados pelo navegador nem auditoria do clipboard.
 
+## Evidência observada · versão 2.0 (31.10.2026)
+
+- `npm run check`: sintaxe de 26 módulos, **38 testes** aprovados e build concluído. Testes novos cobrem os seis modelos de cena (ida e volta JSON), linha do tempo contínua de 15s, keyframes A/B e referências de costas, óptica da distância, alertas de direção, neutralidade de gênero nos prompts, 16 importações hostis (incluindo `__proto__`, caminhos com `..`, URLs, 17 tomadas e 130s), migração de planos v1, exportações sem `undefined`, escape de `<img onerror>` em todos os campos das cinco etapas, geometria finita dos diagramas em todos os modelos e tempos, integridade do elenco, das direções e da fila (IDs, destinos, dependências e ordem) e regras de privacidade do Git.
+- Segurança: nenhuma dependência de runtime ou de desenvolvimento; busca por padrões de segredo no código e no histórico sem resultado; `incoming/`, `references/*` e `private-output/` ignorados; nenhum atributo `style` inline (CSP preservada); nenhum `eval`, `Function` ou `fetch`.
+- Navegador em 1440 px: briefing com nome vazio mostrou erro no campo, `aria-invalid`, contador 1 na etapa e manteve a última versão válida salva; a pendência na Entrega levou o foco ao campo; título com `<b>` foi exibido como texto.
+- Sequência: remover tomada (6 → 5) e desfazer (5 → 6); duplicar e mover antes; trocar a operação para pedestal mostrou “altura final” e para orbit mostrou graus (30°) e escondeu a altura final; duração 12s mostrou erro e bloqueou os prompts; setas navegaram na linha do tempo e nas abas, pulando o keyframe B indisponível.
+- Importação: JSON quebrado mostrou erro sem alterar o rascunho; plano v1 foi migrado (1 tomada) e desfazer restaurou o anterior; aplicar “Produto hero” e desfazer; trocar o perfil de marca para Produto aplicou marca e formato 1:1, e desfazer voltou para Sarcenet.
+- Câmera: na tomada 3 (orbit 30°) a 60% a planta, a lateral e o enquadramento renderizaram sem a falsa indicação de costas (corrigida nesta revisão); na tomada 4 o keyframe B anexa as costas da modelo e da peça.
+- Menu: recolher no desktop levou a barra para 76 px, persistiu após navegar e atualizou rótulo e `aria-expanded`. Em 375 px, a gaveta abriu com o conteúdo `inert`, foco no item atual, Escape fechou e devolveu o foco ao botão; sem rolagem horizontal.
+- Fila: 100 itens; filtro “Campanha Sarcenet” mostrou 13; busca `s04` mostrou A e B; busca sem resultado mostrou estado vazio. Ingestão exercitada com imagens sintéticas: ID desconhecido ignorado, imagem de 300 px recusada, imagens válidas publicadas com miniatura e exibidas no elenco e no contador (1/100). Os arquivos de teste foram removidos.
+
+Não verificado nesta versão: leitor de tela real, Core Web Vitals medidos, bytes dos arquivos baixados e conteúdo do clipboard. As 100 imagens da fila ainda não foram geradas; nenhum clipe foi produzido.
+
 ## Limites atuais
 
 Não foi realizado benchmark de modelos, geração de clipes nas plataformas listadas, avaliação de conversão ou auditoria automática de arquivos de campanha. Envio ao repositório e implantação de Pages são eventos distintos. Um build local aprovado não comprova publicação do site.

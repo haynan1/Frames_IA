@@ -6,12 +6,18 @@ Construir uma referência pública em português para direção de arte de criat
 
 ## Leia nesta ordem
 
-1. `AGENTS.md`, instruções do usuário e `README.md`.
+1. `AGENTS.md`, instruções do usuário, `README.md` e `docs/ANALISE.md`.
 2. `docs/ARQUITETURA.md`, `docs/FONTES.md`, `docs/IMAGENS.md` e `docs/VALIDACAO.md`.
 3. `data/content.js` e `data/prompt-builder.js` antes de alterar interface.
 4. `docs/ATUALIZACAO.md` antes de mudar recomendações de ferramentas.
 
-## Estado inicial
+## Estado atual · 2.0 (31.10.2026)
+
+O projeto virou o **FRAME Studio**: Studio de cenas em cinco etapas (`ui/studio.js`, `data/studio.js`), elenco fictício (`data/cast.js`), direções de arte (`data/directions.js`), perfis de marca (`data/brand.js`) e fila de 100 imagens (`data/image-requests.js`) com protocolo para o Codex em `docs/codex/`. O menu lateral é agrupado e recolhível (`ui/shell.js`, `ui/routes.js`). O antigo plano de produção foi substituído pelo Studio; `#producao` redireciona e planos v1 são migrados. Leia `docs/ANALISE.md` para o diagnóstico e os próximos ciclos.
+
+**Nenhuma das 100 imagens novas foi gerada ainda.** O site mostra placeholders até a ingestão. Não declarar campanha, clipe ou identidade testados. O perfil Sarcenet é proposta, não guia oficial.
+
+## Histórico · 1.x
 
 Versão 1.2: Biblioteca visual com dez cenários e trinta gerações individuais, seis sequências de clothing, uma tentativa de perfume rejeitada e sua correção, prompts de imagem/vídeo por frame e curadoria específica. `data/gallery.js` é a fonte dos roteiros; `data/gallery-assets.js` registra dimensões e origem; `data/gallery-review.js` guarda a revisão visual. Não declarar vídeo testado: nenhum desses trinta frames foi animado neste ciclo. A rota `#como-usar` e `docs/COMO-USAR.md` explicam a operação em seis passos.
 

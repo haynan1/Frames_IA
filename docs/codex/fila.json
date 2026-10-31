@@ -1,0 +1,1836 @@
+{
+  "generatedFrom": "data/image-requests.js",
+  "total": 100,
+  "requests": [
+    {
+      "id": "CAST-SC-01-ROSTO-FRENTE",
+      "group": "Elenco",
+      "priority": "P0",
+      "wave": 1,
+      "title": "SC-01 Helena · Rosto · frente",
+      "target": "assets/cast/sc-01/rosto-frente.webp",
+      "incoming": "incoming/CAST-SC-01-ROSTO-FRENTE.png",
+      "size": "1024x1536",
+      "references": [],
+      "dependsOn": [],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-02-ROSTO-FRENTE",
+      "group": "Elenco",
+      "priority": "P0",
+      "wave": 1,
+      "title": "SC-02 Aiko · Rosto · frente",
+      "target": "assets/cast/sc-02/rosto-frente.webp",
+      "incoming": "incoming/CAST-SC-02-ROSTO-FRENTE.png",
+      "size": "1024x1536",
+      "references": [],
+      "dependsOn": [],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-03-ROSTO-FRENTE",
+      "group": "Elenco",
+      "priority": "P0",
+      "wave": 1,
+      "title": "SC-03 Dandara · Rosto · frente",
+      "target": "assets/cast/sc-03/rosto-frente.webp",
+      "incoming": "incoming/CAST-SC-03-ROSTO-FRENTE.png",
+      "size": "1024x1536",
+      "references": [],
+      "dependsOn": [],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-04-ROSTO-FRENTE",
+      "group": "Elenco",
+      "priority": "P0",
+      "wave": 1,
+      "title": "SC-04 Lívia · Rosto · frente",
+      "target": "assets/cast/sc-04/rosto-frente.webp",
+      "incoming": "incoming/CAST-SC-04-ROSTO-FRENTE.png",
+      "size": "1024x1536",
+      "references": [],
+      "dependsOn": [],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-05-ROSTO-FRENTE",
+      "group": "Elenco",
+      "priority": "P0",
+      "wave": 1,
+      "title": "SC-05 Bianca · Rosto · frente",
+      "target": "assets/cast/sc-05/rosto-frente.webp",
+      "incoming": "incoming/CAST-SC-05-ROSTO-FRENTE.png",
+      "size": "1024x1536",
+      "references": [],
+      "dependsOn": [],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-06-ROSTO-FRENTE",
+      "group": "Elenco",
+      "priority": "P0",
+      "wave": 1,
+      "title": "SC-06 Marta · Rosto · frente",
+      "target": "assets/cast/sc-06/rosto-frente.webp",
+      "incoming": "incoming/CAST-SC-06-ROSTO-FRENTE.png",
+      "size": "1024x1536",
+      "references": [],
+      "dependsOn": [],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-07-ROSTO-FRENTE",
+      "group": "Elenco",
+      "priority": "P0",
+      "wave": 1,
+      "title": "SC-07 Iara · Rosto · frente",
+      "target": "assets/cast/sc-07/rosto-frente.webp",
+      "incoming": "incoming/CAST-SC-07-ROSTO-FRENTE.png",
+      "size": "1024x1536",
+      "references": [],
+      "dependsOn": [],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-08-ROSTO-FRENTE",
+      "group": "Elenco",
+      "priority": "P0",
+      "wave": 1,
+      "title": "SC-08 Rafael · Rosto · frente",
+      "target": "assets/cast/sc-08/rosto-frente.webp",
+      "incoming": "incoming/CAST-SC-08-ROSTO-FRENTE.png",
+      "size": "1024x1536",
+      "references": [],
+      "dependsOn": [],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-09-ROSTO-FRENTE",
+      "group": "Elenco",
+      "priority": "P0",
+      "wave": 1,
+      "title": "SC-09 Theo · Rosto · frente",
+      "target": "assets/cast/sc-09/rosto-frente.webp",
+      "incoming": "incoming/CAST-SC-09-ROSTO-FRENTE.png",
+      "size": "1024x1536",
+      "references": [],
+      "dependsOn": [],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-10-ROSTO-FRENTE",
+      "group": "Elenco",
+      "priority": "P0",
+      "wave": 1,
+      "title": "SC-10 Nina · Rosto · frente",
+      "target": "assets/cast/sc-10/rosto-frente.webp",
+      "incoming": "incoming/CAST-SC-10-ROSTO-FRENTE.png",
+      "size": "1024x1536",
+      "references": [],
+      "dependsOn": [],
+      "generated": false
+    },
+    {
+      "id": "SHOW-PECA-FRENTE",
+      "group": "Campanha Sarcenet",
+      "priority": "P0",
+      "wave": 1,
+      "title": "Peça · Frente",
+      "target": "assets/projects/sarcenet-capsula-seda/peca-frente.webp",
+      "incoming": "incoming/SHOW-PECA-FRENTE.png",
+      "size": "1024x1536",
+      "references": [],
+      "dependsOn": [],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-01-CORPO-FRENTE",
+      "group": "Elenco",
+      "priority": "P0",
+      "wave": 2,
+      "title": "SC-01 Helena · Corpo inteiro · frente",
+      "target": "assets/cast/sc-01/corpo-frente.webp",
+      "incoming": "incoming/CAST-SC-01-CORPO-FRENTE.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-01/rosto-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-01-ROSTO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-02-CORPO-FRENTE",
+      "group": "Elenco",
+      "priority": "P0",
+      "wave": 2,
+      "title": "SC-02 Aiko · Corpo inteiro · frente",
+      "target": "assets/cast/sc-02/corpo-frente.webp",
+      "incoming": "incoming/CAST-SC-02-CORPO-FRENTE.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-02/rosto-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-02-ROSTO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-03-CORPO-FRENTE",
+      "group": "Elenco",
+      "priority": "P0",
+      "wave": 2,
+      "title": "SC-03 Dandara · Corpo inteiro · frente",
+      "target": "assets/cast/sc-03/corpo-frente.webp",
+      "incoming": "incoming/CAST-SC-03-CORPO-FRENTE.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-03/rosto-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-03-ROSTO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-04-CORPO-FRENTE",
+      "group": "Elenco",
+      "priority": "P0",
+      "wave": 2,
+      "title": "SC-04 Lívia · Corpo inteiro · frente",
+      "target": "assets/cast/sc-04/corpo-frente.webp",
+      "incoming": "incoming/CAST-SC-04-CORPO-FRENTE.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-04/rosto-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-04-ROSTO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-05-CORPO-FRENTE",
+      "group": "Elenco",
+      "priority": "P0",
+      "wave": 2,
+      "title": "SC-05 Bianca · Corpo inteiro · frente",
+      "target": "assets/cast/sc-05/corpo-frente.webp",
+      "incoming": "incoming/CAST-SC-05-CORPO-FRENTE.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-05/rosto-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-05-ROSTO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-06-CORPO-FRENTE",
+      "group": "Elenco",
+      "priority": "P0",
+      "wave": 2,
+      "title": "SC-06 Marta · Corpo inteiro · frente",
+      "target": "assets/cast/sc-06/corpo-frente.webp",
+      "incoming": "incoming/CAST-SC-06-CORPO-FRENTE.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-06/rosto-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-06-ROSTO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-07-CORPO-FRENTE",
+      "group": "Elenco",
+      "priority": "P0",
+      "wave": 2,
+      "title": "SC-07 Iara · Corpo inteiro · frente",
+      "target": "assets/cast/sc-07/corpo-frente.webp",
+      "incoming": "incoming/CAST-SC-07-CORPO-FRENTE.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-07/rosto-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-07-ROSTO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-08-CORPO-FRENTE",
+      "group": "Elenco",
+      "priority": "P0",
+      "wave": 2,
+      "title": "SC-08 Rafael · Corpo inteiro · frente",
+      "target": "assets/cast/sc-08/corpo-frente.webp",
+      "incoming": "incoming/CAST-SC-08-CORPO-FRENTE.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-08/rosto-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-08-ROSTO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-09-CORPO-FRENTE",
+      "group": "Elenco",
+      "priority": "P0",
+      "wave": 2,
+      "title": "SC-09 Theo · Corpo inteiro · frente",
+      "target": "assets/cast/sc-09/corpo-frente.webp",
+      "incoming": "incoming/CAST-SC-09-CORPO-FRENTE.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-09/rosto-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-09-ROSTO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-10-CORPO-FRENTE",
+      "group": "Elenco",
+      "priority": "P0",
+      "wave": 2,
+      "title": "SC-10 Nina · Corpo inteiro · frente",
+      "target": "assets/cast/sc-10/corpo-frente.webp",
+      "incoming": "incoming/CAST-SC-10-CORPO-FRENTE.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-10/rosto-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-10-ROSTO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "SHOW-PECA-COSTAS",
+      "group": "Campanha Sarcenet",
+      "priority": "P0",
+      "wave": 2,
+      "title": "Peça · Costas",
+      "target": "assets/projects/sarcenet-capsula-seda/peca-costas.webp",
+      "incoming": "incoming/SHOW-PECA-COSTAS.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/projects/sarcenet-capsula-seda/peca-frente.webp"
+      ],
+      "dependsOn": [
+        "SHOW-PECA-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "SHOW-PECA-DETALHE",
+      "group": "Campanha Sarcenet",
+      "priority": "P0",
+      "wave": 2,
+      "title": "Peça · Detalhe",
+      "target": "assets/projects/sarcenet-capsula-seda/peca-detalhe.webp",
+      "incoming": "incoming/SHOW-PECA-DETALHE.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/projects/sarcenet-capsula-seda/peca-frente.webp"
+      ],
+      "dependsOn": [
+        "SHOW-PECA-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-01-CORPO-COSTAS",
+      "group": "Elenco",
+      "priority": "P0",
+      "wave": 3,
+      "title": "SC-01 Helena · Corpo inteiro · costas",
+      "target": "assets/cast/sc-01/corpo-costas.webp",
+      "incoming": "incoming/CAST-SC-01-CORPO-COSTAS.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-01/rosto-frente.webp",
+        "assets/cast/sc-01/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-01-ROSTO-FRENTE",
+        "CAST-SC-01-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "DIR-SEDA-JANELA-HERO",
+      "group": "Direções",
+      "priority": "P0",
+      "wave": 3,
+      "title": "Seda & janela · imagem-chave",
+      "target": "assets/directions/seda-janela/hero.webp",
+      "incoming": "incoming/DIR-SEDA-JANELA-HERO.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-01/rosto-frente.webp",
+        "assets/cast/sc-01/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-01-ROSTO-FRENTE",
+        "CAST-SC-01-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "DIR-CICLORAMA-MARFIM-HERO",
+      "group": "Direções",
+      "priority": "P0",
+      "wave": 3,
+      "title": "Ciclorama marfim · imagem-chave",
+      "target": "assets/directions/ciclorama-marfim/hero.webp",
+      "incoming": "incoming/DIR-CICLORAMA-MARFIM-HERO.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-05/rosto-frente.webp",
+        "assets/cast/sc-05/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-05-ROSTO-FRENTE",
+        "CAST-SC-05-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "DIR-ATELIER-PROVADOR-HERO",
+      "group": "Direções",
+      "priority": "P0",
+      "wave": 3,
+      "title": "Atelier & provador · imagem-chave",
+      "target": "assets/directions/atelier-provador/hero.webp",
+      "incoming": "incoming/DIR-ATELIER-PROVADOR-HERO.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-06/rosto-frente.webp",
+        "assets/cast/sc-06/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-06-ROSTO-FRENTE",
+        "CAST-SC-06-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "DIR-RUA-GOLDEN-HOUR-HERO",
+      "group": "Direções",
+      "priority": "P0",
+      "wave": 3,
+      "title": "Rua · golden hour · imagem-chave",
+      "target": "assets/directions/rua-golden-hour/hero.webp",
+      "incoming": "incoming/DIR-RUA-GOLDEN-HOUR-HERO.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-08/rosto-frente.webp",
+        "assets/cast/sc-08/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-08-ROSTO-FRENTE",
+        "CAST-SC-08-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "DIR-NOITE-FLASH-HERO",
+      "group": "Direções",
+      "priority": "P0",
+      "wave": 3,
+      "title": "Noite · flash · imagem-chave",
+      "target": "assets/directions/noite-flash/hero.webp",
+      "incoming": "incoming/DIR-NOITE-FLASH-HERO.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-10/rosto-frente.webp",
+        "assets/cast/sc-10/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-10-ROSTO-FRENTE",
+        "CAST-SC-10-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "DIR-COLOR-BLOCK-HERO",
+      "group": "Direções",
+      "priority": "P0",
+      "wave": 3,
+      "title": "Color block · imagem-chave",
+      "target": "assets/directions/color-block/hero.webp",
+      "incoming": "incoming/DIR-COLOR-BLOCK-HERO.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-03/rosto-frente.webp",
+        "assets/cast/sc-03/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-03-ROSTO-FRENTE",
+        "CAST-SC-03-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "DIR-CONCRETO-MINIMAL-HERO",
+      "group": "Direções",
+      "priority": "P0",
+      "wave": 3,
+      "title": "Concreto minimal · imagem-chave",
+      "target": "assets/directions/concreto-minimal/hero.webp",
+      "incoming": "incoming/DIR-CONCRETO-MINIMAL-HERO.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-02/rosto-frente.webp",
+        "assets/cast/sc-02/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-02-ROSTO-FRENTE",
+        "CAST-SC-02-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "DIR-NATUREZA-LINHO-HERO",
+      "group": "Direções",
+      "priority": "P0",
+      "wave": 3,
+      "title": "Natureza & linho · imagem-chave",
+      "target": "assets/directions/natureza-linho/hero.webp",
+      "incoming": "incoming/DIR-NATUREZA-LINHO-HERO.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-07/rosto-frente.webp",
+        "assets/cast/sc-07/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-07-ROSTO-FRENTE",
+        "CAST-SC-07-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "SHOW-S01-A",
+      "group": "Campanha Sarcenet",
+      "priority": "P0",
+      "wave": 3,
+      "title": "Tomada 1 · O toque da seda · keyframe A",
+      "target": "assets/projects/sarcenet-capsula-seda/s01-a.webp",
+      "incoming": "incoming/SHOW-S01-A.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-01/rosto-frente.webp",
+        "assets/cast/sc-01/corpo-frente.webp",
+        "assets/projects/sarcenet-capsula-seda/peca-frente.webp",
+        "assets/projects/sarcenet-capsula-seda/peca-detalhe.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-01-ROSTO-FRENTE",
+        "CAST-SC-01-CORPO-FRENTE",
+        "SHOW-PECA-FRENTE",
+        "SHOW-PECA-DETALHE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "SHOW-S02-A",
+      "group": "Campanha Sarcenet",
+      "priority": "P0",
+      "wave": 3,
+      "title": "Tomada 2 · O olhar · keyframe A",
+      "target": "assets/projects/sarcenet-capsula-seda/s02-a.webp",
+      "incoming": "incoming/SHOW-S02-A.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-01/rosto-frente.webp",
+        "assets/cast/sc-01/corpo-frente.webp",
+        "assets/projects/sarcenet-capsula-seda/peca-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-01-ROSTO-FRENTE",
+        "CAST-SC-01-CORPO-FRENTE",
+        "SHOW-PECA-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "SHOW-S03-A",
+      "group": "Campanha Sarcenet",
+      "priority": "P0",
+      "wave": 3,
+      "title": "Tomada 3 · O caimento · keyframe A",
+      "target": "assets/projects/sarcenet-capsula-seda/s03-a.webp",
+      "incoming": "incoming/SHOW-S03-A.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-01/rosto-frente.webp",
+        "assets/cast/sc-01/corpo-frente.webp",
+        "assets/projects/sarcenet-capsula-seda/peca-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-01-ROSTO-FRENTE",
+        "CAST-SC-01-CORPO-FRENTE",
+        "SHOW-PECA-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "SHOW-S04-A",
+      "group": "Campanha Sarcenet",
+      "priority": "P0",
+      "wave": 3,
+      "title": "Tomada 4 · As costas · keyframe A",
+      "target": "assets/projects/sarcenet-capsula-seda/s04-a.webp",
+      "incoming": "incoming/SHOW-S04-A.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-01/rosto-frente.webp",
+        "assets/cast/sc-01/corpo-frente.webp",
+        "assets/projects/sarcenet-capsula-seda/peca-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-01-ROSTO-FRENTE",
+        "CAST-SC-01-CORPO-FRENTE",
+        "SHOW-PECA-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "SHOW-S05-A",
+      "group": "Campanha Sarcenet",
+      "priority": "P0",
+      "wave": 3,
+      "title": "Tomada 5 · Dois passos · keyframe A",
+      "target": "assets/projects/sarcenet-capsula-seda/s05-a.webp",
+      "incoming": "incoming/SHOW-S05-A.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-01/rosto-frente.webp",
+        "assets/cast/sc-01/corpo-frente.webp",
+        "assets/projects/sarcenet-capsula-seda/peca-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-01-ROSTO-FRENTE",
+        "CAST-SC-01-CORPO-FRENTE",
+        "SHOW-PECA-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "SHOW-S06-A",
+      "group": "Campanha Sarcenet",
+      "priority": "P0",
+      "wave": 3,
+      "title": "Tomada 6 · Assinatura · keyframe A",
+      "target": "assets/projects/sarcenet-capsula-seda/s06-a.webp",
+      "incoming": "incoming/SHOW-S06-A.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-01/rosto-frente.webp",
+        "assets/cast/sc-01/corpo-frente.webp",
+        "assets/projects/sarcenet-capsula-seda/peca-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-01-ROSTO-FRENTE",
+        "CAST-SC-01-CORPO-FRENTE",
+        "SHOW-PECA-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "HOME-CAPA",
+      "group": "Site",
+      "priority": "P0",
+      "wave": 3,
+      "title": "Capa do studio",
+      "target": "assets/studio/capa.webp",
+      "incoming": "incoming/HOME-CAPA.png",
+      "size": "1536x1024",
+      "references": [
+        "assets/cast/sc-01/rosto-frente.webp",
+        "assets/cast/sc-01/corpo-frente.webp",
+        "assets/projects/sarcenet-capsula-seda/peca-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-01-ROSTO-FRENTE",
+        "CAST-SC-01-CORPO-FRENTE",
+        "SHOW-PECA-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "SHOW-S02-B",
+      "group": "Campanha Sarcenet",
+      "priority": "P0",
+      "wave": 4,
+      "title": "Tomada 2 · O olhar · keyframe B",
+      "target": "assets/projects/sarcenet-capsula-seda/s02-b.webp",
+      "incoming": "incoming/SHOW-S02-B.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-01/rosto-frente.webp",
+        "assets/cast/sc-01/corpo-frente.webp",
+        "assets/projects/sarcenet-capsula-seda/peca-frente.webp",
+        "assets/projects/sarcenet-capsula-seda/s02-a.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-01-ROSTO-FRENTE",
+        "CAST-SC-01-CORPO-FRENTE",
+        "SHOW-PECA-FRENTE",
+        "SHOW-S02-A"
+      ],
+      "generated": false
+    },
+    {
+      "id": "SHOW-S03-B",
+      "group": "Campanha Sarcenet",
+      "priority": "P0",
+      "wave": 4,
+      "title": "Tomada 3 · O caimento · keyframe B",
+      "target": "assets/projects/sarcenet-capsula-seda/s03-b.webp",
+      "incoming": "incoming/SHOW-S03-B.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-01/rosto-frente.webp",
+        "assets/cast/sc-01/corpo-frente.webp",
+        "assets/projects/sarcenet-capsula-seda/peca-frente.webp",
+        "assets/projects/sarcenet-capsula-seda/s03-a.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-01-ROSTO-FRENTE",
+        "CAST-SC-01-CORPO-FRENTE",
+        "SHOW-PECA-FRENTE",
+        "SHOW-S03-A"
+      ],
+      "generated": false
+    },
+    {
+      "id": "SHOW-S04-B",
+      "group": "Campanha Sarcenet",
+      "priority": "P0",
+      "wave": 4,
+      "title": "Tomada 4 · As costas · keyframe B",
+      "target": "assets/projects/sarcenet-capsula-seda/s04-b.webp",
+      "incoming": "incoming/SHOW-S04-B.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-01/rosto-frente.webp",
+        "assets/cast/sc-01/corpo-frente.webp",
+        "assets/cast/sc-01/corpo-costas.webp",
+        "assets/projects/sarcenet-capsula-seda/peca-frente.webp",
+        "assets/projects/sarcenet-capsula-seda/peca-costas.webp",
+        "assets/projects/sarcenet-capsula-seda/s04-a.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-01-ROSTO-FRENTE",
+        "CAST-SC-01-CORPO-FRENTE",
+        "CAST-SC-01-CORPO-COSTAS",
+        "SHOW-PECA-FRENTE",
+        "SHOW-PECA-COSTAS",
+        "SHOW-S04-A"
+      ],
+      "generated": false
+    },
+    {
+      "id": "SHOW-S05-B",
+      "group": "Campanha Sarcenet",
+      "priority": "P0",
+      "wave": 4,
+      "title": "Tomada 5 · Dois passos · keyframe B",
+      "target": "assets/projects/sarcenet-capsula-seda/s05-b.webp",
+      "incoming": "incoming/SHOW-S05-B.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-01/rosto-frente.webp",
+        "assets/cast/sc-01/corpo-frente.webp",
+        "assets/projects/sarcenet-capsula-seda/peca-frente.webp",
+        "assets/projects/sarcenet-capsula-seda/s05-a.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-01-ROSTO-FRENTE",
+        "CAST-SC-01-CORPO-FRENTE",
+        "SHOW-PECA-FRENTE",
+        "SHOW-S05-A"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-01-ROSTO-34",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-01 Helena · Rosto · três quartos",
+      "target": "assets/cast/sc-01/rosto-34.webp",
+      "incoming": "incoming/CAST-SC-01-ROSTO-34.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-01/rosto-frente.webp",
+        "assets/cast/sc-01/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-01-ROSTO-FRENTE",
+        "CAST-SC-01-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-01-PERFIL",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-01 Helena · Perfil",
+      "target": "assets/cast/sc-01/perfil.webp",
+      "incoming": "incoming/CAST-SC-01-PERFIL.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-01/rosto-frente.webp",
+        "assets/cast/sc-01/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-01-ROSTO-FRENTE",
+        "CAST-SC-01-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-01-CORPO-LATERAL",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-01 Helena · Corpo inteiro · lateral",
+      "target": "assets/cast/sc-01/corpo-lateral.webp",
+      "incoming": "incoming/CAST-SC-01-CORPO-LATERAL.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-01/rosto-frente.webp",
+        "assets/cast/sc-01/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-01-ROSTO-FRENTE",
+        "CAST-SC-01-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-02-ROSTO-34",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-02 Aiko · Rosto · três quartos",
+      "target": "assets/cast/sc-02/rosto-34.webp",
+      "incoming": "incoming/CAST-SC-02-ROSTO-34.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-02/rosto-frente.webp",
+        "assets/cast/sc-02/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-02-ROSTO-FRENTE",
+        "CAST-SC-02-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-02-PERFIL",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-02 Aiko · Perfil",
+      "target": "assets/cast/sc-02/perfil.webp",
+      "incoming": "incoming/CAST-SC-02-PERFIL.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-02/rosto-frente.webp",
+        "assets/cast/sc-02/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-02-ROSTO-FRENTE",
+        "CAST-SC-02-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-02-CORPO-COSTAS",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-02 Aiko · Corpo inteiro · costas",
+      "target": "assets/cast/sc-02/corpo-costas.webp",
+      "incoming": "incoming/CAST-SC-02-CORPO-COSTAS.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-02/rosto-frente.webp",
+        "assets/cast/sc-02/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-02-ROSTO-FRENTE",
+        "CAST-SC-02-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-02-CORPO-LATERAL",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-02 Aiko · Corpo inteiro · lateral",
+      "target": "assets/cast/sc-02/corpo-lateral.webp",
+      "incoming": "incoming/CAST-SC-02-CORPO-LATERAL.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-02/rosto-frente.webp",
+        "assets/cast/sc-02/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-02-ROSTO-FRENTE",
+        "CAST-SC-02-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-03-ROSTO-34",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-03 Dandara · Rosto · três quartos",
+      "target": "assets/cast/sc-03/rosto-34.webp",
+      "incoming": "incoming/CAST-SC-03-ROSTO-34.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-03/rosto-frente.webp",
+        "assets/cast/sc-03/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-03-ROSTO-FRENTE",
+        "CAST-SC-03-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-03-PERFIL",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-03 Dandara · Perfil",
+      "target": "assets/cast/sc-03/perfil.webp",
+      "incoming": "incoming/CAST-SC-03-PERFIL.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-03/rosto-frente.webp",
+        "assets/cast/sc-03/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-03-ROSTO-FRENTE",
+        "CAST-SC-03-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-03-CORPO-COSTAS",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-03 Dandara · Corpo inteiro · costas",
+      "target": "assets/cast/sc-03/corpo-costas.webp",
+      "incoming": "incoming/CAST-SC-03-CORPO-COSTAS.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-03/rosto-frente.webp",
+        "assets/cast/sc-03/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-03-ROSTO-FRENTE",
+        "CAST-SC-03-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-03-CORPO-LATERAL",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-03 Dandara · Corpo inteiro · lateral",
+      "target": "assets/cast/sc-03/corpo-lateral.webp",
+      "incoming": "incoming/CAST-SC-03-CORPO-LATERAL.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-03/rosto-frente.webp",
+        "assets/cast/sc-03/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-03-ROSTO-FRENTE",
+        "CAST-SC-03-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-04-ROSTO-34",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-04 Lívia · Rosto · três quartos",
+      "target": "assets/cast/sc-04/rosto-34.webp",
+      "incoming": "incoming/CAST-SC-04-ROSTO-34.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-04/rosto-frente.webp",
+        "assets/cast/sc-04/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-04-ROSTO-FRENTE",
+        "CAST-SC-04-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-04-PERFIL",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-04 Lívia · Perfil",
+      "target": "assets/cast/sc-04/perfil.webp",
+      "incoming": "incoming/CAST-SC-04-PERFIL.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-04/rosto-frente.webp",
+        "assets/cast/sc-04/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-04-ROSTO-FRENTE",
+        "CAST-SC-04-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-04-CORPO-COSTAS",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-04 Lívia · Corpo inteiro · costas",
+      "target": "assets/cast/sc-04/corpo-costas.webp",
+      "incoming": "incoming/CAST-SC-04-CORPO-COSTAS.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-04/rosto-frente.webp",
+        "assets/cast/sc-04/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-04-ROSTO-FRENTE",
+        "CAST-SC-04-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-04-CORPO-LATERAL",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-04 Lívia · Corpo inteiro · lateral",
+      "target": "assets/cast/sc-04/corpo-lateral.webp",
+      "incoming": "incoming/CAST-SC-04-CORPO-LATERAL.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-04/rosto-frente.webp",
+        "assets/cast/sc-04/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-04-ROSTO-FRENTE",
+        "CAST-SC-04-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-05-ROSTO-34",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-05 Bianca · Rosto · três quartos",
+      "target": "assets/cast/sc-05/rosto-34.webp",
+      "incoming": "incoming/CAST-SC-05-ROSTO-34.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-05/rosto-frente.webp",
+        "assets/cast/sc-05/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-05-ROSTO-FRENTE",
+        "CAST-SC-05-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-05-PERFIL",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-05 Bianca · Perfil",
+      "target": "assets/cast/sc-05/perfil.webp",
+      "incoming": "incoming/CAST-SC-05-PERFIL.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-05/rosto-frente.webp",
+        "assets/cast/sc-05/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-05-ROSTO-FRENTE",
+        "CAST-SC-05-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-05-CORPO-COSTAS",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-05 Bianca · Corpo inteiro · costas",
+      "target": "assets/cast/sc-05/corpo-costas.webp",
+      "incoming": "incoming/CAST-SC-05-CORPO-COSTAS.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-05/rosto-frente.webp",
+        "assets/cast/sc-05/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-05-ROSTO-FRENTE",
+        "CAST-SC-05-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-05-CORPO-LATERAL",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-05 Bianca · Corpo inteiro · lateral",
+      "target": "assets/cast/sc-05/corpo-lateral.webp",
+      "incoming": "incoming/CAST-SC-05-CORPO-LATERAL.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-05/rosto-frente.webp",
+        "assets/cast/sc-05/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-05-ROSTO-FRENTE",
+        "CAST-SC-05-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-06-ROSTO-34",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-06 Marta · Rosto · três quartos",
+      "target": "assets/cast/sc-06/rosto-34.webp",
+      "incoming": "incoming/CAST-SC-06-ROSTO-34.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-06/rosto-frente.webp",
+        "assets/cast/sc-06/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-06-ROSTO-FRENTE",
+        "CAST-SC-06-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-06-PERFIL",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-06 Marta · Perfil",
+      "target": "assets/cast/sc-06/perfil.webp",
+      "incoming": "incoming/CAST-SC-06-PERFIL.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-06/rosto-frente.webp",
+        "assets/cast/sc-06/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-06-ROSTO-FRENTE",
+        "CAST-SC-06-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-06-CORPO-COSTAS",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-06 Marta · Corpo inteiro · costas",
+      "target": "assets/cast/sc-06/corpo-costas.webp",
+      "incoming": "incoming/CAST-SC-06-CORPO-COSTAS.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-06/rosto-frente.webp",
+        "assets/cast/sc-06/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-06-ROSTO-FRENTE",
+        "CAST-SC-06-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-06-CORPO-LATERAL",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-06 Marta · Corpo inteiro · lateral",
+      "target": "assets/cast/sc-06/corpo-lateral.webp",
+      "incoming": "incoming/CAST-SC-06-CORPO-LATERAL.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-06/rosto-frente.webp",
+        "assets/cast/sc-06/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-06-ROSTO-FRENTE",
+        "CAST-SC-06-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-07-ROSTO-34",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-07 Iara · Rosto · três quartos",
+      "target": "assets/cast/sc-07/rosto-34.webp",
+      "incoming": "incoming/CAST-SC-07-ROSTO-34.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-07/rosto-frente.webp",
+        "assets/cast/sc-07/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-07-ROSTO-FRENTE",
+        "CAST-SC-07-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-07-PERFIL",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-07 Iara · Perfil",
+      "target": "assets/cast/sc-07/perfil.webp",
+      "incoming": "incoming/CAST-SC-07-PERFIL.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-07/rosto-frente.webp",
+        "assets/cast/sc-07/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-07-ROSTO-FRENTE",
+        "CAST-SC-07-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-07-CORPO-COSTAS",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-07 Iara · Corpo inteiro · costas",
+      "target": "assets/cast/sc-07/corpo-costas.webp",
+      "incoming": "incoming/CAST-SC-07-CORPO-COSTAS.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-07/rosto-frente.webp",
+        "assets/cast/sc-07/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-07-ROSTO-FRENTE",
+        "CAST-SC-07-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-07-CORPO-LATERAL",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-07 Iara · Corpo inteiro · lateral",
+      "target": "assets/cast/sc-07/corpo-lateral.webp",
+      "incoming": "incoming/CAST-SC-07-CORPO-LATERAL.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-07/rosto-frente.webp",
+        "assets/cast/sc-07/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-07-ROSTO-FRENTE",
+        "CAST-SC-07-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-08-ROSTO-34",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-08 Rafael · Rosto · três quartos",
+      "target": "assets/cast/sc-08/rosto-34.webp",
+      "incoming": "incoming/CAST-SC-08-ROSTO-34.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-08/rosto-frente.webp",
+        "assets/cast/sc-08/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-08-ROSTO-FRENTE",
+        "CAST-SC-08-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-08-PERFIL",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-08 Rafael · Perfil",
+      "target": "assets/cast/sc-08/perfil.webp",
+      "incoming": "incoming/CAST-SC-08-PERFIL.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-08/rosto-frente.webp",
+        "assets/cast/sc-08/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-08-ROSTO-FRENTE",
+        "CAST-SC-08-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-08-CORPO-COSTAS",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-08 Rafael · Corpo inteiro · costas",
+      "target": "assets/cast/sc-08/corpo-costas.webp",
+      "incoming": "incoming/CAST-SC-08-CORPO-COSTAS.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-08/rosto-frente.webp",
+        "assets/cast/sc-08/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-08-ROSTO-FRENTE",
+        "CAST-SC-08-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-08-CORPO-LATERAL",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-08 Rafael · Corpo inteiro · lateral",
+      "target": "assets/cast/sc-08/corpo-lateral.webp",
+      "incoming": "incoming/CAST-SC-08-CORPO-LATERAL.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-08/rosto-frente.webp",
+        "assets/cast/sc-08/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-08-ROSTO-FRENTE",
+        "CAST-SC-08-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-09-ROSTO-34",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-09 Theo · Rosto · três quartos",
+      "target": "assets/cast/sc-09/rosto-34.webp",
+      "incoming": "incoming/CAST-SC-09-ROSTO-34.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-09/rosto-frente.webp",
+        "assets/cast/sc-09/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-09-ROSTO-FRENTE",
+        "CAST-SC-09-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-09-PERFIL",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-09 Theo · Perfil",
+      "target": "assets/cast/sc-09/perfil.webp",
+      "incoming": "incoming/CAST-SC-09-PERFIL.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-09/rosto-frente.webp",
+        "assets/cast/sc-09/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-09-ROSTO-FRENTE",
+        "CAST-SC-09-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-09-CORPO-COSTAS",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-09 Theo · Corpo inteiro · costas",
+      "target": "assets/cast/sc-09/corpo-costas.webp",
+      "incoming": "incoming/CAST-SC-09-CORPO-COSTAS.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-09/rosto-frente.webp",
+        "assets/cast/sc-09/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-09-ROSTO-FRENTE",
+        "CAST-SC-09-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-09-CORPO-LATERAL",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-09 Theo · Corpo inteiro · lateral",
+      "target": "assets/cast/sc-09/corpo-lateral.webp",
+      "incoming": "incoming/CAST-SC-09-CORPO-LATERAL.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-09/rosto-frente.webp",
+        "assets/cast/sc-09/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-09-ROSTO-FRENTE",
+        "CAST-SC-09-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-10-ROSTO-34",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-10 Nina · Rosto · três quartos",
+      "target": "assets/cast/sc-10/rosto-34.webp",
+      "incoming": "incoming/CAST-SC-10-ROSTO-34.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-10/rosto-frente.webp",
+        "assets/cast/sc-10/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-10-ROSTO-FRENTE",
+        "CAST-SC-10-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-10-PERFIL",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-10 Nina · Perfil",
+      "target": "assets/cast/sc-10/perfil.webp",
+      "incoming": "incoming/CAST-SC-10-PERFIL.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-10/rosto-frente.webp",
+        "assets/cast/sc-10/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-10-ROSTO-FRENTE",
+        "CAST-SC-10-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-10-CORPO-COSTAS",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-10 Nina · Corpo inteiro · costas",
+      "target": "assets/cast/sc-10/corpo-costas.webp",
+      "incoming": "incoming/CAST-SC-10-CORPO-COSTAS.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-10/rosto-frente.webp",
+        "assets/cast/sc-10/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-10-ROSTO-FRENTE",
+        "CAST-SC-10-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-10-CORPO-LATERAL",
+      "group": "Elenco",
+      "priority": "P1",
+      "wave": 3,
+      "title": "SC-10 Nina · Corpo inteiro · lateral",
+      "target": "assets/cast/sc-10/corpo-lateral.webp",
+      "incoming": "incoming/CAST-SC-10-CORPO-LATERAL.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-10/rosto-frente.webp",
+        "assets/cast/sc-10/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-10-ROSTO-FRENTE",
+        "CAST-SC-10-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "DIR-SEDA-JANELA-PLATE",
+      "group": "Direções",
+      "priority": "P1",
+      "wave": 4,
+      "title": "Seda & janela · cenário vazio",
+      "target": "assets/directions/seda-janela/plate.webp",
+      "incoming": "incoming/DIR-SEDA-JANELA-PLATE.png",
+      "size": "1536x1024",
+      "references": [
+        "assets/directions/seda-janela/hero.webp"
+      ],
+      "dependsOn": [
+        "DIR-SEDA-JANELA-HERO"
+      ],
+      "generated": false
+    },
+    {
+      "id": "DIR-CICLORAMA-MARFIM-PLATE",
+      "group": "Direções",
+      "priority": "P1",
+      "wave": 4,
+      "title": "Ciclorama marfim · cenário vazio",
+      "target": "assets/directions/ciclorama-marfim/plate.webp",
+      "incoming": "incoming/DIR-CICLORAMA-MARFIM-PLATE.png",
+      "size": "1536x1024",
+      "references": [
+        "assets/directions/ciclorama-marfim/hero.webp"
+      ],
+      "dependsOn": [
+        "DIR-CICLORAMA-MARFIM-HERO"
+      ],
+      "generated": false
+    },
+    {
+      "id": "DIR-ATELIER-PROVADOR-PLATE",
+      "group": "Direções",
+      "priority": "P1",
+      "wave": 4,
+      "title": "Atelier & provador · cenário vazio",
+      "target": "assets/directions/atelier-provador/plate.webp",
+      "incoming": "incoming/DIR-ATELIER-PROVADOR-PLATE.png",
+      "size": "1536x1024",
+      "references": [
+        "assets/directions/atelier-provador/hero.webp"
+      ],
+      "dependsOn": [
+        "DIR-ATELIER-PROVADOR-HERO"
+      ],
+      "generated": false
+    },
+    {
+      "id": "DIR-RUA-GOLDEN-HOUR-PLATE",
+      "group": "Direções",
+      "priority": "P1",
+      "wave": 4,
+      "title": "Rua · golden hour · cenário vazio",
+      "target": "assets/directions/rua-golden-hour/plate.webp",
+      "incoming": "incoming/DIR-RUA-GOLDEN-HOUR-PLATE.png",
+      "size": "1536x1024",
+      "references": [
+        "assets/directions/rua-golden-hour/hero.webp"
+      ],
+      "dependsOn": [
+        "DIR-RUA-GOLDEN-HOUR-HERO"
+      ],
+      "generated": false
+    },
+    {
+      "id": "DIR-NOITE-FLASH-PLATE",
+      "group": "Direções",
+      "priority": "P1",
+      "wave": 4,
+      "title": "Noite · flash · cenário vazio",
+      "target": "assets/directions/noite-flash/plate.webp",
+      "incoming": "incoming/DIR-NOITE-FLASH-PLATE.png",
+      "size": "1536x1024",
+      "references": [
+        "assets/directions/noite-flash/hero.webp"
+      ],
+      "dependsOn": [
+        "DIR-NOITE-FLASH-HERO"
+      ],
+      "generated": false
+    },
+    {
+      "id": "DIR-COLOR-BLOCK-PLATE",
+      "group": "Direções",
+      "priority": "P1",
+      "wave": 4,
+      "title": "Color block · cenário vazio",
+      "target": "assets/directions/color-block/plate.webp",
+      "incoming": "incoming/DIR-COLOR-BLOCK-PLATE.png",
+      "size": "1536x1024",
+      "references": [
+        "assets/directions/color-block/hero.webp"
+      ],
+      "dependsOn": [
+        "DIR-COLOR-BLOCK-HERO"
+      ],
+      "generated": false
+    },
+    {
+      "id": "DIR-CONCRETO-MINIMAL-PLATE",
+      "group": "Direções",
+      "priority": "P1",
+      "wave": 4,
+      "title": "Concreto minimal · cenário vazio",
+      "target": "assets/directions/concreto-minimal/plate.webp",
+      "incoming": "incoming/DIR-CONCRETO-MINIMAL-PLATE.png",
+      "size": "1536x1024",
+      "references": [
+        "assets/directions/concreto-minimal/hero.webp"
+      ],
+      "dependsOn": [
+        "DIR-CONCRETO-MINIMAL-HERO"
+      ],
+      "generated": false
+    },
+    {
+      "id": "DIR-NATUREZA-LINHO-PLATE",
+      "group": "Direções",
+      "priority": "P1",
+      "wave": 4,
+      "title": "Natureza & linho · cenário vazio",
+      "target": "assets/directions/natureza-linho/plate.webp",
+      "incoming": "incoming/DIR-NATUREZA-LINHO-PLATE.png",
+      "size": "1536x1024",
+      "references": [
+        "assets/directions/natureza-linho/hero.webp"
+      ],
+      "dependsOn": [
+        "DIR-NATUREZA-LINHO-HERO"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-01-EDITORIAL",
+      "group": "Elenco",
+      "priority": "P2",
+      "wave": 3,
+      "title": "SC-01 Helena · Editorial · luz Sarcenet",
+      "target": "assets/cast/sc-01/editorial.webp",
+      "incoming": "incoming/CAST-SC-01-EDITORIAL.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-01/rosto-frente.webp",
+        "assets/cast/sc-01/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-01-ROSTO-FRENTE",
+        "CAST-SC-01-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-02-EDITORIAL",
+      "group": "Elenco",
+      "priority": "P2",
+      "wave": 3,
+      "title": "SC-02 Aiko · Editorial · luz Sarcenet",
+      "target": "assets/cast/sc-02/editorial.webp",
+      "incoming": "incoming/CAST-SC-02-EDITORIAL.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-02/rosto-frente.webp",
+        "assets/cast/sc-02/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-02-ROSTO-FRENTE",
+        "CAST-SC-02-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-03-EDITORIAL",
+      "group": "Elenco",
+      "priority": "P2",
+      "wave": 3,
+      "title": "SC-03 Dandara · Editorial · luz Sarcenet",
+      "target": "assets/cast/sc-03/editorial.webp",
+      "incoming": "incoming/CAST-SC-03-EDITORIAL.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-03/rosto-frente.webp",
+        "assets/cast/sc-03/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-03-ROSTO-FRENTE",
+        "CAST-SC-03-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-04-EDITORIAL",
+      "group": "Elenco",
+      "priority": "P2",
+      "wave": 3,
+      "title": "SC-04 Lívia · Editorial · luz Sarcenet",
+      "target": "assets/cast/sc-04/editorial.webp",
+      "incoming": "incoming/CAST-SC-04-EDITORIAL.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-04/rosto-frente.webp",
+        "assets/cast/sc-04/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-04-ROSTO-FRENTE",
+        "CAST-SC-04-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-05-EDITORIAL",
+      "group": "Elenco",
+      "priority": "P2",
+      "wave": 3,
+      "title": "SC-05 Bianca · Editorial · luz Sarcenet",
+      "target": "assets/cast/sc-05/editorial.webp",
+      "incoming": "incoming/CAST-SC-05-EDITORIAL.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-05/rosto-frente.webp",
+        "assets/cast/sc-05/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-05-ROSTO-FRENTE",
+        "CAST-SC-05-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-06-EDITORIAL",
+      "group": "Elenco",
+      "priority": "P2",
+      "wave": 3,
+      "title": "SC-06 Marta · Editorial · luz Sarcenet",
+      "target": "assets/cast/sc-06/editorial.webp",
+      "incoming": "incoming/CAST-SC-06-EDITORIAL.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-06/rosto-frente.webp",
+        "assets/cast/sc-06/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-06-ROSTO-FRENTE",
+        "CAST-SC-06-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-07-EDITORIAL",
+      "group": "Elenco",
+      "priority": "P2",
+      "wave": 3,
+      "title": "SC-07 Iara · Editorial · luz Sarcenet",
+      "target": "assets/cast/sc-07/editorial.webp",
+      "incoming": "incoming/CAST-SC-07-EDITORIAL.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-07/rosto-frente.webp",
+        "assets/cast/sc-07/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-07-ROSTO-FRENTE",
+        "CAST-SC-07-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-08-EDITORIAL",
+      "group": "Elenco",
+      "priority": "P2",
+      "wave": 3,
+      "title": "SC-08 Rafael · Editorial · luz Sarcenet",
+      "target": "assets/cast/sc-08/editorial.webp",
+      "incoming": "incoming/CAST-SC-08-EDITORIAL.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-08/rosto-frente.webp",
+        "assets/cast/sc-08/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-08-ROSTO-FRENTE",
+        "CAST-SC-08-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-09-EDITORIAL",
+      "group": "Elenco",
+      "priority": "P2",
+      "wave": 3,
+      "title": "SC-09 Theo · Editorial · luz Sarcenet",
+      "target": "assets/cast/sc-09/editorial.webp",
+      "incoming": "incoming/CAST-SC-09-EDITORIAL.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-09/rosto-frente.webp",
+        "assets/cast/sc-09/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-09-ROSTO-FRENTE",
+        "CAST-SC-09-CORPO-FRENTE"
+      ],
+      "generated": false
+    },
+    {
+      "id": "CAST-SC-10-EDITORIAL",
+      "group": "Elenco",
+      "priority": "P2",
+      "wave": 3,
+      "title": "SC-10 Nina · Editorial · luz Sarcenet",
+      "target": "assets/cast/sc-10/editorial.webp",
+      "incoming": "incoming/CAST-SC-10-EDITORIAL.png",
+      "size": "1024x1536",
+      "references": [
+        "assets/cast/sc-10/rosto-frente.webp",
+        "assets/cast/sc-10/corpo-frente.webp"
+      ],
+      "dependsOn": [
+        "CAST-SC-10-ROSTO-FRENTE",
+        "CAST-SC-10-CORPO-FRENTE"
+      ],
+      "generated": false
+    }
+  ]
+}
