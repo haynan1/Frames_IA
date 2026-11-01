@@ -225,3 +225,28 @@ test('Prompts follow the store realism rules', () => {
   assert.match(compileShot(p, 0).motion, /real time \(no slow motion\)/);
   assert.match(compileShot(p, 0).keyA, /never mirrored/);
 });
+
+test('Ready-made takes: five coherent takes, examples that match, and only the model changes', async () => {
+  const {takeNotes, kitRules, createKitProject} = await import('../data/takes.js');
+  const {takesMarkup} = await import('../ui/takes.js');
+  const kit = createKitProject();
+  assert.equal(kit.shots.length, 5); assert.equal(takeNotes.length, 5); assert.equal(totalDuration(kit), 14);
+  assert.ok(kitRules.length >= 4);
+  // The queue's campaign keyframes are shown as examples: the camera must be the same take.
+  const showcase = createStudioProject('sarcenet-capsula-seda');
+  for (let i = 0; i < 5; i++) for (const key of ['sizeStart', 'sizeEnd', 'move', 'degrees', 'lens', 'height', 'heightEnd', 'angle', 'action', 'focus']) assert.equal(kit.shots[i][key], showcase.shots[i][key], `take ${i + 1} · ${key}`);
+  const compiled = compileProject(kit);
+  compiled.forEach((c, i) => {
+    assert.deepEqual(c.warnings, [], c.title);
+    assert.equal(Boolean(c.keyB), Boolean(takeNotes[i].frames.b), `take ${i + 1} B frame note`);
+    assert.ok(takeNotes[i].review.length >= 3 && takeNotes[i].fix && takeNotes[i].why);
+  });
+  const swapped = createKitProject('loja-07');
+  assert.equal(swapped.talent.castId, 'loja-07');
+  assert.deepEqual(swapped.shots, kit.shots, 'changing the model never changes the takes');
+  assert.match(compileShot(swapped, 1).keyA, /LOJA-07/);
+  assert.throws(() => createKitProject('celebrity'));
+  const html = takesMarkup();
+  assert.equal((html.match(/class="take"/g) || []).length, 5);
+  assert.doesNotMatch(html, /undefined|NaN|\[object/);
+});

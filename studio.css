@@ -521,6 +521,56 @@ footer { padding: 24px clamp(18px, 3.4vw, 54px); }
 .home-direction-label { position: absolute; inset: auto 0 0 0; padding: 30px 16px 14px; background: linear-gradient(0deg, #000c, transparent); font: 20px var(--serif); color: #fff8ed; display: flex; flex-direction: column; }
 .home-direction-label small { font: 10px var(--mono); color: var(--accent); }
 
+/* ---------- tomadas prontas ---------- */
+.take-toolbar { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px 24px; padding: 20px 22px; margin-bottom: 16px; }
+.take-toolbar .field.compact { min-width: 300px; flex: 1 1 300px; max-width: 460px; }
+.take-toolbar-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.take-rules { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-bottom: 26px; }
+.take-rules .panel { padding: 20px 22px; }
+.take-rules .rules { margin: 0; }
+.take-order { margin: 0; padding-left: 20px; color: var(--muted); font-size: 13px; line-height: 1.65; }
+.take-order li { margin: 6px 0; }
+.take-strip { list-style: none; margin: 0; padding: 0; display: flex; gap: 4px; }
+.take-strip li { flex-basis: 0; min-width: 0; }
+.take-strip a { display: grid; gap: 2px; height: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--line); background: linear-gradient(180deg, #1a1a18, #141413); transition: border-color .18s; }
+.take-strip a:hover { border-color: var(--accent); }
+.take-strip span { font: 600 10px var(--mono); color: var(--accent); }
+.take-strip b { font-size: 13px; font-weight: 550; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.take-strip small { font-size: 10px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.take-summary { margin: 10px 0 8px; font: 11px var(--mono); color: var(--muted); }
+.take-summary b { color: var(--text); font-weight: 500; }
+.take { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: 32px; padding: 36px 0; border-top: 1px solid var(--line); scroll-margin-top: calc(var(--topbar-h) + 16px); }
+.take-frames { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.take-frames.single { grid-template-columns: minmax(0, .5fr); }
+.take-frames figure { margin: 0; }
+.take-frames img, .take-frames svg { display: block; width: 100%; aspect-ratio: 2 / 3; object-fit: cover; border-radius: 12px; border: 1px solid var(--line); background: var(--sheet); }
+.take-frames figcaption { margin-top: 6px; font: 10px var(--mono); letter-spacing: 1px; color: var(--muted); }
+.take-example-note { margin: 10px 0 14px; font-size: 11px; color: #8e8b7f; }
+.take-diagrams { display: grid; grid-template-columns: .82fr 1fr; gap: 10px; }
+.take-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.take-time { font: 11px var(--mono); color: var(--accent); padding: 4px 10px; border-radius: 99px; border: 1px solid #4b4334; }
+.take h2 { font: 400 clamp(34px, 3vw, 46px)/1.05 var(--serif); margin: 14px 0 6px; }
+.take-feeling { margin: 0 0 12px; font: italic 18px var(--serif); color: var(--accent); }
+.take-body > p { font-size: 14px; line-height: 1.75; color: var(--muted); max-width: 640px; }
+.take-body h3 { margin: 22px 0 8px; font-size: 11px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.take-spec { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; margin: 18px 0 0; background: var(--line); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.take-spec div { background: var(--panel); padding: 12px 14px; min-width: 0; }
+.take-spec dt { font-size: 10px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--muted); }
+.take-spec dd { margin: 4px 0 0; font-size: 13px; color: var(--text); line-height: 1.4; }
+.take-frames-list, .take-attach, .take-review { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.take-frames-list li { display: grid; grid-template-columns: 28px 1fr; gap: 10px; align-items: baseline; font-size: 13px; color: var(--text); }
+.take-frames-list b { font: 600 12px var(--mono); color: var(--accent); }
+.take-attach li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; font-size: 12px; color: var(--muted); }
+.take-attach code { font: 11px var(--mono); color: var(--text); overflow-wrap: anywhere; }
+.take-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 4px; }
+.take-review li { display: flex; gap: 10px; align-items: flex-start; font-size: 13px; color: var(--text); }
+.take-review .icon { width: 16px; height: 16px; color: var(--ok); flex-shrink: 0; margin-top: 2px; }
+.take-fix { margin: 14px 0 0; padding: 12px 14px; border-radius: 10px; background: #241a12; border: 1px solid #4d3626; font-size: 13px; line-height: 1.6; color: #f0cfb2; }
+.take-fix b { color: var(--warn); }
+.queue-take { display: flex; gap: 8px; align-items: flex-start; margin: 0 0 8px; font-size: 12px; color: var(--muted); }
+.queue-take .icon { width: 15px; height: 15px; color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+.queue-take a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+
 /* ---------- responsive ---------- */
 @media (max-width: 1150px) {
   .studio-split { grid-template-columns: 1fr; }
@@ -528,6 +578,9 @@ footer { padding: 24px clamp(18px, 3.4vw, 54px); }
 }
 @media (max-width: 900px) {
   .seq-grid { grid-template-columns: 1fr; }
+  .take { grid-template-columns: 1fr; gap: 22px; }
+  .take-rules { grid-template-columns: 1fr; }
+  .take-spec { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .howto-steps { grid-template-columns: 1fr 1fr; }
   .howto-steps li:nth-child(3) { padding-left: 0; border-left: 0; }
   .howto-steps li:nth-child(n+3) { border-top: 1px solid var(--line); }
@@ -559,6 +612,10 @@ footer { padding: 24px clamp(18px, 3.4vw, 54px); }
   .produce-steps { grid-template-columns: 1fr; }
   .produce-step { padding: 14px; }
   .produce-foot .button { width: 100%; }
+  .take-strip { overflow-x: auto; }
+  .take-strip li { min-width: 92px; }
+  .take-toolbar .field.compact { min-width: 0; }
+  .take-toolbar-actions .button { flex: 1; }
   .preview-grid { grid-template-columns: 1fr 1fr; }
   .queue-item { grid-template-columns: 72px minmax(0, 1fr); gap: 12px; }
   .queue-media { width: 72px; }
@@ -572,4 +629,30 @@ footer { padding: 24px clamp(18px, 3.4vw, 54px); }
 @media print {
   .sidebar, .topbar, .scrim, .stepper, .studio-tools, .step-nav, .seq-actions, .scrub, .howto, .done-check, .ref-get, .prompt-row .button { display: none !important; }
   .workspace { margin: 0; }
+}
+
+/* ---------- como produzir ---------- */
+.quickstart-prep { margin: 0 0 10px; padding: 24px; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); }
+.quickstart-prep h2 { font-size: 26px; margin-bottom: 14px; }
+.prep-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 28px; }
+.prep-grid b { display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+.prep-grid p { margin: 0; font-size: 13px; line-height: 1.75; color: var(--muted); }
+.prep-grid code { font: 11px var(--mono); color: var(--text); overflow-wrap: anywhere; }
+@media (max-width: 900px) { .prep-grid { grid-template-columns: 1fr; } }
+
+/* ---------- entrega: montagem ---------- */
+.photo-note { margin: 16px 0 0; font-size: 12px; line-height: 1.65; }
+.montage { margin-bottom: 20px; padding: 22px; }
+.montage > p { margin: -6px 0 14px; }
+.montage-cuts { list-style: none; margin: 0 0 16px; padding: 0; display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.montage-cuts li { display: grid; grid-template-columns: 84px minmax(0, 1fr) minmax(0, 1.2fr); gap: 14px; align-items: baseline; padding: 12px 14px; background: var(--panel); font-size: 13px; }
+.cut-time { font: 11px var(--mono); color: var(--accent); }
+.montage-cuts b { font-weight: 550; }
+.cut-out { color: var(--muted); font-size: 12px; }
+.montage-spec { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 20px; }
+.montage-spec li { font-size: 12px; color: var(--muted); line-height: 1.6; }
+.montage-spec b { display: block; font-size: 10px; letter-spacing: 1.3px; text-transform: uppercase; color: var(--text); font-weight: 600; }
+@media (max-width: 600px) {
+  .montage-cuts li { grid-template-columns: 1fr; gap: 2px; }
+  .montage-spec { grid-template-columns: 1fr; }
 }

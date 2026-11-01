@@ -2,7 +2,9 @@
 export const navGroups = [
   {id: 'studio', label: 'Studio', routes: [
     {id: 'inicio', label: 'Visão geral', icon: 'home'},
-    {id: 'studio', label: 'Studio de cenas', icon: 'studio', badge: 'NOVO'},
+    {id: 'como-usar', label: 'Como produzir', icon: 'compass'},
+    {id: 'tomadas', label: 'Tomadas prontas', icon: 'film'},
+    {id: 'studio', label: 'Studio de cenas', icon: 'studio'},
     {id: 'elenco', label: 'Elenco', icon: 'cast'},
     {id: 'direcoes', label: 'Direções de arte', icon: 'aperture'},
     {id: 'fila', label: 'Fila de imagens', icon: 'queue'}
@@ -13,7 +15,6 @@ export const navGroups = [
     {id: 'prompts', label: 'Prompts', icon: 'text'}
   ]},
   {id: 'aprender', label: 'Aprender', routes: [
-    {id: 'como-usar', label: 'Como usar', icon: 'compass'},
     {id: 'guia', label: 'Manual de direção', icon: 'book'},
     {id: 'storyboard', label: 'Do frame ao filme', icon: 'film'},
     {id: 'laboratorio', label: 'Laboratório', icon: 'sliders'}

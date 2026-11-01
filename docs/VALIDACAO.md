@@ -122,6 +122,27 @@ Não verificado: o download real dos arquivos e o clipboard.
 
 Não verificado: geração real de imagens ou clipes com os novos prompts.
 
+## Evidência observada · versão 2.3 (01.11.2026)
+
+- `npm run check`: **46 testes**. O teste novo das Tomadas prontas confere:
+  - 5 tomadas, 14 s e nenhum alerta;
+  - a câmera de cada tomada igual à da campanha cujos keyframes servem de exemplo;
+  - a nota de imagem B presente exatamente quando a tomada tem B;
+  - trocar a modelo não altera nenhuma tomada, e uma modelo inválida é recusada;
+  - a página renderiza 5 tomadas sem `undefined`.
+- Navegador em 1440 px:
+  - a página Tomadas prontas mostra a ficha, o exemplo A/B, os diagramas e a revisão;
+  - trocar para LOJA-07 atualizou o resumo e os anexos (`sarcenet-modelo-07-*`);
+  - “Produzir no Studio” na tomada 4 abriu o Studio em `#studio/4`, com a tomada 4 selecionada, “Desfazer: abrir tomadas prontas” e a linha do tempo à vista;
+  - a Fila mostra o link “Exemplo da tomada N”;
+  - a Entrega mostra a Montagem com 5 cortes e a exportação 1080×1920.
+- Revisão de experiência:
+  - percorri Visão geral, Como produzir, Tomadas prontas, as cinco etapas do Studio, Fila, Direções e Controle de qualidade;
+  - os problemas encontrados e corrigidos estão no CHANGELOG 2.3.0.
+- Em 375 px não há rolagem horizontal, e `#tomadas/3` abre na tomada 3. Console sem erros.
+
+Não verificado: download real do pacote e clipboard.
+
 ## Limites atuais
 
 Não foi realizado benchmark de modelos, geração de clipes nas plataformas listadas, avaliação de conversão ou auditoria automática de arquivos de campanha. Envio ao repositório e implantação de Pages são eventos distintos. Um build local aprovado não comprova publicação do site.

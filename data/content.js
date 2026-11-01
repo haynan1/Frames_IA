@@ -133,14 +133,15 @@ export const storyboard = [
 ];
 
 export const qaItems = [
- 'O produto corresponde à referência em forma, cor, peças e rótulo.',
- 'A identidade da pessoa e a roupa permanecem consistentes.',
- 'Mãos, contato, sombras e reflexos são plausíveis.',
- 'Não há morphing ou tremulação em velocidade normal.',
- 'A demonstração mostra uma operação e um resultado confirmados.',
- 'Copy, preço e afirmações têm fontes e aprovação aplicável.',
- 'O áudio termina corretamente e a voz está autorizada.',
- 'Produto, legenda e CTA são legíveis no celular.',
- 'Duração, proporção e arquivo exportado foram verificados.',
- 'Direitos, identificação sintética e aprovação final foram registrados.'
+ "A peça bate com as fotos: cor, corte, comprimento, alças, fechos e costuras.",
+ "Nada inventado: costas, forro, bolsos e trama só aparecem se houver foto.",
+ "A mesma modelo do começo ao fim: rosto, cabelo, sinais e tom de pele.",
+ "Mãos com cinco dedos; um pé esquerdo e um direito, sem deslizar no chão.",
+ "Sem morphing nem tremulação em velocidade normal; nada em câmera lenta.",
+ "A luz vem do mesmo lado em todas as tomadas e não muda a cor da peça.",
+ "Nenhum equipamento, texto, logo ou marca d’água gerado dentro da imagem.",
+ "Copy, preço e afirmações confirmados na ficha do produto, em inglês britânico.",
+ "Peça, legenda e CTA legíveis no celular, sem a peça cortada no 9:16.",
+ "Duração, proporção e arquivo exportado (MP4 H.264, 1080×1920) conferidos.",
+ "Uso de IA identificado onde a plataforma exige; aprovação final registrada."
 ];

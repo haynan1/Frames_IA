@@ -1,5 +1,24 @@
 # Histórico
 
+## 2.3.0 — 2026-11-01 · Tomadas prontas e revisão de produção
+
+- **Tomadas prontas** (`#tomadas`): 5 tomadas pré-configuradas (matéria, retrato, caimento, costas, passo; 14 s). Escolhe-se a modelo (loja ou elenco) e nada mais muda. Cada tomada traz:
+  - exemplo gerado, ficha técnica, planta e enquadramento;
+  - imagens a gerar e arquivos a anexar;
+  - prompts A, B e movimento, revisão e "se der errado";
+  - "Produzir no Studio", que abre a sequência na tomada certa, com desfazer.
+- As tomadas são as tomadas 1–5 da campanha Cápsula Seda; na Fila, cada keyframe "Tomada N" leva à descrição completa.
+- **Como produzir** (antes "Como usar") reescrito como o caminho real: preparar fotos e modelos, escolher as tomadas, trocar a peça, conferir câmera, gerar, animar, montar e revisar. O treino com a biblioteca virou opcional.
+- **Entrega:** novo painel **Montagem**, com a ordem dos cortes, as transições, o fecho com CTA e a exportação (formato, resolução, MP4 H.264, 30 fps). A tabela ganhou a coluna Saída.
+- **Etapa 2:** orientação de como fotografar a peça. O seletor "Modelo de cena" mostra a descrição de cada modelo.
+- **Checklist de qualidade** refeito para vídeo de moda e regras da loja (11 itens), com o exemplo de correção trocado de produto para roupa.
+- **Correções:**
+  - a página inicial trocava o botão "Abrir a sequência" por qualquer rascunho; agora leva às Tomadas prontas;
+  - contagens fixas desatualizadas ("8 mundos", "Oito sets") agora são calculadas;
+  - textos que ainda chamavam o perfil Sarcenet de proposta ou diziam que tudo era fictício foram atualizados;
+  - links diretos (`#tomadas/3`) passaram a rolar para a tomada mesmo com a rolagem suave.
+- Navegação: "Como produzir" e "Tomadas prontas" no grupo Studio, antes do Studio de cenas. 46 testes.
+
 ## 2.2.1 — 2026-10-31 · Refação de imagens
 
 - Imagens já geradas podem ser reabertas em `data/image-revisions.js` com motivo, linha `CORRECTION` e novo critério de aceite. A fila mostra o item como **refazer** (topo do `FILA-DE-IMAGENS.md`, selo na página Fila, contador 101/102), e a versão antiga continua no site até a nova chegar.

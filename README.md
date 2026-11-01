@@ -8,6 +8,8 @@ Estúdio de direção de arte com IA em português, pensado primeiro para a loja
 
 ## O que você encontra
 
+- **Tomadas prontas:** sequência profissional de 5 tomadas (matéria, retrato, caimento, costas, passo; 14 s) já configurada. Troca-se só a modelo. Cada tomada tem exemplo gerado, ficha técnica, imagens a gerar, anexos, prompts, revisão e correção, e abre direto no Studio.
+- **Como produzir:** o caminho da peça ao vídeo em seis passos, com preparo das fotos e das modelos da loja.
 - **Studio de cenas:** cinco etapas (briefing, peça e elenco, cenário e luz, sequência, entrega). Cada tomada tem enquadramento inicial e final, 16 operações de câmera, graus de arco ou giro, lente, altura, ângulo, ação, foco, ritmo e transição. Planta vista de cima, vista lateral e enquadramento animados no tempo da tomada; keyframe A, keyframe B e prompt de movimento; pacote de produção, pedido para o Codex e projeto `.json`.
 - **Elenco:** 10 modelos fictícias (inclui plus size, 40+, petite e masculino) com ficha de identidade e sete vistas de referência.
 - **Direções de arte:** nove sets repetíveis com planta de luz, lente, exposição, paleta e cenário, incluindo o **Estúdio Sarcenet**, transcrito do padrão de fotos da loja.

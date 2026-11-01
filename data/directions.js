@@ -18,7 +18,7 @@ export const directions = [
     hero: {castId: 'sc-01', wardrobe: 'a champagne satin-finish floor-length column gown with a draped cowl neckline, wide straps and a high front slit'},
     avoid: 'Fundo com outro tom ou horizonte, luz vindo da direita, peça com cor puxada pela luz, equipamento de estúdio no quadro.'},
   {id: 'seda-janela', name: 'Seda & janela', tagline: 'Matéria líquida, luz de manhã.',
-    use: 'Assinatura proposta para a Sarcenet: lançamentos, peças fluidas, seda, cetim, malhas finas.',
+    use: 'Vídeos e campanhas em uso real: peças fluidas, seda, cetim, malhas finas. É o cenário das Tomadas prontas.',
     mood: ['Íntimo', 'Luminoso', 'Tátil'], light: 'window', grade: 'warm-film', lens: '85mm · f/2', exposure: 'ISO 400 · 1/250 · balanço 5200K',
     palette: [{name: 'Champagne', hex: '#D8C3A5'}, {name: 'Marfim', hex: '#F2EDE4'}, {name: 'Rosé seco', hex: '#B88A7E'}, {name: 'Sombra quente', hex: '#5B4B3E'}],
     setup: [

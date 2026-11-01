@@ -8,7 +8,7 @@ import {escapeHTML} from '../ui/html.js';
 test('Content identifiers are unique and every section is substantive',()=>{
   for(const list of [movements,chapters,promptLibrary,tools])assert.equal(new Set(list.map(x=>x.id)).size,list.length);
   for(const c of chapters){assert.ok(c.items.length>=4);for(const [title,body] of c.items){assert.ok(title.length>5);assert.ok(body.length>100);}}
-  assert.equal(movements.length,16);assert.equal(promptLibrary.length,12);assert.equal(storyboard.length,5);assert.equal(qaItems.length,10);
+  assert.equal(movements.length,16);assert.equal(promptLibrary.length,12);assert.equal(storyboard.length,5);assert.equal(qaItems.length,11);
 });
 test('All camera modes generate distinct actionable instructions',()=>{
   const generated=movements.map(m=>buildPrompt({movement:m.id,mode:'video',duration:4,format:'9:16'}));

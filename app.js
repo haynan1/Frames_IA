@@ -4,9 +4,11 @@ import {buildPrompt} from './data/prompt-builder.js';
 import {mountShell} from './ui/shell.js';
 import {routeById,routeAliases} from './ui/routes.js';
 import {studioMarkup,mountStudio} from './ui/studio.js';
+import {takesMarkup,mountTakes} from './ui/takes.js';
 import {castMarkup,mountCast,directionsMarkup,queueMarkup,mountQueue} from './ui/pages.js';
 import {placeholderSVG} from './ui/diagram.js';
 import {cast,castAssetPath} from './data/cast.js';
+import {storeModels} from './data/store-models.js';
 import {directions,directionAssetPath} from './data/directions.js';
 import {queueStats,assetSrc} from './data/image-requests.js';
 import {escapeHTML} from './ui/html.js';
@@ -37,18 +39,18 @@ function home(){
   const castCard=m=>{const src=assetSrc(castAssetPath(m.id,'rosto-frente'),true);return `<a class="home-cast" href="#elenco/${m.id}"><span class="home-cast-media">${src?`<img src="${src}" alt="${m.code} ${escapeHTML(m.name)}" loading="lazy">`:placeholderSVG({label:`${m.code} ${m.name}`,id:m.code})}</span><b>${m.code}</b><small>${escapeHTML(m.name)}</small></a>`;};
   const dirCard=(d,i)=>{const src=assetSrc(directionAssetPath(d.id,'hero'),true);return `<a class="home-direction" href="#direcoes/${d.id}"><span class="home-direction-media">${src?`<img src="${src}" alt="${escapeHTML(d.name)}" loading="lazy">`:placeholderSVG({label:d.name,id:d.id})}</span><span class="home-direction-label"><small>${String(i+1).padStart(2,'0')}</small>${escapeHTML(d.name)}</span></a>`;};
   const flow=[['01','Briefing','Marca, objetivo, formato e mensagem.','1'],['02','Peça & elenco','Construção exata da roupa e a modelo certa.','2'],['03','Cenário & luz','Uma direção de arte preenche luz, lente e cor.','3'],['04','Sequência','Tomadas com enquadramento, câmera, giro e ação.','4'],['05','Entrega','Pacote, keyframes e pedido para o Codex.','5']];
-  return `<section class="studio-hero"><div class="studio-hero-copy"><span class="eyebrow">FRAME STUDIO · SARCENET</span><h1>Dirija a coleção.<br><em>Frame a frame.</em></h1><p>Um estúdio de direção de arte com IA para moda: elenco com ficha, direções de luz, construção de cenas com câmera, aproximação e rotação, e prompts prontos para imagem e vídeo.</p><div class="actions"><a class="button" href="#studio">Abrir o Studio<span aria-hidden="true">↗</span></a><a class="button secondary" href="#como-usar">Como usar<span aria-hidden="true">↗</span></a></div></div><figure class="studio-hero-media">${coverMedia}<figcaption><span class="image-badge">${cover?'IMAGEM GERADA COM IA · ELENCO FICTÍCIO':'ESTUDO VISUAL · CAPA AGUARDANDO GERAÇÃO'}</span></figcaption></figure></section>
-  <div class="home-stats"><a href="#elenco"><strong>${cast.length}</strong><span>MODELOS NO ELENCO</span></a><a href="#direcoes"><strong>${directions.length}</strong><span>DIREÇÕES DE ARTE</span></a><a href="#camera"><strong>${movements.length}</strong><span>OPERAÇÕES DE CÂMERA</span></a><a href="#fila"><strong>${stats.done}<small>/${stats.total}</small></strong><span>IMAGENS NA FILA</span></a></div>
+  return `<section class="studio-hero"><div class="studio-hero-copy"><span class="eyebrow">FRAME STUDIO · SARCENET</span><h1>Dirija a coleção.<br><em>Frame a frame.</em></h1><p>Um estúdio de direção de arte com IA para moda: elenco com ficha, direções de luz, construção de cenas com câmera, aproximação e rotação, e prompts prontos para imagem e vídeo.</p><div class="actions"><a class="button" href="#tomadas">Começar pelas tomadas prontas<span aria-hidden="true">↗</span></a><a class="button secondary" href="#como-usar">Como produzir<span aria-hidden="true">↗</span></a></div></div><figure class="studio-hero-media">${coverMedia}<figcaption><span class="image-badge">${cover?'IMAGEM GERADA COM IA · ELENCO FICTÍCIO':'ESTUDO VISUAL · CAPA AGUARDANDO GERAÇÃO'}</span></figcaption></figure></section>
+  <div class="home-stats"><a href="#elenco"><strong>${cast.length}<small>+${storeModels.length}</small></strong><span>ELENCO + MODELOS DA LOJA</span></a><a href="#direcoes"><strong>${directions.length}</strong><span>DIREÇÕES DE ARTE</span></a><a href="#camera"><strong>${movements.length}</strong><span>OPERAÇÕES DE CÂMERA</span></a><a href="#fila"><strong>${stats.done}<small>/${stats.total}</small></strong><span>IMAGENS NA FILA</span></a></div>
   <div class="section-title"><div><small>O FLUXO DO ESTÚDIO</small><h2>Cinco etapas. <em>Uma cena pronta.</em></h2></div><a class="text-link" href="#studio">Começar agora ↗</a></div>
   <ol class="home-flow">${flow.map(([n,t,d,s])=>`<li><a href="#studio/${s}"><b>${n}</b><h3>${t}</h3><p>${d}</p></a></li>`).join('')}</ol>
   <div class="section-title"><div><small>ELENCO FICTÍCIO · FICHAS DE IDENTIDADE</small><h2>Rostos que <em>se repetem.</em></h2></div><a class="text-link" href="#elenco">Ver elenco ↗</a></div>
   <div class="home-cast-row">${cast.map(castCard).join('')}</div>
-  <div class="section-title"><div><small>DIREÇÕES DE ARTE</small><h2>Oito sets. <em>Uma linguagem.</em></h2></div><a class="text-link" href="#direcoes">Ver direções ↗</a></div>
+  <div class="section-title"><div><small>DIREÇÕES DE ARTE</small><h2>${directions.length} sets. <em>Uma linguagem.</em></h2></div><a class="text-link" href="#direcoes">Ver direções ↗</a></div>
   <div class="home-direction-row">${directions.map(dirCard).join('')}</div>
-  <div class="callout"><div><span class="eyebrow">CAMPANHA DEMONSTRATIVA</span><h3>Sarcenet · Cápsula Seda · 15s</h3><p>Seis tomadas: a matéria, o olhar, o caimento em arco, as costas, dois passos e a assinatura. Abra no Studio e veja cada câmera.</p></div><a class="button" href="#studio/4">Abrir a sequência<span aria-hidden="true">↗</span></a></div>
+  <div class="callout"><div><span class="eyebrow">TOMADAS PRONTAS · 5 TOMADAS · 14 s</span><h3>Matéria, retrato, caimento, costas e passo.</h3><p>Uma sequência profissional já configurada. Escolha a modelo, troque a peça e produza tomada por tomada, com o que gerar, revisar e corrigir.</p></div><a class="button" href="#tomadas">Ver as tomadas<span aria-hidden="true">↗</span></a></div>
   <div class="section-title"><div><small>REPERTÓRIO</small><h2>Para estudar e consultar.</h2></div></div>
   <div class="feature-grid"><a class="feature" href="#biblioteca"><figure>${photo('model','Retrato de personagem adulta fictícia em blazer marfim','loading="lazy"')}<span class="index">30 FRAMES</span></figure><div class="feature-body"><h3>Biblioteca visual.</h3><p>Dez mundos e trinta frames com prompts de imagem e animação.</p><span>EXPLORAR ↗</span></div></a><a class="feature" href="#camera"><figure>${photo('product','Estudo conceitual de vidro âmbar sobre superfície escura','loading="lazy"')}<span class="index">${movements.length} OPERAÇÕES</span></figure><div class="feature-body"><h3>Atlas de câmera.</h3><p>Dolly, orbit, giro no eixo, arco com aproximação e mais, com simulação.</p><span>VER O ATLAS ↗</span></div></a><a class="feature" href="#guia"><figure>${photo('scene','Frasco conceitual em cenário cinematográfico de pedra','loading="lazy"')}<span class="index">8 CAPÍTULOS</span></figure><div class="feature-body"><h3>Manual de direção.</h3><p>Briefing, óptica, identidade, produto, vídeo e revisão.</p><span>ABRIR O MANUAL ↗</span></div></a></div>
-  <p class="note">Estúdio independente. Elenco, peças e campanhas são fictícios e as imagens são geradas com IA. O perfil Sarcenet resume o manual de imagens da loja. O site planeja e organiza; a geração de imagem e vídeo acontece na ferramenta que você escolher.</p>`;
+  <p class="note">Estúdio independente. O elenco SC e as campanhas de demonstração são fictícios e as imagens são geradas com IA; modelos e peças da loja entram só como referência privada. O perfil Sarcenet resume o manual de imagens da loja. O site planeja e organiza; a geração de imagem e vídeo acontece na ferramenta que você escolher.</p>`;
 }
 
 function guide(section){
@@ -137,10 +139,10 @@ function models(){
 }
 
 function quality(){
-  return `${head('CONTROLE DE QUALIDADE','Aprove com <em>critério.</em>','Um checklist de revisão, não uma certificação automática. As marcações ficam apenas neste navegador e não enviam arquivos ou dados.')}<div class="two-column"><section class="panel"><div class="section-title"><h2>Checklist de entrega</h2><output id="qa-count" aria-live="polite">0 / ${qaItems.length}</output></div><div class="check-progress" role="progressbar" aria-label="Revisão concluída" aria-valuenow="0" aria-valuemin="0" aria-valuemax="${qaItems.length}"><span></span></div><div>${qaItems.map((q,i)=>`<label class="check-row"><input type="checkbox" data-qa="${i}"><span>${q}</span></label>`).join('')}</div><div class="actions"><button class="button secondary small" id="reset-qa" type="button">Limpar checklist</button><button class="button small" id="download-qa" type="button">Baixar revisão ↓</button></div><p id="storage-note" class="muted"></p></section><section class="panel"><h2>Corrija uma coisa por vez.</h2><p>Feedback útil descreve o que pode ser observado e o que deve permanecer igual.</p><div class="prompt-text">FALHA: a tampa muda de altura.
+  return `${head('CONTROLE DE QUALIDADE','Aprove com <em>critério.</em>','Um checklist de revisão, não uma certificação automática. As marcações ficam apenas neste navegador e não enviam arquivos ou dados.')}<div class="two-column"><section class="panel"><div class="section-title"><h2>Checklist de entrega</h2><output id="qa-count" aria-live="polite">0 / ${qaItems.length}</output></div><div class="check-progress" role="progressbar" aria-label="Revisão concluída" aria-valuenow="0" aria-valuemin="0" aria-valuemax="${qaItems.length}"><span></span></div><div>${qaItems.map((q,i)=>`<label class="check-row"><input type="checkbox" data-qa="${i}"><span>${q}</span></label>`).join('')}</div><div class="actions"><button class="button secondary small" id="reset-qa" type="button">Limpar checklist</button><button class="button small" id="download-qa" type="button">Baixar revisão ↓</button></div><p id="storage-note" class="muted"></p></section><section class="panel"><h2>Corrija uma coisa por vez.</h2><p>Feedback útil descreve o que pode ser observado e o que deve permanecer igual.</p><div class="prompt-text">FALHA: a alça direita fica mais larga no fim da tomada.
 ONDE: aos 2 segundos.
-ESPERADO: a geometria do frame aprovado.
-PRESERVAR: corpo do frasco, cenário, luz e câmera.
+ESPERADO: a alça igual à foto da peça e à imagem A aprovada.
+PRESERVAR: rosto, cabelo, cenário, luz e movimento de câmera.
 AÇÃO: tentar um reparo dirigido e comparar novamente.</div><p>Rejeite uma geração se ela inventar peças, alterar o rosto ou demonstrar um uso impossível. Volte ao frame aprovado quando os reparos acumularem novas falhas.</p><p class="note">Completar as marcações registra sua revisão. Não mede automaticamente a imagem e não substitui a aprovação de quem responde pela campanha.</p>${button('Ler critérios completos','#guia/qualidade',true)}</section></div>`;
 }
 
@@ -160,6 +162,7 @@ function storageSet(key,value){try{localStorage.setItem(key,JSON.stringify(value
 function bind(page,section){
   if(page==='biblioteca')dispose=mountGallery({id:section,notify,download});
   if(page==='studio')dispose=mountStudio({section,notify,download});
+  if(page==='tomadas')dispose=mountTakes({section,notify,download});
   if(page==='elenco')dispose=mountCast({id:section,notify});
   if(page==='fila')dispose=mountQueue({notify});
   if(page==='camera'){
@@ -221,8 +224,8 @@ function bind(page,section){
   if(page==='storyboard') document.querySelector('#download-story').addEventListener('click',()=>download('frame-shot-list.txt',`FRAME · Estudo conceitual · 15 segundos\nRevisão ${reviewedAt}\nNão contém clipes gerados.\n\n`+storyboard.map((s,i)=>`PLANO ${i+1} · ${s.time}\n${s.name} | ${s.shot} | ${s.move}\n${s.detail}\nPROMPT:\n${s.prompt}`).join('\n\n')));
   if(page==='qualidade'){
     const checks=[...document.querySelectorAll('[data-qa]')];
-    const saved=storageGet('frame-qa-v1',[]);checks.forEach(c=>{c.checked=saved.includes(Number(c.dataset.qa));});
-    const update=()=>{const selected=checks.filter(x=>x.checked).map(x=>Number(x.dataset.qa));document.querySelector('#qa-count').value=`${selected.length} / ${qaItems.length}`;const progress=document.querySelector('.check-progress');progress.setAttribute('aria-valuenow',String(selected.length));progress.firstElementChild.style.width=`${selected.length/qaItems.length*100}%`;document.querySelector('#storage-note').textContent=storageSet('frame-qa-v1',selected)?'Salvo somente neste navegador.':'O navegador não permite salvar. Você ainda pode baixar a revisão.';};
+    const saved=storageGet('frame-qa-v2',[]);checks.forEach(c=>{c.checked=saved.includes(Number(c.dataset.qa));});
+    const update=()=>{const selected=checks.filter(x=>x.checked).map(x=>Number(x.dataset.qa));document.querySelector('#qa-count').value=`${selected.length} / ${qaItems.length}`;const progress=document.querySelector('.check-progress');progress.setAttribute('aria-valuenow',String(selected.length));progress.firstElementChild.style.width=`${selected.length/qaItems.length*100}%`;document.querySelector('#storage-note').textContent=storageSet('frame-qa-v2',selected)?'Salvo somente neste navegador.':'O navegador não permite salvar. Você ainda pode baixar a revisão.';};
     checks.forEach(c=>c.addEventListener('change',update));
     document.querySelector('#reset-qa').addEventListener('click',()=>{checks.forEach(c=>{c.checked=false;});update();notify('Checklist limpo.');});
     document.querySelector('#download-qa').addEventListener('click',()=>download('frame-revisao.txt',`FRAME · Revisão manual\nRegistro: ${new Date().toISOString()}\nCampanha/arquivo: preencher no registro de produção\n\n`+checks.map((c,i)=>`${c.checked?'[x]':'[ ]'} ${qaItems[i]}`).join('\n')+'\n\nMarcações humanas. Não constitui validação automática nem autorização de publicação.'));
@@ -238,7 +241,7 @@ function route(){
   const [hashPage,section]=location.hash.slice(1).split('/');
   const raw=routeAliases[hashPage]||hashPage;
   const page=routeById(raw)?raw:'inicio';
-  const renders={inicio:home,studio:studioMarkup,elenco:castMarkup,direcoes:directionsMarkup,fila:queueMarkup,guia:guide,camera,laboratorio:lab,prompts,storyboard:film,modelos:models,qualidade:quality,fontes:references,biblioteca:galleryMarkup,'como-usar':quickstartMarkup};
+  const renders={inicio:home,studio:studioMarkup,tomadas:takesMarkup,elenco:castMarkup,direcoes:directionsMarkup,fila:queueMarkup,guia:guide,camera,laboratorio:lab,prompts,storyboard:film,modelos:models,qualidade:quality,fontes:references,biblioteca:galleryMarkup,'como-usar':quickstartMarkup};
   const previousScroll=window.scrollY;
   main.innerHTML=renders[page](section);
   document.title=`${routeById(page).label} — FRAME Studio`;

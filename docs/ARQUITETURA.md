@@ -19,6 +19,7 @@ O roteamento usa fragmentos (`#studio/4`, `#elenco/sc-01`, `#direcoes/seda-janel
 | `ui/icons.js` | Família única de ícones SVG em traço |
 | `ui/studio.js` | Studio de cenas em 5 etapas, linha do tempo, inspetor, painel Produzir (passos, referências baixáveis, progresso), saídas e importação |
 | `ui/diagram.js` | Planta de câmera, vista lateral, enquadramento, planta de luz e placeholders (SVG puro) |
+| `ui/takes.js` | Tomadas prontas: seletor de modelo, ficha de cada tomada, prompts e abertura no Studio |
 | `ui/pages.js` | Elenco, direções de arte e fila de imagens |
 | `ui/gallery.js`, `ui/quickstart.js` | Biblioteca visual e guia de uso |
 | `ui/html.js` | Escape compartilhado de texto e atributos |
@@ -26,6 +27,7 @@ O roteamento usa fragmentos (`#studio/4`, `#elenco/sc-01`, `#direcoes/seda-janel
 | `data/studio.js` | Esquema v2, vocabulário de câmera, modelos de cena, validação, migração v1 e compilação de prompts |
 | `data/brand.js` | Perfis de marca (Sarcenet proposta, moda, produto, beleza) |
 | `data/cast.js` | Elenco fictício e vistas de referência |
+| `data/takes.js` | Notas de direção das Tomadas prontas; a câmera vem do modelo `tomadas-prontas` em `data/studio.js` |
 | `data/store-models.js` | Modelos da loja (MODELO-A e 20 fichas): identidade em texto e nomes dos arquivos privados |
 | `data/directions.js` | Direções de arte com planta de luz |
 | `data/image-requests.js` | Fila de imagens derivada de elenco, direções e campanha |

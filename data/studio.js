@@ -171,6 +171,22 @@ export const templates = {
       shot('Dois passos', 'O tecido em movimento: caimento vivo e real.', 2, 'fs', 'fs', 'tracking', {lens: 35, angle: 45, action: 'walk', focus: 'garment'}),
       shot('Assinatura', 'Plano limpo com respiro para logo e CTA na edição.', 2, 'mls', 'mls', 'static', {lens: 85, action: 'still', focus: 'face', transition: 'dissolve'})
     ]})},
+  // The ready-made 5-take kit. Takes 1–5 repeat shots 1–5 of the Cápsula Seda campaign, so the queue's
+  // generated keyframes are true examples of each take. Only the talent is meant to change.
+  'tomadas-prontas': {label: 'Tomadas prontas · 5 tomadas · 14s', description: 'Matéria, retrato, caimento, costas e passo. Troque só a modelo.', build: () => ({
+    version: STUDIO_VERSION,
+    meta: {title: 'Sequência pronta · 5 tomadas'},
+    brief: {brandPreset: 'sarcenet', brand: 'Sarcenet', objective: 'social', format: '9:16', message: 'Apresentar uma peça em cinco tomadas: a matéria, quem veste, o caimento, as costas e o movimento.', audience: 'Mulheres no Reino Unido que procuram peças para a noite e para eventos.', cta: 'Shop the look · sarcenet.uk'},
+    product: {vertical: 'fashion', name: 'Vestido slip midi', category: 'dress', color: 'champagne', fabric: 'silk', details: 'bias-cut midi slip dress, thin adjustable spaghetti straps, soft cowl neckline, low scoop back with crossed straps, hem at mid-calf, no logo, no print', refFront: 'peca-frente.png', refBack: 'peca-costas.png', refDetail: 'peca-detalhe.png'},
+    talent: {castId: 'sc-01', customRef: '', customDescription: ''},
+    look: {direction: 'seda-janela', environment: directionById('seda-janela').environment, light: 'window', grade: 'warm-film'},
+    shots: [
+      shot('Matéria', 'Abrir pela matéria: os dedos tocam o tecido e o foco passa para o brilho.', 2, 'ecu', 'ecu', 'rack-focus', {lens: 100, angle: 45, action: 'touch', focus: 'detail', detail: 'neckline', transition: 'match'}),
+      shot('Retrato', 'Do rosto à cintura: apresentar quem veste, sem pressa.', 3, 'cu', 'ms', 'dolly-out', {lens: 85, height: 'eye', heightEnd: 'eye', action: 'gaze', focus: 'face'}),
+      shot('Caimento', 'Um arco curto mostra o volume da peça inteira.', 3, 'fs', 'fs', 'orbit', {degrees: 30, angle: -45, action: 'still', focus: 'garment'}),
+      shot('Costas', 'Meia-volta com a câmera fixa: as costas da peça.', 3, 'mls', 'mls', 'static', {action: 'turn180', focus: 'garment', height: 'waist', heightEnd: 'waist', transition: 'whip'}),
+      shot('Passo', 'Dois passos: o tecido em movimento real, terminando estável para o CTA.', 3, 'fs', 'fs', 'tracking', {lens: 35, angle: 45, action: 'walk', focus: 'garment', transition: 'dissolve'})
+    ]})},
   'sarcenet-ultra-close': {label: 'Sarcenet · Ultra close no cetim · 14s', description: 'Peça real da loja: trama, drapeado, franzido e fenda em macro, giro lento e revelação.', build: () => ({
     version: STUDIO_VERSION,
     meta: {title: 'Sarcenet · Champagne Drape · ultra close'},

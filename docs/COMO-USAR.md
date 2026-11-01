@@ -1,5 +1,41 @@
 # Como operar o FRAME Studio
 
+## O caminho de produção (resumo)
+
+1. **Antes de começar:**
+   - fotografe a peça: frente, costas e um detalhe bem próximo, salvos como `peca-frente.png`, `peca-costas.png` e `peca-detalhe.png`;
+   - se for usar as modelos da loja, rode `npm run modelos` uma vez.
+2. **Tomadas prontas** (`#tomadas`): escolha a modelo e clique em “Abrir as 5 tomadas no Studio”.
+3. **Etapa 2 do Studio:** troque a peça (nome, cor, material, construção em inglês e os nomes das fotos).
+4. **Etapas 3 e 4:** confira cenário e câmera e resolva os alertas laranja.
+5. **Painel Produzir de cada tomada:**
+   - gere a imagem A (e a B) no ChatGPT;
+   - anime na ferramenta de vídeo;
+   - marque o que foi aprovado.
+
+   Comece pela tomada 2, o retrato.
+6. **Entrega:** monte na ordem do painel Montagem, exporte em 9:16 e passe pelo Controle de qualidade.
+
+## Tomadas prontas
+
+Cinco tomadas pré-configuradas, num total de 14 s, no cenário Seda & janela:
+
+| # | Tomada | Câmera | Ação | Imagens |
+| --- | --- | --- | --- | --- |
+| 1 | Matéria | PD, rack focus, 100 mm | Mão toca o decote | A |
+| 2 | Retrato | PPP → PM, dolly out, 85 mm | Muda o olhar | A + B |
+| 3 | Caimento | PI, arco de 30° | Parada | A + B |
+| 4 | Costas | PA, câmera fixa | Meia-volta | A + B |
+| 5 | Passo | PI, tracking, 35 mm | Dois passos | A + B |
+
+Só a modelo muda: a câmera, a lente, a ação, a duração e a transição continuam iguais. Cada tomada traz:
+- um exemplo gerado (tomadas 1–5 da campanha Cápsula Seda);
+- a ficha técnica, o que gerar e o que anexar;
+- os prompts A, B e de movimento, já com a modelo escolhida;
+- o que revisar e o que fazer se der errado.
+
+“Produzir no Studio” abre a sequência na tomada escolhida. O rascunho anterior pode ser recuperado com Desfazer.
+
 ## Construir uma cena no Studio
 
 1. Abra **Studio de cenas** (menu lateral ou botão “Abrir Studio”). O modelo **Sarcenet · Cápsula Seda · 15s** abre por padrão; troque em “Modelo de cena”.
